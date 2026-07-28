@@ -1,0 +1,24 @@
+read_verilog alu.v
+
+hierarchy -top alu
+
+proc
+opt
+
+fsm
+opt
+
+memory
+opt
+
+techmap
+opt
+
+abc
+
+clean
+
+stat
+
+write_verilog alu_synth.v
+
