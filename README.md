@@ -1,153 +1,240 @@
-# chipathon-2026-gf180mcu-padring
+# AI_BYTE — Chipathon 2026 full chip
 
-Chipathon 2026 workshop fork of the wafer-space `gf180mcu-project-template`.
-Adds a new LibreLane slot, `workshop`, that mirrors Juan Moya's
-standalone workshop padring as a native LibreLane slot definition so
-participants can take the flow all the way to GDS with the stock
-template Makefile.
+**AI_BYTE** is a small **edge AI / math accelerator** on GlobalFoundries **180 nm** open PDK (`gf180mcuD`).  
+A host microcontrollers or FPGA talks to the chip over a simple **8-bit memory-mapped bus**. Firmware loads data into on-chip SRAMs, programs a register file, pulses **START**, then reads results and status.
 
-No PRs are planned against upstream; all chipathon-specific material
-stays in this fork.
+This repository is the **chip integration**: digital core RTL, pad adapter, padframe flow, cocotb tests, and LibreLane configs for GDS.
 
-## Credits
+| | |
+|--|--|
+| Supply | **5 V** single domain (`VDD` / `VSS`) |
+| Clock / reset | Single clock domain; active-low `RST_N` |
+| Host bus | 4-bit address, 8-bit data, `WE` / `RE`, `IRQ` / `DONE` / `ERROR` |
+| Core area estimate | **1100 µm × 1100 µm** (digital core) |
+| Typical use | CNN tiles (4×4 SA), FC/CONV, Q8.8 ALU, EML activations |
 
-This repository is a **derivation**. The template, Nix flake, and
-LibreLane flow are the work of Leo Moser and the wafer-space
-contributors; the workshop pad layout is a port of Juan Moya's
-`padring_gf180`. Both are Apache-2.0.
+---
 
-- Upstream template — https://github.com/wafer-space/gf180mcu-project-template
-  pinned at commit `8bd0f6ff28947bf222c5288343f8f3ee1fc04632`
-  (`chore: update flake to librelane 3.0`, 2026-03-26).
-- Workshop pad layout — https://github.com/JuanMoya/padring_gf180
-  (`Workshop_CASS/padring/workshop_padring.cfg`).
+## What the chip provides
 
-See `CREDITS.md` for the per-artifact attribution and `NOTICE` for
-the formal Apache-2.0 notice.
+### Compute services
 
-## What this fork changes vs upstream
+| Capability | What you get |
+|------------|----------------|
+| **CNN tile ops** | Weight-stationary **4×4 systolic array** (INT8 act/weight → INT16 products) for **CONV** and **FC**-style matmul |
+| **Post (CNN path)** | Optional **bias**, **ReLU**, **2×2 pooling**, **scale** (INT16 → INT8) selected by CONFIG bits |
+| **Fixed-point math** | **ADD / SUB / MUL** on **Q8.8** values in activation / weight / result buffers |
+| **Elementary functions (EML)** | **SIGMOID, TANH, RECIP, SQRT, SOFTMAX**, and a small **microcoded / feedback** path (`MICRO`) using Mitchell-style log/exp tiles |
+| **On-chip memory** | Three **byte-addressable SRAMs**: Activation, Weight, Result (depths parameterized; default **64 / 16 / 16** bytes) |
+| **Host programming model** | 16-register map (`addr[3:0]`), start / soft-reset / IRQ clear, status + interrupt |
 
-Exactly 6 files (one commit on top of pinned upstream):
+### What it is *not*
 
-| File | Change |
-|------|--------|
-| `src/slot_defines.svh` | add `SLOT_WORKSHOP` block (NUM_INPUT=1, BIDIR=20, ANALOG=60, 4/4 DVDD/DVSS) |
-| `src/chip_core.sv` | replace example counter with a 20-bit counter driving the 20 bidir pads; analog pads float through |
-| `librelane/slots/slot_workshop.yaml` | **new** slot (DIE 2935x2935 um, CORE 2051x2051 um, VERILOG_DEFINES=SLOT_WORKSHOP) |
-| `librelane/config.yaml` | drop SRAM `MACROS` entry and PDN macro connections - not used in this slot |
-| `librelane/pdn_cfg.tcl` | drop SRAM-specific `define_pdn_grid` blocks |
-| `Makefile` | `AVAILABLE_SLOTS += workshop` |
+- Not a general GPU or full CNN SoC — tiles fit **small activations / weights** in the three SRAMs.
+- Not IEEE floating point — use **INT8** (CNN) or **Q8.8** (ALU / EML) as agreed per opcode.
+- EML is **approximate** (Mitchell expansion); software must budget error (tests use tolerances).
+- Debug observability pins may exist in RTL/pads; they are **optional**, not part of the minimum host contract.
 
-`git log upstream/main..main` shows the single derivation commit;
-`git diff upstream/main..main` shows the delta.
+---
 
-## Workshop slot - pad map at a glance
+## How the chip works (inside)
 
-- Die: **2935 x 2935 um** (same as Juan Moya's reference).
-- **60 x analog** (`gf180mcu_fd_io__asig_5p0`)
-- **20 x bidir** (`gf180mcu_fd_io__bi_24t`)
-- **4 x DVDD** + **4 x DVSS** (`gf180mcu_ws_io__dvdd` / `__dvss`)
-- **clk_pad** (`gf180mcu_fd_io__in_s`), **rst_n_pad** (`gf180mcu_fd_io__in_c`)
-- **1 x input_pad** - Yosys zero-width-vector workaround; chipathon
-  participants can ignore it (documented in `docs/workshop-slot-spec.md`).
-- **4 x corner** (`gf180mcu_fd_io__cor`, inserted by LibreLane).
+![AI_BYTE architecture — host, MMIF, register file, control unit, buffers, and compute engines](docs/img/ai_byte_architecture.png)
 
-Pad ordering in `PAD_NORTH` and `PAD_WEST` is **reversed** relative to
-Juan Moya's standalone `workshop_padring.cfg` because LibreLane reads
-pad lists clockwise from the SW corner. Full pad-by-pad mapping in
-`docs/workshop-slot-spec.md`.
+*Figure: Host MMIF → register file / control → buffer controller + SRAMs → systolic array, ALU/post, and EML engines.*
 
-## Quickstart
+1. **MMIF** — maps host `addr` / `data` / `we` / `re` to either the **register file** or the **buffer data window** (`addr == 0x6`).
+2. **Register file** — holds opcode, CONFIG flags, tensor sizes (where needed), buffer pointer, and **CONTROL** pulses (start / soft-reset / IRQ clear). Broadcasts config to the rest of the control path.
+3. **Control unit** — FSM that, after **START**, sequences one **opcode**: move data through the buffer controller into the right engine, wait for completion, set **STATUS** / **IRQ**.
+4. **Buffer controller** — owns all SRAM traffic (host CPU mode vs compute mode); packs/unpacks bytes to engine word widths when needed.
+5. **Compute engines** (treated as IPs from control’s point of view):
+   - **SA** for CONV/FC tiles  
+   - **Post / ALU** for integer / Q8.8 / CNN cleanup  
+   - **EML** for nonlinear math  
 
-### Build the workshop slot (native, nix-shell)
+**Two host modes:**
+
+| Mode | Behavior |
+|------|----------|
+| **CPU buffer mode** (no START) | FSM idle. Host sets `BUFFER_SELECT` + `BUFFER_ADDR`, then reads/writes **BUFFER_DATA** (`0x6`) to fill Act / Weight or dump Result. |
+| **Compute mode** | Host programs opcode + CONFIG + sizes as needed, then writes **CONTROL.START**. Engines run; host waits on **IRQ** / **DONE**, checks **STATUS**, optionally clears IRQ, then reads Result via BUFFER_DATA. |
+
+Single clock domain; `RST_N` is asynchronous active-low hard reset. CONTROL soft-reset is a one-cycle soft clear path for control logic.
+
+### Data formats (short)
+
+| Path | In buffers | Engine view |
+|------|------------|-------------|
+| Physical SRAM / MMIF | Always **8-bit** beats | — |
+| CNN (SA) | INT8 activations & weights | INT16 row products; often **scaled to INT8** in Result if `scale_en` |
+| ALU math | Two bytes = **Q8.8** little-endian | Q8.8 add/sub/mul |
+| EML | Q8.8 words (or INT8 promoted then optional re-scale) | Approximate transcendental results |
+
+Q8.8 layout: `buf[2*i] = low byte`, `buf[2*i+1] = high byte`.
+
+### Register map (host `addr[3:0]`)
+
+| Addr | Name | Role |
+|------|------|------|
+| `0x0` | CONTROL | W: bit0 **START**, bit1 soft-reset, bit2 **IRQ clear**. Reads 0. |
+| `0x1` | STATUS | R: busy / done / error (see STATUS bits in tests/golden) |
+| `0x2` | OPCODE | W/R: operation code (4 bits used) |
+| `0x3` | CONFIG | W/R: feature flags for post / EML scale (6 bits) |
+| `0x4` | BUFFER_SELECT | Which SRAM: Act=`0`, Weight=`1`, Result=`2` |
+| `0x5` | BUFFER_ADDR | Byte address into that buffer |
+| `0x6` | BUFFER_DATA | Host R/W window into selected SRAM (not RF storage) |
+| `0x7`–`0xA` | feature rows/cols, Cin / Cout | Shape knobs for CNN-style ops |
+| `0xB` | SOFTMAX_N | Vector length for softmax |
+| `0xF` | VERSION | ID (`0x02` in current RF) |
+
+### Opcodes (subset used in e2e)
+
+| Code | Mnemonic | Notes |
+|------|----------|--------|
+| `0x0` | CONV | SA + optional ReLU / pool / scale |
+| `0x1` | FC | SA + optional bias / ReLU / scale |
+| `0x2` / `0x3` / `0x4` | ADD / SUB / MUL | Q8.8 |
+| `0x6`–`0x9` | SIGMOID / TANH / RECIP / SQRT | EML |
+| `0xA` | SOFTMAX | EML serial path; needs `SOFTMAX_N` |
+| `0xB` | MICRO | Micro / feedback EML path |
+
+CONFIG bits (typical): ReLU, pool, pool type, bias_en, scale_en, eml_scale_en — see `reg_file.v` and golden model.
+
+---
+
+## Assumptions and limitations
+
+Treat these as **design contracts** for software and board:
+
+1. **5 V I/O and core** — Host interface and DVDD rails expect **5 V CMOS**, not 3.3 V.
+2. **Single clock domain** — No multi-clock CDC; keep `CLK` within the STA period you sign off (core LibreLane default is **100 ns / 10 MHz**; 25 MHz has been shown *not* to close easily).
+3. **Small tiles only** — SA is **4×4**; buffer depths are tiny (defaults 64/16/16 bytes). Large tensors require **host tiling** and multiple jobs.
+4. **One job at a time** — START is accepted when not busy; no out-of-order queue.
+5. **Data packing is software responsibility** — Little-endian Q8.8 pairs, INT8 layouts for CNN tiles, CONFIG alignment with the opcode path.
+6. **EML is approximate** — Do not expect bit-exact match to `libm`; use tolerance or calibration.
+7. **IRQ / DONE / ERROR** — Completion is by status + IRQ; always clear sticky IRQ when done. Illegal opcodes raise error paths rather than silent success.
+8. **Padframe may expose more pins** than the functional set (unused analog pads, multi-copy power pads). Functional **minimum** for AI_BYTE is listed below; extra pads depend on the package slot, not on the accelerator logic.
+9. **Active-low reset** — Assert `RST_N` low at power-up until clocks are stable.
+
+---
+
+## How to use the chip (host)
+
+### Electrical
+
+| Net | Role |
+|-----|------|
+| `VDD` | 5 V power (one rail; all VDD pads tied together) |
+| `VSS` | Ground (all ground pads tied together) |
+| `CLK` | Continuous system clock |
+| `RST_N` | Hard reset, active low |
+| `ADDR[3:0]`, `WE`, `RE` | Drive from host |
+| `DATA[7:0]` | Bidirectional — host drives only when **not** doing a read (`re && !we` is when the chip may drive) |
+| `IRQ`, `DONE`, `ERROR` | Chip → host status |
+
+**Minimum pin budget (functional):**
+
+```text
+Area estimate: 1100 um x 1100 um (digital core; padframe die depends on slot)
+Required pins: Power 1, Ground 1, Digital inputs 8, Digital outputs(including I/O) 11, Analog 0
+```
+
+= `CLK`, `RST_N`, `ADDR[3:0]`, `WE`, `RE`, `DATA[7:0]`, `IRQ`, `DONE`, `ERROR`, plus one `VDD` and one `VSS`.
+
+CSV tables: [`docs/AI_BYTE_pinout_sheet.csv`](docs/AI_BYTE_pinout_sheet.csv).
+
+### Typical software flow
+
+```text
+1. Power up, hold RST_N low, start CLK, release RST_N
+2. (Optional) write CONTROL soft-reset / IRQ clear
+3. Fill Activation (and Weight if needed):
+      write BUFFER_SELECT, BUFFER_ADDR once
+      write BUFFER_DATA for each byte (addr may auto-increment on access paths)
+4. Write OPCODE, CONFIG, and size regs as required by that op
+5. Write CONTROL = START (bit0)
+6. Wait until IRQ or DONE; read STATUS (check error)
+7. Write CONTROL = IRQ clear if needed
+8. Read results: BUFFER_SELECT = Result, walk BUFFER_ADDR / BUFFER_DATA
+9. Next job…
+```
+
+Pseudo-sequence for a Q8.8 ADD (conceptually):
+
+```text
+// pack floats to Q8.8 little-endian into Act/Wt as required by opcode
+write_reg(OPCODE, OP_ADD)
+write_reg(CONFIG, 0)           // path-dependent
+// load buffers via BUFFER_SELECT / ADDR / DATA
+write_reg(CONTROL, 0x01)      // START
+wait_for_irq()
+status = read_reg(STATUS)
+// read Result bytes, unpack Q8.8
+write_reg(CONTROL, 0x04)      // clear IRQ
+```
+
+Reference implementation of these sequences:  
+`cocotb/test_ai_byte.py`, helpers in `cocotb/ai_byte_pads.py`, architectural golden in `cocotb/golden/`.  
+**Verification plan (how the chip is tested + golden co-sim):** [`cocotb/README.md`](cocotb/README.md).
+
+---
+
+## Building and simulating this repo
+
+### Layout
+
+```text
+src/chip_top.sv       padframe top (if used)
+src/chip_core.sv      pad adapter → AI_BYTE MMIF pins
+src/ai_byte/          digital design (control, buffers, SA, EML, post, interface)
+cocotb/               pad-level tests + golden model
+librelane/            full-chip and core-only PnR configs
+docs/                 extra notes and pin CSVs
+Makefile              sim, clone-pdk, librelane, librelane-core
+```
+
+### Simulate (RTL, pad-level e2e)
 
 ```bash
-git clone <this-repo-url> chipathon-2026-gf180mcu-padring
-cd chipathon-2026-gf180mcu-padring
-nix-shell               # provides LibreLane 3.0.0
-make clone-pdk          # clones wafer-space/gf180mcu @ 1.8.0
-SLOT=workshop make librelane
+nix-shell              # recommended tool environment
+make sim               # smoke + AI_BYTE opcode suite (default slot as configured)
+COCOTB_TEST_MODULES=test_ai_byte make sim
 ```
 
-Runtime on a modern laptop: **~2h 15m** for the full signoff run
-(Magic DRC + KLayout DRC + LVS + antenna + STA across 3 corners).
+Needs cocotb + a Verilog simulator. PDK not required for pure RTL cocotb.
 
-Final artifacts land in `final/`:
-- `final/gds/chip_top.gds` (~85 MB)
-- `final/metrics.csv` (signoff metrics)
-- `final/*.log` (per-stage logs)
-
-### Inspect a built GDS (Docker, hpretl/iic-osic-tools)
-
-`scripts/run_docker_iic.sh` spawns the iic-osic-tools container with
-this repo mounted; inside the container run `klayout final/gds/chip_top.gds`
-or `magic -T .../gf180mcuD.magicrc ...`.
-
-See `docs/reproducing-native.md` and `docs/reproducing-docker.md` for
-the detailed walkthroughs.
-
-### Use the workshop slot for your own RTL
-
-Swap `src/chip_core.sv` with your design, keeping the port list
-(NUM_INPUT=1, NUM_BIDIR=20, NUM_ANALOG=60, clk, rst_n), and re-run
-`SLOT=workshop make librelane`. Padring stays fixed.
-
-## Verification
-
-The repository was validated **end-to-end** against a known-good
-reference build. To re-run the pragmatic check (byte-compare the
-six tracked files against the reference tree):
+### Place & route
 
 ```bash
-scripts/verify_workshop_slot.sh /path/to/reference/template
+make clone-pdk         # once → ~/.cache/ai-byte/pdk/gf180mcu
+make check-pdk
+
+# Digital core only (no pads) — area / timing exploration
+make librelane-core-nodrc
+# make librelane-core CORE_SIDE=1100 PL_DENSITY=55
+
+# Full chip with padframe
+make librelane
+# make librelane-nodrc
 ```
 
-The reference build (DRC/LVS/antenna/STA signoff on 2026-04-23 with
-LibreLane 3.0 + wafer-space PDK 1.8.0) is the source of truth for
-"clean". As long as the fork's six files byte-match that reference,
-a fresh build on a compatible host will reproduce the same result.
+Outputs: `final_core/` (core) or `final/gds/chip_top.gds` (full chip).
 
-If you do not have the reference tree, the repo itself is the ground
-truth - this fork *is* those six files.
+### Resync RTL from parent monorepo (optional)
 
-## Repository layout
+If you develop control/CE elsewhere:
 
-```
-.
-|-- README.md                       # this file
-|-- NOTICE                          # Apache-2.0 attribution
-|-- CREDITS.md                      # detailed credits
-|-- AUTHORS.md                      # copyright holders (upstream + fork)
-|-- LICENSE                         # Apache-2.0
-|-- docs/
-|   |-- workshop-slot-spec.md       # full pad-by-pad mapping
-|   |-- reproducing-native.md       # nix-shell walkthrough
-|   `-- reproducing-docker.md       # iic-osic-tools walkthrough
-|-- examples/
-|   `-- rtl2gds_chipathon_padring.ipynb   # standalone notebook
-|-- scripts/
-|   |-- run_docker_iic.sh           # iic-osic-tools launcher
-|   `-- verify_workshop_slot.sh     # pragmatic end-to-end check
-|-- librelane/
-|   |-- config.yaml                 # top-level LibreLane config (patched)
-|   |-- pdn_cfg.tcl                 # PDN generator (patched)
-|   |-- chip_top.sdc                # upstream, unchanged
-|   `-- slots/
-|       |-- slot_0p5x0p5.yaml       # upstream, unchanged
-|       |-- slot_0p5x1.yaml         # upstream, unchanged
-|       |-- slot_1x0p5.yaml         # upstream, unchanged
-|       |-- slot_1x1.yaml           # upstream, unchanged
-|       `-- slot_workshop.yaml      # new (this fork)
-|-- src/
-|   |-- chip_top.sv                 # upstream, unchanged
-|   |-- chip_core.sv                # patched (counter->bidir)
-|   `-- slot_defines.svh            # patched (SLOT_WORKSHOP)
-|-- Makefile                        # patched (AVAILABLE_SLOTS += workshop)
-`-- (upstream infra: flake.nix, gf180mcu/, ip/, cocotb/, scripts/, ...)
+```bash
+./scripts/sync_ai_byte.sh
 ```
 
-## License
+More integration notes: [`docs/AI_BYTE.md`](docs/AI_BYTE.md).
 
-Apache-2.0, inherited from upstream. See `LICENSE` for the full text,
-`NOTICE` for attribution of third-party material, and `AUTHORS.md`
-for the list of copyright holders.
+---
+
+## Credits and license
+
+Padframe template and LibreLane packaging build on wafer-space **gf180mcu-project-template**; workshop-style pad geometry roots in Juan Moya’s workshop padring.  
+See [`CREDITS.md`](CREDITS.md), [`NOTICE`](NOTICE), [`AUTHORS.md`](AUTHORS.md).
+
+**License:** Apache-2.0 — [`LICENSE`](LICENSE).
