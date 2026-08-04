@@ -203,32 +203,6 @@ COCOTB_TEST_MODULES=test_ai_byte make sim
 
 Needs cocotb + a Verilog simulator. PDK not required for pure RTL cocotb.
 
-### Place & route
-
-```bash
-make clone-pdk         # once → ~/.cache/ai-byte/pdk/gf180mcu
-make check-pdk
-
-# Digital core only (no pads) — area / timing exploration
-make librelane-core-nodrc
-# make librelane-core CORE_SIDE=1100 PL_DENSITY=55
-
-# Full chip with padframe
-make librelane
-# make librelane-nodrc
-```
-
-Outputs: `final_core/` (core) or `final/gds/chip_top.gds` (full chip).
-
-### Resync RTL from parent monorepo (optional)
-
-If you develop control/CE elsewhere:
-
-```bash
-./scripts/sync_ai_byte.sh
-```
-
-More integration notes: [`docs/AI_BYTE.md`](docs/AI_BYTE.md).
 
 ---
 
