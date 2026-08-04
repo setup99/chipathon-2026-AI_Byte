@@ -1,0 +1,142 @@
+
+=============== feedback_cell ===============
+
+COCOTB_MAKEFILES := $(shell cocotb-config --makefiles)
+SIM               = icarus
+TOPLEVEL_LANG     = verilog
+VERILOG_SOURCES   = mitchell_log2_q88.v
+VERILOG_SOURCES  += mitchell_exp2_q88.v
+VERILOG_SOURCES  += eml_mul_q88.v
+VERILOG_SOURCES  += eml_tile_q88.v
+VERILOG_SOURCES  += eml_feedback_cell_q88.v
+TOPLEVEL          = eml_feedback_cell_q88
+MODULE            = test_feedback_cell_q88
+COMPILE_ARGS      = -g2012
+include $(COCOTB_MAKEFILES)/Makefile.sim
+
+
+================   sigmoid   ===================
+
+
+COCOTB_MAKEFILES := $(shell cocotb-config --makefiles)
+SIM               = icarus
+TOPLEVEL_LANG     = verilog
+VERILOG_SOURCES   = mitchell_log2_q88.v
+VERILOG_SOURCES  += mitchell_exp2_q88.v
+VERILOG_SOURCES  += eml_mul_q88.v
+VERILOG_SOURCES  += eml_tile_q88.v
+VERILOG_SOURCES  += eml_sigmoid_q88.v
+TOPLEVEL          = eml_sigmoid_q88
+MODULE            = test_sigmoid_q88
+COMPILE_ARGS      = -g2012
+include $(COCOTB_MAKEFILES)/Makefile.sim
+
+===================  softmax =====================
+
+COCOTB_MAKEFILES := $(shell cocotb-config --makefiles)
+SIM               = icarus
+TOPLEVEL_LANG     = verilog
+VERILOG_SOURCES   = mitchell_log2_q88.v
+VERILOG_SOURCES  += mitchell_exp2_q88.v
+VERILOG_SOURCES  += eml_tile_q88.v
+VERILOG_SOURCES  += eml_mul_q88.v
+VERILOG_SOURCES  += eml_softmax_q88.v
+TOPLEVEL          = eml_softmax_q88
+MODULE            = test_softmax_q88
+COMPILE_ARGS      = -g2012
+include $(COCOTB_MAKEFILES)/Makefile.sim
+
+===============
+
+COCOTB_MAKEFILES := $(shell cocotb-config --makefiles)
+SIM               = icarus
+TOPLEVEL_LANG     = verilog
+VERILOG_SOURCES   = mitchell_log2_q88.v
+VERILOG_SOURCES  += mitchell_exp2_q88.v
+VERILOG_SOURCES  += eml_tile_q88.v
+VERILOG_SOURCES  += eml_mul_q88.v
+VERILOG_SOURCES  += eml_recip_q88.v
+TOPLEVEL          = eml_recip_q88
+MODULE            = test_recip_q88
+COMPILE_ARGS      = -g2012
+include $(COCOTB_MAKEFILES)/Makefile.sim
+
+========================
+
+COCOTB_MAKEFILES := $(shell cocotb-config --makefiles)
+SIM               = icarus
+TOPLEVEL_LANG     = verilog
+VERILOG_SOURCES   = mitchell_log2_q88.v
+VERILOG_SOURCES  += mitchell_exp2_q88.v
+VERILOG_SOURCES  += eml_tile_q88.v
+VERILOG_SOURCES  += eml_mul_q88.v
+VERILOG_SOURCES  += eml_sqrt_q88.v
+TOPLEVEL          = eml_sqrt_q88
+MODULE            = test_sqrt_q88
+COMPILE_ARGS      = -g2012
+include $(COCOTB_MAKEFILES)/Makefile.sim
+
+
+===============full =================
+
+
+COCOTB_MAKEFILES := $(shell cocotb-config --makefiles)
+SIM               = icarus
+TOPLEVEL_LANG     = verilog
+VERILOG_SOURCES   = mitchell_log2_q88.v
+VERILOG_SOURCES  += mitchell_exp2_q88.v
+VERILOG_SOURCES  += eml_mul_q88.v
+VERILOG_SOURCES  += eml_tile_q88.v
+VERILOG_SOURCES  += eml_feedback_cell_q88.v
+VERILOG_SOURCES  += eml_sigmoid_q88.v
+VERILOG_SOURCES  += eml_softmax_q88.v
+VERILOG_SOURCES  += eml_recip_q88.v
+VERILOG_SOURCES  += eml_sqrt_q88.v
+VERILOG_SOURCES  += eml_tanh_q88.v
+VERILOG_SOURCES  += eml_wrapper_q88.v
+TOPLEVEL          = eml_wrapper_q88
+MODULE            = test_eml_q88_full
+COMPILE_ARGS      = -g2012
+include $(COCOTB_MAKEFILES)/Makefile.sim
+
+
+=======================
+
+
+yosys -p "
+read_verilog mitchell_log2_q88.v mitchell_exp2_q88.v eml_tile_q88.v eml_softmax_q88_rtn.v;
+hierarchy -top eml_softmax_q88_rtn;
+procs; opt
+fsm; opt
+# Force structural resource sharing of arithmetic operators
+share; opt
+wreduce; opt
+techmap; opt
+check;
+synth;
+stat;
+write_verilog counter_syn.v
+"
+
+
+===========================================================
+
+COCOTB_MAKEFILES := $(shell cocotb-config --makefiles)
+SIM               = icarus
+TOPLEVEL_LANG     = verilog
+VERILOG_SOURCES   = ../src/mitchell_log2_q88.v
+VERILOG_SOURCES  += ../src/mitchell_exp2_q88.v
+VERILOG_SOURCES  += ../src/eml_tile_q88.v
+VERILOG_SOURCES  += ../src/eml_sigmoid_q88.v
+VERILOG_SOURCES  += ../src/eml_tanh_q88.v
+VERILOG_SOURCES  += ../src/eml_recip_q88.v
+VERILOG_SOURCES  += ../src/eml_sqrt_q88.v
+VERILOG_SOURCES  += ../src/eml_feedback_cell_q88.v
+VERILOG_SOURCES  += ../src/eml_softmax_q88_rtn.v
+VERILOG_SOURCES  += ../src/eml_wrapper_q88_rtn.v
+TOPLEVEL          = eml_wrapper_q88_rtn
+MODULE            = test_wrapper_all_functions_q88
+COMPILE_ARGS      = -g2012
+include $(COCOTB_MAKEFILES)/Makefile.sim
+
+
