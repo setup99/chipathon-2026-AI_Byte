@@ -176,6 +176,57 @@ Adjust only if intentional RTL/Mitchell behavior changes; prefer documenting why
 
 ---
 
+## Results (last known good run)
+
+**Status: all green** on pad-level RTL sim (`SLOT=workshop`, Icarus + cocotb).
+
+| Suite | Tests | Result |
+|-------|------:|--------|
+| Smoke (`chip_top_tb`) | 1 | **PASS** |
+| E2E (`test_ai_byte`) | 12 | **PASS** |
+| **Total** | **13** | **PASS** |
+
+### Error budget vs golden
+
+`err` = max |DUT − golden| over compared elements.  
+Q8.8: `1` LSB = `1/256` ≈ `0.003906`.
+
+| Constant | Allowed max \|err\| | Meaning |
+|----------|-------------------:|---------|
+| bit-exact (`tol=0`) | **0** | Exact match |
+| `TOL_EML_Q88` / `TOL_MICRO_Q88` | **0x80 = 128** | 0.5 in Q8.8 |
+| `TOL_EML_I8` | **2** | ±2 INT8 codes |
+| `TOL_SOFTMAX_I8` | **3** | ±3 INT8 codes |
+
+| Test | Result | Allowed max \|err\| | Notes |
+|------|--------|--------------------:|-------|
+| `test_smoke_reset` | PASS | — | No numeric compare |
+| `test_e2e_illegal` | PASS | — | STATUS ERROR bit only |
+| `test_e2e_add` | PASS | **0** | Q8.8 bit-exact |
+| `test_e2e_sub` | PASS | **0** | Q8.8 bit-exact |
+| `test_e2e_mul` | PASS | **0** | Q8.8 bit-exact |
+| `test_e2e_sqrt` | PASS | **128** (0.5 Q8.8) | vs float/Mitchell stand-in |
+| `test_e2e_recip` | PASS | **128** (0.5 Q8.8) | vs float/Mitchell stand-in |
+| `test_e2e_sigmoid` | PASS | **2** (INT8) | EML path |
+| `test_e2e_tanh` | PASS | **2** (INT8) | EML path |
+| `test_e2e_softmax` | PASS | **3** (INT8) | EML serial |
+| `test_e2e_microprog` | PASS | **128** (0.5 Q8.8) | micro / feedback EML |
+| `test_e2e_fc` | PASS | **0** | SA + post bit-exact |
+| `test_e2e_conv` | PASS | **0** | SA + post bit-exact |
+
+Measured `max_err` for each compare is printed in the cocotb log on PASS, e.g.  
+`ok max_err=… tol=…` (see `compare_bytes` / `compare_q88_words`). Re-run `make sim` and copy those values here if you need the exact measured errors from a fresh run.
+
+Command used:
+
+```bash
+SLOT=workshop make sim
+```
+
+Re-run after RTL or pad-map changes and update this table if anything fails.
+
+---
+
 ## How to run
 
 From repo root (Nix shell recommended if using project tools):

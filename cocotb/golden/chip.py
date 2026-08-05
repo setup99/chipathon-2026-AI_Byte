@@ -549,12 +549,18 @@ def compare_bytes(
 ) -> Tuple[bool, str]:
     if len(hw) != len(golden):
         return False, f"len hw={len(hw)} gold={len(golden)}"
+    max_err = 0
+    worst_i = 0
     for i, (a, b) in enumerate(zip(hw, golden)):
         a8 = to_i8(a)
         b8 = to_i8(b)
-        if abs(a8 - b8) > tol:
-            return False, f"idx {i}: hw={a8} gold={b8} tol={tol}"
-    return True, "ok"
+        e = abs(a8 - b8)
+        if e > max_err:
+            max_err = e
+            worst_i = i
+        if e > tol:
+            return False, f"idx {i}: hw={a8} gold={b8} err={e} tol={tol}"
+    return True, f"ok max_err={max_err} (idx {worst_i}) tol={tol}"
 
 
 def compare_q88_words(
@@ -562,10 +568,19 @@ def compare_q88_words(
 ) -> Tuple[bool, str]:
     if len(hw_words) != len(golden_words):
         return False, f"len hw={len(hw_words)} gold={len(golden_words)}"
+    max_err = 0
+    worst_i = 0
     for i, (a, b) in enumerate(zip(hw_words, golden_words)):
-        if abs(to_i16(a) - to_i16(b)) > tol:
+        e = abs(to_i16(a) - to_i16(b))
+        if e > max_err:
+            max_err = e
+            worst_i = i
+        if e > tol:
             return (
                 False,
-                f"idx {i}: hw={to_i16(a):#x} gold={to_i16(b):#x} tol={tol}",
+                f"idx {i}: hw={to_i16(a):#x} gold={to_i16(b):#x} err={e} ({e/256:.4f}) tol={tol}",
             )
-    return True, "ok"
+    return (
+        True,
+        f"ok max_err={max_err} ({max_err/256:.4f} Q8.8) idx={worst_i} tol={tol}",
+    )

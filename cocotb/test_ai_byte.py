@@ -166,7 +166,7 @@ async def test_e2e_add(dut):
     ok, msg = compare_bytes(hw, gold, tol=0)
     assert ok, f"ADD mismatch: {msg} hw={hw} gold={gold}"
     await clear_irq(dut, g)
-    cocotb.log.info(f"e2e ADD: PASS res={hw}")
+    cocotb.log.info(f"e2e ADD: PASS res={hw} {msg}")
 
 
 @cocotb.test()
@@ -191,7 +191,7 @@ async def test_e2e_sub(dut):
     ok, msg = compare_bytes(hw, gold, tol=0)
     assert ok, f"SUB mismatch: {msg} hw={hw} gold={gold}"
     await clear_irq(dut, g)
-    cocotb.log.info(f"e2e SUB: PASS res={hw}")
+    cocotb.log.info(f"e2e SUB: PASS res={hw} {msg}")
 
 
 @cocotb.test()
@@ -216,7 +216,7 @@ async def test_e2e_mul(dut):
     ok, msg = compare_bytes(hw, gold, tol=0)
     assert ok, f"MUL mismatch: {msg} hw={hw} gold={gold}"
     await clear_irq(dut, g)
-    cocotb.log.info(f"e2e MUL: PASS res={hw}")
+    cocotb.log.info(f"e2e MUL: PASS res={hw} {msg}")
 
 
 @cocotb.test()
@@ -239,7 +239,7 @@ async def test_e2e_sqrt(dut):
     ok, msg = compare_q88_words([res_q88(hw)], [res_q88(gold)], tol=TOL_EML_Q88)
     assert ok, f"SQRT mismatch: {msg} hw={res_q88(hw):#x} gold={res_q88(gold):#x}"
     await clear_irq(dut, g)
-    cocotb.log.info(f"e2e SQRT: PASS hw={res_q88(hw):#x} gold={res_q88(gold):#x}")
+    cocotb.log.info(f"e2e SQRT: PASS hw={res_q88(hw):#x} gold={res_q88(gold):#x} {msg}")
 
 
 @cocotb.test()
@@ -262,7 +262,7 @@ async def test_e2e_recip(dut):
     ok, msg = compare_q88_words([res_q88(hw)], [res_q88(gold)], tol=TOL_EML_Q88)
     assert ok, f"RECIP mismatch: {msg} hw={res_q88(hw):#x} gold={res_q88(gold):#x}"
     await clear_irq(dut, g)
-    cocotb.log.info(f"e2e RECIP: PASS hw={res_q88(hw):#x} gold={res_q88(gold):#x}")
+    cocotb.log.info(f"e2e RECIP: PASS hw={res_q88(hw):#x} gold={res_q88(gold):#x} {msg}")
 
 
 @cocotb.test()
@@ -284,7 +284,7 @@ async def test_e2e_sigmoid(dut):
     ok, msg = compare_bytes(hw, gold, tol=TOL_EML_I8)
     assert ok, f"SIGMOID mismatch: {msg}"
     await clear_irq(dut, g)
-    cocotb.log.info(f"e2e SIGMOID: PASS first4_hw={hw[:4]} gold={gold[:4]}")
+    cocotb.log.info(f"e2e SIGMOID: PASS first4_hw={hw[:4]} gold={gold[:4]} {msg}")
 
 
 @cocotb.test()
@@ -306,7 +306,7 @@ async def test_e2e_tanh(dut):
     ok, msg = compare_bytes(hw, gold, tol=TOL_EML_I8)
     assert ok, f"TANH mismatch: {msg}"
     await clear_irq(dut, g)
-    cocotb.log.info(f"e2e TANH: PASS first4_hw={hw[:4]} gold={gold[:4]}")
+    cocotb.log.info(f"e2e TANH: PASS first4_hw={hw[:4]} gold={gold[:4]} {msg}")
 
 
 @cocotb.test()
@@ -329,7 +329,7 @@ async def test_e2e_softmax(dut):
     ok, msg = compare_bytes(hw, gold, tol=TOL_SOFTMAX_I8)
     assert ok, f"SOFTMAX mismatch: {msg} hw={hw} gold={gold}"
     await clear_irq(dut, g)
-    cocotb.log.info(f"e2e SOFTMAX: PASS hw={hw} gold={gold}")
+    cocotb.log.info(f"e2e SOFTMAX: PASS hw={hw} gold={gold} {msg}")
 
 
 @cocotb.test()
@@ -356,7 +356,7 @@ async def test_e2e_microprog(dut):
     ok, msg = compare_q88_words([res_q88(hw)], [res_q88(gold)], tol=TOL_MICRO_Q88)
     assert ok, f"MICRO mismatch: {msg} hw={res_q88(hw):#x} gold={res_q88(gold):#x}"
     await clear_irq(dut, g)
-    cocotb.log.info(f"e2e MICRO: PASS hw={res_q88(hw):#x} gold={res_q88(gold):#x}")
+    cocotb.log.info(f"e2e MICRO: PASS hw={res_q88(hw):#x} gold={res_q88(gold):#x} {msg}")
 
 
 @cocotb.test()
@@ -381,7 +381,7 @@ async def test_e2e_fc(dut):
     ok, msg = compare_bytes(hw, gold, tol=0)
     assert ok, f"FC mismatch: {msg} hw={hw} gold={gold}"
     await clear_irq(dut, g)
-    cocotb.log.info(f"e2e FC: PASS first8_hw={hw[:8]} gold={gold[:8]}")
+    cocotb.log.info(f"e2e FC: PASS first8_hw={hw[:8]} gold={gold[:8]} {msg}")
 
 
 @cocotb.test()
@@ -405,4 +405,4 @@ async def test_e2e_conv(dut):
     ok, msg = compare_bytes(hw, gold, tol=0)
     assert ok, f"CONV mismatch: {msg} hw={hw} gold={gold}"
     await clear_irq(dut, g)
-    cocotb.log.info(f"e2e CONV: PASS hw={hw} gold={gold}")
+    cocotb.log.info(f"e2e CONV: PASS hw={hw} gold={gold} {msg}")
