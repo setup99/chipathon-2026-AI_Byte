@@ -57,8 +57,8 @@ def ai_byte_sources():
         "control/control_unit.v",
         "control/buffer_ctrl.v",
         "control/control_wrap.v",
-        "control/ai_byte_core.v",
-        "control/ai_byte_top.v",
+        "top/ai_byte_core.v",
+        "top/ai_byte_top.v",
     ]
     return [AI_BYTE_ROOT / p for p in order]
 

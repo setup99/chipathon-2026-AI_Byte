@@ -1,0 +1,95 @@
+# AI_BYTE digital core only (no padframe).
+# Default floorplan: 1100 × 1100 µm die, ~10 µm core inset, density 55%.
+# Override size/density without editing this file:
+#   make librelane-core-nodrc CORE_SIDE=1200 PL_DENSITY=55
+meta:
+  version: 3
+  flow: Classic
+
+DESIGN_NAME: ai_byte_top
+
+VERILOG_FILES:
+- dir::../src/ai_byte/post/alu_q88.v
+- dir::../src/ai_byte/post/relu_int16.v
+- dir::../src/ai_byte/post/pooling_int16.v
+- dir::../src/ai_byte/post/scale_int16_to_int8.v
+- dir::../src/ai_byte/post/block_wrapper.v
+- dir::../src/ai_byte/eml/mitchell_log2_q88.v
+- dir::../src/ai_byte/eml/mitchell_exp2_q88.v
+- dir::../src/ai_byte/eml/eml_tile_q88.v
+- dir::../src/ai_byte/eml/eml_sigmoid_q88_shared.v
+- dir::../src/ai_byte/eml/eml_tanh_q88_shared.v
+- dir::../src/ai_byte/eml/eml_recip_q88_shared.v
+- dir::../src/ai_byte/eml/eml_sqrt_q88_shared.v
+- dir::../src/ai_byte/eml/eml_softmax_q88_serial.v
+- dir::../src/ai_byte/eml/eml_feedback_cell_q88_shared.v
+- dir::../src/ai_byte/eml/eml_wrapper_q88_serial.v
+- dir::../src/ai_byte/sa/ram_sdp.v
+- dir::../src/ai_byte/sa/pe_gemv_ws.v
+- dir::../src/ai_byte/sa/gemm_systolic_2d.v
+- dir::../src/ai_byte/buffers/ai_byte_sram_buffer.v
+- dir::../src/ai_byte/interface/ai_byte_mmif.v
+- dir::../src/ai_byte/control/reg_file.v
+- dir::../src/ai_byte/control/control_unit.v
+- dir::../src/ai_byte/control/buffer_ctrl.v
+- dir::../src/ai_byte/control/control_wrap.v
+- dir::../src/ai_byte/top/ai_byte_core.v
+- dir::../src/ai_byte/top/ai_byte_top.v
+
+PRIMARY_GDSII_STREAMOUT_TOOL: klayout
+
+PNR_SDC_FILE: dir::ai_byte_top.sdc
+SIGNOFF_SDC_FILE: dir::ai_byte_top.sdc
+FALLBACK_SDC: dir::ai_byte_top.sdc
+
+VDD_NETS:
+- VDD
+GND_NETS:
+- VSS
+
+# Floorplan: core only (no padring). Die = CORE_SIDE².
+FP_SIZING: absolute
+# Placeable core is inset by CORE_MARGIN from die edges (IO pin strip).
+DIE_AREA: [0, 0, 1100, 1100]
+CORE_AREA: [10, 10, 1090, 1090]
+
+# Clock on bare MMIF ports (not pad-inst hierarchy)
+CLOCK_PORT: clk
+CLOCK_NET: clk
+# 25 MHz (40 ns) fails setup on GF180 SS (~73 ns period_min pre-PnR; worse post-CTS).
+# 10 MHz gives PnR margin; tighten again after RTL piping / multi-cycle.
+CLOCK_PERIOD: 100 # 10 MHz
+
+PL_TARGET_DENSITY_PCT: 55
+GRT_ALLOW_CONGESTION: true
+
+PL_RESIZER_HOLD_SLACK_MARGIN: 0.35
+GRT_RESIZER_HOLD_SLACK_MARGIN: 0.3
+
+DRT_ANTENNA_REPAIR_ITERS: 10
+DRT_ANTENNA_REPAIR_MARGIN: 10
+
+# PDN — core-only straps (no pad connection)
+PDN_VWIDTH: 5
+PDN_HWIDTH: 5
+PDN_VSPACING: 1
+PDN_HSPACING: 1
+PDN_VPITCH: 75
+PDN_HPITCH: 75
+PDN_CORE_RING: True
+PDN_CORE_RING_VWIDTH: 10
+PDN_CORE_RING_HWIDTH: 10
+PDN_CORE_RING_CONNECT_TO_PADS: False
+PDN_ENABLE_PINS: True
+PDN_CORE_VERTICAL_LAYER: Metal2
+PDN_CORE_HORIZONTAL_LAYER: Metal3
+
+ERROR_ON_MAGIC_DRC: False
+
+# No chip-level logos / pad extras
+MACROS: {}
+PDN_MACRO_CONNECTIONS: []
+
+# Skip heavy tapeout checks while exploring core size (full Chip flow for
+# submission still uses config.yaml + workshop slot).
+# Override or re-enable as needed.

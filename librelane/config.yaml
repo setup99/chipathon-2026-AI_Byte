@@ -26,8 +26,36 @@ meta:
 
 DESIGN_NAME: chip_top
 VERILOG_FILES:
+# Padframe top + AI_BYTE pad wrapper
 - dir::../src/chip_top.sv
 - dir::../src/chip_core.sv
+# AI_BYTE CE / SRAM / control (vendored under src/ai_byte/)
+- dir::../src/ai_byte/post/alu_q88.v
+- dir::../src/ai_byte/post/relu_int16.v
+- dir::../src/ai_byte/post/pooling_int16.v
+- dir::../src/ai_byte/post/scale_int16_to_int8.v
+- dir::../src/ai_byte/post/block_wrapper.v
+- dir::../src/ai_byte/eml/mitchell_log2_q88.v
+- dir::../src/ai_byte/eml/mitchell_exp2_q88.v
+- dir::../src/ai_byte/eml/eml_tile_q88.v
+- dir::../src/ai_byte/eml/eml_sigmoid_q88_shared.v
+- dir::../src/ai_byte/eml/eml_tanh_q88_shared.v
+- dir::../src/ai_byte/eml/eml_recip_q88_shared.v
+- dir::../src/ai_byte/eml/eml_sqrt_q88_shared.v
+- dir::../src/ai_byte/eml/eml_softmax_q88_serial.v
+- dir::../src/ai_byte/eml/eml_feedback_cell_q88_shared.v
+- dir::../src/ai_byte/eml/eml_wrapper_q88_serial.v
+- dir::../src/ai_byte/sa/ram_sdp.v
+- dir::../src/ai_byte/sa/pe_gemv_ws.v
+- dir::../src/ai_byte/sa/gemm_systolic_2d.v
+- dir::../src/ai_byte/buffers/ai_byte_sram_buffer.v
+- dir::../src/ai_byte/interface/ai_byte_mmif.v
+- dir::../src/ai_byte/control/reg_file.v
+- dir::../src/ai_byte/control/control_unit.v
+- dir::../src/ai_byte/control/buffer_ctrl.v
+- dir::../src/ai_byte/control/control_wrap.v
+- dir::../src/ai_byte/top/ai_byte_core.v
+- dir::../src/ai_byte/top/ai_byte_top.v
 
 # Enable plugin for better SystemVerilog support
 # USE_SLANG: True
@@ -64,8 +92,8 @@ PL_RESIZER_HOLD_SLACK_MARGIN: 0.35
 GRT_RESIZER_HOLD_SLACK_MARGIN: 0.3
 
 # Increase for more logic
-# on your die
-PL_TARGET_DENSITY_PCT: 35
+# on your die (AI_BYTE ~20k cells after FF-mapped SRAMs)
+PL_TARGET_DENSITY_PCT: 50
 GRT_ALLOW_CONGESTION: true
 
 # Fix antenna violations after DRT
