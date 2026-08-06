@@ -33,6 +33,14 @@
 //  writeup (128-bit bus removed entirely; parallel max-tree + 8
 //  dedicated subtractors replaced by the shared ALU reused
 //  serially).
+//
+//  OP_SIGMOID and OP_TANH share one eml_sigmoid_tanh_q88_shared FSM
+//  (tanh(x) = 2*sigma(2x)-1 is the only relationship needed; see that
+//  file's header), and OP_RECIP/OP_SQRT share one
+//  eml_recip_sqrt_q88_shared FSM (same 3-step LNS pipeline, different
+//  middle-step operand order/shift). Both pairs are selected by a
+//  `mode` bit taken from the live opcode during the accept cycle --
+//  same convention route_opcode already uses for the tile-select mux.
 // ============================================================
 `timescale 1ns/1ps
 
@@ -42,7 +50,7 @@ module eml_wrapper_q88_serial #(
     parameter MAX_N = 8
 )(
     input  wire             clk,
-    input  wire             rst_n,
+    input  wire             rst_n,   // synchronous, active-low
     input  wire             start,
     input  wire [2:0]       opcode,
 
@@ -82,8 +90,14 @@ module eml_wrapper_q88_serial #(
 
     wire start_sigmoid  = accept && (opcode == OP_SIGMOID);
     wire start_tanh     = accept && (opcode == OP_TANH);
+    wire start_sigtanh  = start_sigmoid | start_tanh;
+    wire mode_sigtanh   = (opcode == OP_TANH);   // live, sampled only on start_sigtanh's cycle
+
     wire start_recip    = accept && (opcode == OP_RECIP);
     wire start_sqrt     = accept && (opcode == OP_SQRT);
+    wire start_recipsqrt = start_recip | start_sqrt;
+    wire mode_recipsqrt  = (opcode == OP_SQRT);  // live, sampled only on start_recipsqrt's cycle
+
     wire start_softmax  = accept && (opcode == OP_SOFTMAX);
     wire start_feedback = accept && (opcode == OP_FEEDBACK);
 
@@ -101,66 +115,42 @@ module eml_wrapper_q88_serial #(
         .x(tile_x_sel), .y(tile_y_sel), .out(tile_out), .ovf(tile_ovf)
     );
 
-    wire signed [W-1:0] sigmoid_eml_x,  tanh_eml_x,  recip_eml_x,  sqrt_eml_x,  softmax_eml_x,  feedback_eml_x;
-    wire        [W-1:0] sigmoid_eml_y,  tanh_eml_y,  recip_eml_y,  sqrt_eml_y,  softmax_eml_y,  feedback_eml_y;
+    wire signed [W-1:0] sigtanh_eml_x,  recipsqrt_eml_x,  softmax_eml_x,  feedback_eml_x;
+    wire        [W-1:0] sigtanh_eml_y,  recipsqrt_eml_y,  softmax_eml_y,  feedback_eml_y;
 
     always @(*) begin
         case (route_opcode)
-            OP_SIGMOID:  begin tile_x_sel = sigmoid_eml_x;  tile_y_sel = sigmoid_eml_y;  end
-            OP_TANH:     begin tile_x_sel = tanh_eml_x;     tile_y_sel = tanh_eml_y;     end
-            OP_RECIP:    begin tile_x_sel = recip_eml_x;    tile_y_sel = recip_eml_y;    end
-            OP_SQRT:     begin tile_x_sel = sqrt_eml_x;     tile_y_sel = sqrt_eml_y;     end
+            OP_SIGMOID:  begin tile_x_sel = sigtanh_eml_x;   tile_y_sel = sigtanh_eml_y;   end
+            OP_TANH:     begin tile_x_sel = sigtanh_eml_x;   tile_y_sel = sigtanh_eml_y;   end
+            OP_RECIP:    begin tile_x_sel = recipsqrt_eml_x; tile_y_sel = recipsqrt_eml_y; end
+            OP_SQRT:     begin tile_x_sel = recipsqrt_eml_x; tile_y_sel = recipsqrt_eml_y; end
             OP_SOFTMAX:  begin tile_x_sel = softmax_eml_x;  tile_y_sel = softmax_eml_y;  end
             OP_FEEDBACK: begin tile_x_sel = feedback_eml_x; tile_y_sel = feedback_eml_y; end
             default:     begin tile_x_sel = {W{1'b0}};      tile_y_sel = {W{1'b0}};      end
         endcase
     end
 
-    // ── OP_SIGMOID ─────────────────────────────────────────────
-    wire signed [W-1:0] sigmoid_result;
-    wire                sigmoid_valid, sigmoid_ovf;
+    // ── OP_SIGMOID / OP_TANH (merged FSM) ───────────────────────
+    wire signed [W-1:0] sigtanh_result;
+    wire                sigtanh_valid, sigtanh_ovf;
 
-    eml_sigmoid_q88_shared #(.W(W),.F(F)) u_sigmoid (
-        .clk(clk), .rst_n(rst_n), .start(start_sigmoid),
+    eml_sigmoid_tanh_q88_shared #(.W(W),.F(F)) u_sigtanh (
+        .clk(clk), .rst_n(rst_n), .start(start_sigtanh), .mode(mode_sigtanh),
         .x_in(x_in),
-        .result(sigmoid_result), .valid(sigmoid_valid), .ovf(sigmoid_ovf),
-        .eml_x_out(sigmoid_eml_x), .eml_y_out(sigmoid_eml_y),
+        .result(sigtanh_result), .valid(sigtanh_valid), .ovf(sigtanh_ovf),
+        .eml_x_out(sigtanh_eml_x), .eml_y_out(sigtanh_eml_y),
         .eml_out_in(tile_out), .eml_ovf_in(tile_ovf)
     );
 
-    // ── OP_TANH ────────────────────────────────────────────────
-    wire signed [W-1:0] tanh_result;
-    wire                tanh_valid, tanh_ovf;
+    // ── OP_RECIP / OP_SQRT (merged FSM) ─────────────────────────
+    wire signed [W-1:0] recipsqrt_result;
+    wire                recipsqrt_valid, recipsqrt_ovf;
 
-    eml_tanh_q88_shared #(.W(W),.F(F)) u_tanh (
-        .clk(clk), .rst_n(rst_n), .start(start_tanh),
-        .x_in(x_in),
-        .result(tanh_result), .valid(tanh_valid), .ovf(tanh_ovf),
-        .eml_x_out(tanh_eml_x), .eml_y_out(tanh_eml_y),
-        .eml_out_in(tile_out), .eml_ovf_in(tile_ovf)
-    );
-
-    // ── OP_RECIP ───────────────────────────────────────────────
-    wire signed [W-1:0] recip_result;
-    wire                recip_valid, recip_ovf;
-
-    eml_recip_q88_shared #(.W(W),.F(F)) u_recip (
-        .clk(clk), .rst_n(rst_n), .start(start_recip),
+    eml_recip_sqrt_q88_shared #(.W(W),.F(F)) u_recipsqrt (
+        .clk(clk), .rst_n(rst_n), .start(start_recipsqrt), .mode(mode_recipsqrt),
         .x_in(x_in[W-1:0]),
-        .result(recip_result), .valid(recip_valid), .ovf(recip_ovf),
-        .eml_x_out(recip_eml_x), .eml_y_out(recip_eml_y),
-        .eml_out_in(tile_out), .eml_ovf_in(tile_ovf)
-    );
-
-    // ── OP_SQRT ────────────────────────────────────────────────
-    wire signed [W-1:0] sqrt_result;
-    wire                sqrt_valid, sqrt_ovf;
-
-    eml_sqrt_q88_shared #(.W(W),.F(F)) u_sqrt (
-        .clk(clk), .rst_n(rst_n), .start(start_sqrt),
-        .x_in(x_in[W-1:0]),
-        .result(sqrt_result), .valid(sqrt_valid), .ovf(sqrt_ovf),
-        .eml_x_out(sqrt_eml_x), .eml_y_out(sqrt_eml_y),
+        .result(recipsqrt_result), .valid(recipsqrt_valid), .ovf(recipsqrt_ovf),
+        .eml_x_out(recipsqrt_eml_x), .eml_y_out(recipsqrt_eml_y),
         .eml_out_in(tile_out), .eml_ovf_in(tile_ovf)
     );
 
@@ -207,20 +197,20 @@ module eml_wrapper_q88_serial #(
     always @(*) begin
         case (opcode_reg)
             OP_SIGMOID: begin
-                result = sigmoid_result; valid = sigmoid_valid; ovf = sigmoid_ovf; n_err = 1'b0;
-                done = sigmoid_valid;
+                result = sigtanh_result; valid = sigtanh_valid; ovf = sigtanh_ovf; n_err = 1'b0;
+                done = sigtanh_valid;
             end
             OP_TANH: begin
-                result = tanh_result; valid = tanh_valid; ovf = tanh_ovf; n_err = 1'b0;
-                done = tanh_valid;
+                result = sigtanh_result; valid = sigtanh_valid; ovf = sigtanh_ovf; n_err = 1'b0;
+                done = sigtanh_valid;
             end
             OP_RECIP: begin
-                result = recip_result; valid = recip_valid; ovf = recip_ovf; n_err = 1'b0;
-                done = recip_valid;
+                result = recipsqrt_result; valid = recipsqrt_valid; ovf = recipsqrt_ovf; n_err = 1'b0;
+                done = recipsqrt_valid;
             end
             OP_SQRT: begin
-                result = sqrt_result; valid = sqrt_valid; ovf = sqrt_ovf; n_err = 1'b0;
-                done = sqrt_valid;
+                result = recipsqrt_result; valid = recipsqrt_valid; ovf = recipsqrt_ovf; n_err = 1'b0;
+                done = recipsqrt_valid;
             end
             OP_SOFTMAX: begin
                 // softmax_valid (module's own transaction-complete) is

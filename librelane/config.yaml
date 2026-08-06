@@ -38,10 +38,8 @@ VERILOG_FILES:
 - dir::../src/ai_byte/eml/mitchell_log2_q88.v
 - dir::../src/ai_byte/eml/mitchell_exp2_q88.v
 - dir::../src/ai_byte/eml/eml_tile_q88.v
-- dir::../src/ai_byte/eml/eml_sigmoid_q88_shared.v
-- dir::../src/ai_byte/eml/eml_tanh_q88_shared.v
-- dir::../src/ai_byte/eml/eml_recip_q88_shared.v
-- dir::../src/ai_byte/eml/eml_sqrt_q88_shared.v
+- dir::../src/ai_byte/eml/eml_recip_sqrt_q88_shared.v
+- dir::../src/ai_byte/eml/eml_sigmoid_tanh_q88_shared.v
 - dir::../src/ai_byte/eml/eml_softmax_q88_serial.v
 - dir::../src/ai_byte/eml/eml_feedback_cell_q88_shared.v
 - dir::../src/ai_byte/eml/eml_wrapper_q88_serial.v
