@@ -24,7 +24,7 @@
 		""
 	],
 	"LVS_VERILOG_FILES": [
-		""
+		"$UPRJ_ROOT/verilog/gl/ai_byte_top.v"
 	],
 	"LAYOUT_FILE": "$UPRJ_ROOT/gds/ai_byte_top.gds"
 }
