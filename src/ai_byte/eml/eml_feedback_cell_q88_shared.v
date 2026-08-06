@@ -17,7 +17,8 @@
 //    0,1  iterate Y       out = eml(x_ext, out_prev)
 //    1,1  cross-feedback  out = eml(out_prev, out_prev)
 //
-//  fb_reg resets to Q88_ONE = 0x0100 (1.0) on rst_n (active-low).
+//  fb_reg resets to Q88_ONE = 0x0100 (1.0) on rst_n low (synchronous,
+//  active-low).
 // ============================================================
 `timescale 1ns/1ps
 
@@ -26,7 +27,7 @@ module eml_feedback_cell_q88_shared #(
     parameter F = 8
 )(
     input  wire             clk,
-    input  wire             rst_n,
+    input  wire             rst_n,   // synchronous, active-low
     input  wire             valid_in,
     input  wire signed [W-1:0] x_ext,
     input  wire        [W-1:0] y_ext,
