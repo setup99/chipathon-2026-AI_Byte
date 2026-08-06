@@ -1,0 +1,32 @@
+read_verilog -sv \
+    gemm_systolic_2d.v \
+    pe_gemv_ws.v \
+    ram_sdp.v \
+
+
+
+hierarchy -top  gemm_systolic_2d
+
+# RTL translation
+proc
+opt
+fsm
+opt
+
+# Resource sharing
+wreduce
+opt
+share -aggressive
+opt
+
+# Low-level mapping
+techmap
+opt
+
+# ABC Logic Optimization (Fixed syntax)
+abc
+
+clean
+check
+stat
+write_verilog  gemm_systolic_2d_syn.v

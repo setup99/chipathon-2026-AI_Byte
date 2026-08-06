@@ -1,0 +1,20 @@
+# Makefile.cocotb - Cocotb execution sub-makefile
+
+SIM ?= icarus
+TOPLEVEL_LANG ?= verilog
+
+# Pass source files from parent make
+VERILOG_SOURCES = $(SRC_FILES)
+
+# TOPLEVEL is the name of the toplevel module in your Verilog or VHDL file
+# COCOTB_TEST_MODULES is the name of the Python test file (without .py)
+TOPLEVEL ?= gemm_systolic_2d
+COCOTB_TEST_MODULES ?= test_gemm
+
+# Separate build directories to avoid collisions
+SIM_BUILD ?= sim_build
+
+# Ensure python knows where to find the test modules
+export PYTHONPATH := $(PWD)/tb:$(PWD):$(PYTHONPATH)
+
+include $(shell cocotb-config --makefiles)/Makefile.sim

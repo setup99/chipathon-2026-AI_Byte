@@ -1,0 +1,41 @@
+# ----- ------ ----- ----- ------ ----- ----- ------ -----
+# Chipathon 2026: Project configuration
+# LICENSE: Apache License Version 2.0
+# http://www.apache.org/licenses/
+# ----- ------ ----- ----- ------ ----- ----- ------ -----
+#
+# Data is pulled from the main branch of the repo.
+# Keep main current with the design / GDS you intend to submit.
+# This file will be updated later (e.g. full pin tables).
+#
+# ======================================================
+# Project metadata (used for documentation / review)
+# ======================================================
+project:
+  title: "AI_BYTE"
+  team: "AI_Byte"                 # update if the official team name differs
+  discord: ""                     # optional Discord handle
+  description: >
+    Lightweight edge AI / math accelerator (systolic CNN tiles,
+    Q8.8 ALU, EML elementary functions) with 8-bit host MMIF on GF180MCU.
+  # Relative path from repository root:
+  lvs_config: "lvs_config.json"
+
+# ======================================================
+# Pin data (to be filled / expanded per weekly instructions)
+# Functional minimum host nets (package map may add more pads).
+# Format may change when organizers publish the full schema —
+# keep signals accurate; renumber/names to match final pinout table.
+# ======================================================
+# pins:
+#   - { name: VDD,  type: power,  direction: inout,  voltage: "5V" }
+#   - { name: VSS,  type: ground, direction: inout }
+#   - { name: CLK,  type: digital, direction: input }
+#   - { name: RST_N, type: digital, direction: input }
+#   - { name: ADDR, type: digital, direction: input,  width: 4 }
+#   - { name: DATA, type: digital, direction: inout,  width: 8 }
+#   - { name: WE,   type: digital, direction: input }
+#   - { name: RE,   type: digital, direction: input }
+#   - { name: IRQ,  type: digital, direction: output }
+#   - { name: DONE, type: digital, direction: output }
+#   - { name: ERROR, type: digital, direction: output }
