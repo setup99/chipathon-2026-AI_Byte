@@ -52,8 +52,7 @@ module eml_softmax_q88_serial #(
     parameter F     = 8,
     parameter MAX_N = 8
 )(
-    input  wire                   clk, start,
-    input  wire                   rst_n,   // synchronous, active-low
+    input  wire                   clk, rst_n, start,
     input  wire [3:0]             n_in,
     input  wire signed [W-1:0]    z_in,
     input  wire                   z_valid,

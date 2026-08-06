@@ -49,8 +49,12 @@ module mitchell_exp2_q88 #(
 
     reg [2*W-1:0] wide;
     always @(*) begin
-        if (rsh < 0)         y = {W{1'b1}};
-        else if (rsh >= 2*W) y = {W{1'b0}};
+        // Default: avoid inferred latch (Verilator -Werror=LATCH)
+        wide = {2*W{1'b0}};
+        if (rsh < 0)
+            y = {W{1'b1}};
+        else if (rsh >= 2*W)
+            y = {W{1'b0}};
         else begin
             wide = wide_base >> rsh;
             y    = (|wide[2*W-1:W]) ? {W{1'b1}} : wide[W-1:0];

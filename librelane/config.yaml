@@ -38,8 +38,10 @@ VERILOG_FILES:
 - dir::../src/ai_byte/eml/mitchell_log2_q88.v
 - dir::../src/ai_byte/eml/mitchell_exp2_q88.v
 - dir::../src/ai_byte/eml/eml_tile_q88.v
-- dir::../src/ai_byte/eml/eml_recip_sqrt_q88_shared.v
-- dir::../src/ai_byte/eml/eml_sigmoid_tanh_q88_shared.v
+- dir::../src/ai_byte/eml/eml_sigmoid_q88_shared.v
+- dir::../src/ai_byte/eml/eml_tanh_q88_shared.v
+- dir::../src/ai_byte/eml/eml_recip_q88_shared.v
+- dir::../src/ai_byte/eml/eml_sqrt_q88_shared.v
 - dir::../src/ai_byte/eml/eml_softmax_q88_serial.v
 - dir::../src/ai_byte/eml/eml_feedback_cell_q88_shared.v
 - dir::../src/ai_byte/eml/eml_wrapper_q88_serial.v
@@ -95,7 +97,8 @@ PL_TARGET_DENSITY_PCT: 50
 GRT_ALLOW_CONGESTION: true
 
 # Fix antenna violations after DRT
-DRT_ANTENNA_REPAIR_ITERS: 10
+DRT_OPT_ITERS: 15
+DRT_ANTENNA_REPAIR_ITERS: 0
 DRT_ANTENNA_REPAIR_MARGIN: 10 # %
 
 # PDN - Straps
