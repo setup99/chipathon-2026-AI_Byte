@@ -12,7 +12,7 @@
 # Project metadata (used for documentation / review)
 # ======================================================
 project:
-  title: "AI_BYTE"
+  title: "A Reconfigurable AI and Mathematical Expression Accelerator for Edge Inference"
   team: "AI_Byte"                 # update if the official team name differs
   discord: ""                     # optional Discord handle
   description: >
