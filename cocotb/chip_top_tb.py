@@ -20,7 +20,7 @@ from cocotb_tools.runner import get_runner
 sim = os.getenv("SIM", "icarus")
 pdk_root = os.getenv("PDK_ROOT", str(Path(__file__).resolve().parent.parent / "gf180mcu"))
 pdk = os.getenv("PDK", "gf180mcuD")
-scl = os.getenv("SCL", "gf180mcu_fd_sc_mcu9t5v0")
+scl = os.getenv("SCL", "gf180mcu_fd_sc_mcu7t5v0")
 gl = os.getenv("GL", "0") not in ("0", "false", "False", "")
 slot = os.getenv("SLOT", "workshop")
 
@@ -72,8 +72,11 @@ async def set_defaults(dut):
 
 
 async def enable_power(dut):
-    dut.VDD.value = 1
-    dut.VSS.value = 0
+    try:
+        dut.VDD.value = 1
+        dut.VSS.value = 0
+    except AttributeError:
+        pass  # no top-level power ports (post-synth GL without USE_POWER_PINS)
 
 
 async def start_clock(clock, freq=50):
@@ -119,11 +122,30 @@ def chip_top_runner():
     defines = {f"SLOT_{slot.upper()}": True}
     includes = [proj_path / "../src/"]
 
+    chip_pnl = proj_path / f"../final/pnl/{hdl_toplevel}.pnl.v"
+    core_pnl = proj_path / "../final/pnl/ai_byte_top.pnl.v"
+
     if gl:
+        # Prefer full-chip GL netlist; else mixed: RTL padframe + core GL.
         sources.append(Path(pdk_root) / pdk / "libs.ref" / scl / "verilog" / f"{scl}.v")
         sources.append(Path(pdk_root) / pdk / "libs.ref" / scl / "verilog" / "primitives.v")
-        sources.append(proj_path / f"../final/pnl/{hdl_toplevel}.pnl.v")
-        defines = {"FUNCTIONAL": True, "USE_POWER_PINS": True}
+        defines["FUNCTIONAL"] = True
+        if chip_pnl.is_file():
+            sources.append(chip_pnl)
+            defines["USE_POWER_PINS"] = True
+        elif core_pnl.is_file():
+            sources.append(proj_path / "../src/chip_top.sv")
+            sources.append(proj_path / "../src/chip_core.sv")
+            sources.append(core_pnl)
+            # Post-PnR pnl has VDD/VSS; post-synth .nl often does not.
+            net_txt = core_pnl.read_text(encoding="utf-8", errors="ignore")[:4000]
+            if "VDD" in net_txt and "VSS" in net_txt:
+                defines["USE_POWER_PINS"] = True
+        else:
+            raise FileNotFoundError(
+                "GL requested but no final/pnl/chip_top.pnl.v or "
+                "final/pnl/ai_byte_top.pnl.v — copy from LibreLane final/ first"
+            )
     else:
         sources.append(proj_path / "../src/chip_top.sv")
         sources.append(proj_path / "../src/chip_core.sv")
@@ -136,12 +158,14 @@ def chip_top_runner():
         proj_path / "../ip/gf180mcu_ws_ip__id/vh/gf180mcu_ws_ip__id.v",
         proj_path / "../ip/gf180mcu_ws_ip__logo/vh/gf180mcu_ws_ip__logo.v",
     ]
+    sources = [s for s in sources if Path(s).is_file()]
+    print(f"[GL={gl}] sources={len(sources)} defines={defines}")
 
     test_module = os.getenv("COCOTB_TEST_MODULES", "chip_top_tb,test_ai_byte")
 
     runner = get_runner(sim)
     runner.build(
-        sources=[s for s in sources if Path(s).exists() or True],
+        sources=sources,
         hdl_toplevel=hdl_toplevel,
         defines=defines,
         always=True,

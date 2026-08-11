@@ -4,6 +4,8 @@ gf180mcu/
 gf180_drc.lyrdb
 sim_build/
 final/
+final_core/
+librelane/.core_size_override.yaml
 img/
 *.lyrdb
 .ipynb_checkpoints/

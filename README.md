@@ -205,20 +205,25 @@ Needs cocotb + a Verilog simulator. PDK not required for pure RTL cocotb.
 
 ### Place & route
 
+Uses PDK `gf180mcuD` and stdcell **`gf180mcu_fd_sc_mcu7t5v0`**.  
+**Crispi-style:** harden the core, then place it as a macro in the workshop padring.
+
 ```bash
-make clone-pdk         # once → ~/.cache/ai-byte/pdk/gf180mcu
-make check-pdk
+make clone-pdk && make check-pdk
 
-# Digital core only (no pads) — area / timing exploration
+# Step A — digital core macro (no pads)
 make librelane-core-nodrc
-# make librelane-core CORE_SIDE=1100 PL_DENSITY=55
+# make librelane-core
 
-# Full chip with padframe
-make librelane
-# make librelane-nodrc
+# Step B — workshop padframe + hardened ai_byte_top macro
+SLOT=workshop make librelane
+# SLOT=workshop make librelane-nodrc
 ```
 
-Outputs: `final_core/` (core) or `final/gds/chip_top.gds` (full chip).
+Confirm SCL: `make help` prints `STD_CELL_LIBRARY=gf180mcu_fd_sc_mcu7t5v0`.  
+Details: [`librelane/README.md`](librelane/README.md).
+
+Outputs: `final_core/` (macro) then `final/gds/chip_top.gds` (submission).
 
 ### Resync RTL from parent monorepo (optional)
 

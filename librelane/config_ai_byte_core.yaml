@@ -91,6 +91,6 @@ ERROR_ON_MAGIC_DRC: False
 MACROS: {}
 PDN_MACRO_CONNECTIONS: []
 
-# Skip heavy tapeout checks while exploring core size (full Chip flow for
-# submission still uses config.yaml + workshop slot).
-# Override or re-enable as needed.
+# Skip heavy tapeout checks while exploring core size.
+# After a good macro, integrate with workshop pads:
+#   SLOT=workshop make librelane   (config.yaml MACROS ← final_core/)

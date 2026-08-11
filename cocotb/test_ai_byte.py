@@ -71,8 +71,11 @@ async def start_up(dut, freq_mhz=50):
     except Exception:
         pass
     if GL:
-        dut.VDD.value = 1
-        dut.VSS.value = 0
+        try:
+            dut.VDD.value = 1
+            dut.VSS.value = 0
+        except AttributeError:
+            pass
     bits = ["z"] * 20
     for i in range(14):
         bits[i] = "0"

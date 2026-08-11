@@ -13,7 +13,11 @@ TOP = chip_top
 PDK_TAG ?= 1.8.0
 PDK := gf180mcuD
 PDK_ROOT := $(HOME)/.cache/ai-byte/pdk/gf180mcu
-export STD_CELL_LIBRARY := gf180mcu_fd_sc_mcu9t5v0
+# Team stdcell: always 7-track 5V. Make cmdline can still override:
+#   make librelane-core STD_CELL_LIBRARY=gf180mcu_fd_sc_mcu9t5v0
+# `:=` ignores ambient shell STD_CELL_LIBRARY/SCL (avoids accidental 9t).
+STD_CELL_LIBRARY := gf180mcu_fd_sc_mcu7t5v0
+export STD_CELL_LIBRARY
 export PAD_CELL_LIBRARY := gf180mcu_fd_io
 export SCL := $(STD_CELL_LIBRARY)
 
@@ -39,6 +43,7 @@ help: ## Show this help message
 	@echo ''
 	@echo "PDK_ROOT=$(PDK_ROOT)"
 	@echo "  (persistent cache; clone once with make clone-pdk)"
+	@echo "STD_CELL_LIBRARY=$(STD_CELL_LIBRARY)  (team default: mcu7t5v0)"
 .PHONY: help
 
 all: librelane ## Build the project (runs LibreLane)
@@ -103,12 +108,19 @@ LIBRELANE_COMMON = librelane librelane/slots/slot_${SLOT}.yaml librelane/config.
 	--save-views-to $(MAKEFILE_DIR)/final \
 	--pdk ${PDK} --pdk-root ${PDK_ROOT} --scl ${STD_CELL_LIBRARY} --manual-pdk
 
+LIBRELANE_FLAT = librelane librelane/slots/slot_${SLOT}.yaml librelane/config_flat.yaml \
+	--save-views-to $(MAKEFILE_DIR)/final \
+	--pdk ${PDK} --pdk-root ${PDK_ROOT} --scl ${STD_CELL_LIBRARY} --manual-pdk
+
 CORE_SIDE    ?= 1100
 CORE_MARGIN  ?= 10
 PL_DENSITY   ?= 55
 CORE_FINAL   := $(MAKEFILE_DIR)/final_core
 CORE_CFG     := $(MAKEFILE_DIR)/librelane/config_ai_byte_core.yaml
 CORE_SIZE_YAML := $(MAKEFILE_DIR)/librelane/.core_size_override.yaml
+CORE_GDS     := $(CORE_FINAL)/gds/ai_byte_top.gds
+CORE_LEF     := $(CORE_FINAL)/lef/ai_byte_top.lef
+CORE_NL      := $(CORE_FINAL)/nl/ai_byte_top.nl.v
 
 define write_core_size_yaml
 	@core_hi=$$(( $(CORE_SIDE) - $(CORE_MARGIN) )); \
@@ -138,19 +150,49 @@ librelane-core-nodrc: check-pdk ## Core-only without DRC
 	$(LIBRELANE_CORE) --skip KLayout.Antenna --skip KLayout.DRC --skip Magic.DRC
 .PHONY: librelane-core-nodrc
 
-librelane: check-pdk ## Full chip LibreLane (padframe)
+# Crispi-style step 2 requires hardened core views from step 1
+check-core-macro: ## Verify final_core macro views exist for hierarchical chip
+	@missing=0; \
+	for f in "$(CORE_GDS)" "$(CORE_LEF)" "$(CORE_NL)"; do \
+	  if [ ! -f "$$f" ]; then echo "MISSING: $$f"; missing=1; fi; \
+	done; \
+	for c in nom_tt_025C_5v00 nom_ss_125C_4v50 nom_ff_n40C_5v50 \
+	         min_tt_025C_5v00 min_ss_125C_4v50 min_ff_n40C_5v50 \
+	         max_tt_025C_5v00 max_ss_125C_4v50 max_ff_n40C_5v50; do \
+	  f="$(CORE_FINAL)/lib/$$c/ai_byte_top__$$c.lib"; \
+	  if [ ! -f "$$f" ]; then echo "MISSING: $$f"; missing=1; fi; \
+	done; \
+	if [ "$$missing" = 1 ]; then \
+	  echo ""; \
+	  echo "Hierarchical chip flow needs a hardened ai_byte_top macro."; \
+	  echo "Run first:  make librelane-core   (or make librelane-core-nodrc)"; \
+	  echo "Views land in: $(CORE_FINAL)/"; \
+	  exit 1; \
+	fi; \
+	echo "OK: ai_byte_top macro views in $(CORE_FINAL)/"
+.PHONY: check-core-macro
+
+librelane: check-pdk check-core-macro ## Full chip: place hardened core macro in workshop padring
 	$(LIBRELANE_COMMON)
 .PHONY: librelane
 
-librelane-nodrc: check-pdk ## Full chip without DRC
+librelane-nodrc: check-pdk check-core-macro ## Full chip hierarchical, skip DRC
 	$(LIBRELANE_COMMON) --skip KLayout.Antenna --skip KLayout.DRC --skip Magic.DRC
 .PHONY: librelane-nodrc
 
-librelane-klayoutdrc: check-pdk ## LibreLane without Magic DRC
+librelane-flat: check-pdk ## Full chip flat (re-synth all RTL; no macro). Uses config_flat.yaml
+	$(LIBRELANE_FLAT)
+.PHONY: librelane-flat
+
+librelane-flat-nodrc: check-pdk ## Flat chip without DRC
+	$(LIBRELANE_FLAT) --skip KLayout.Antenna --skip KLayout.DRC --skip Magic.DRC
+.PHONY: librelane-flat-nodrc
+
+librelane-klayoutdrc: check-pdk check-core-macro ## LibreLane without Magic DRC
 	$(LIBRELANE_COMMON) --skip Magic.DRC
 .PHONY: librelane-klayoutdrc
 
-librelane-magicdrc: check-pdk ## LibreLane without KLayout DRC
+librelane-magicdrc: check-pdk check-core-macro ## LibreLane without KLayout DRC
 	$(LIBRELANE_COMMON) --skip KLayout.DRC
 .PHONY: librelane-magicdrc
 

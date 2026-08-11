@@ -193,6 +193,6 @@ add_pdn_connect \
     -grid macro \
     -layers "$::env(PDN_VERTICAL_LAYER) $::env(PDN_HORIZONTAL_LAYER)"
 
-# No custom per-macro PDN grids for the workshop slot: the core
-# holds only a 20-bit counter, no SRAMs, so the generic `macro` grid
-# above covers the chip_id / logo placeholders.
+# Adds the core ring if enabled.
+# Hierarchical chip: MACROS + PDN_MACRO_CONNECTIONS in config.yaml
+# connect the hardened ai_byte_top instance (i_chip_core.u_ai_byte).

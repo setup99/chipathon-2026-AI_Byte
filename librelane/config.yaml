@@ -1,3 +1,15 @@
+# Full-chip Chip flow — Crispi-style hierarchical integration.
+#
+# Step 1: harden the digital core (Classic):
+#   make librelane-core   →  final_core/{gds,lef,nl,lib}/ai_byte_top.*
+# Step 2: place that macro inside the workshop padring:
+#   SLOT=workshop make librelane
+#
+# Padframe RTL only (chip_top + chip_core). AI_BYTE RTL is NOT re-synthesized;
+# LibreLane blackboxes `ai_byte_top` from final_core views under MACROS.
+#
+# Flat (re-synth everything) path kept as: config_flat.yaml + make librelane-flat
+
 meta:
   version: 3
   flow: Chip
@@ -25,83 +37,44 @@ meta:
     #Checker.LVS: null
 
 DESIGN_NAME: chip_top
+
+# Padframe + pad adapter only. Do NOT list src/ai_byte/*.v here.
 VERILOG_FILES:
-# Padframe top + AI_BYTE pad wrapper
 - dir::../src/chip_top.sv
 - dir::../src/chip_core.sv
-# AI_BYTE CE / SRAM / control (vendored under src/ai_byte/)
-- dir::../src/ai_byte/post/alu_q88.v
-- dir::../src/ai_byte/post/relu_int16.v
-- dir::../src/ai_byte/post/pooling_int16.v
-- dir::../src/ai_byte/post/scale_int16_to_int8.v
-- dir::../src/ai_byte/post/block_wrapper.v
-- dir::../src/ai_byte/eml/mitchell_log2_q88.v
-- dir::../src/ai_byte/eml/mitchell_exp2_q88.v
-- dir::../src/ai_byte/eml/eml_tile_q88.v
-- dir::../src/ai_byte/eml/eml_sigmoid_q88_shared.v
-- dir::../src/ai_byte/eml/eml_tanh_q88_shared.v
-- dir::../src/ai_byte/eml/eml_recip_q88_shared.v
-- dir::../src/ai_byte/eml/eml_sqrt_q88_shared.v
-- dir::../src/ai_byte/eml/eml_softmax_q88_serial.v
-- dir::../src/ai_byte/eml/eml_feedback_cell_q88_shared.v
-- dir::../src/ai_byte/eml/eml_wrapper_q88_serial.v
-- dir::../src/ai_byte/sa/ram_sdp.v
-- dir::../src/ai_byte/sa/pe_gemv_ws.v
-- dir::../src/ai_byte/sa/gemm_systolic_2d.v
-- dir::../src/ai_byte/buffers/ai_byte_sram_buffer.v
-- dir::../src/ai_byte/interface/ai_byte_mmif.v
-- dir::../src/ai_byte/control/reg_file.v
-- dir::../src/ai_byte/control/control_unit.v
-- dir::../src/ai_byte/control/buffer_ctrl.v
-- dir::../src/ai_byte/control/control_wrap.v
-- dir::../src/ai_byte/top/ai_byte_core.v
-- dir::../src/ai_byte/top/ai_byte_top.v
 
-# Enable plugin for better SystemVerilog support
-# USE_SLANG: True
-# SLANG_ARGUMENTS: ['--keep-hierarchy']
-
-# Slightly smaller file sizes
 PRIMARY_GDSII_STREAMOUT_TOOL: klayout
 
-# SDC files
 PNR_SDC_FILE: dir::chip_top.sdc
 SIGNOFF_SDC_FILE: dir::chip_top.sdc
 FALLBACK_SDC: dir::chip_top.sdc
 
-# Power / ground nets
 VDD_NETS:
 - VDD
 GND_NETS:
 - VSS
 
-# We need to add gf180mcu_fd_io__bi_24t
-# due to the unused Y output for output only pads
 IGNORE_DISCONNECTED_MODULES:
 - gf180mcu_fd_io__bi_24t
 - gf180mcu_ws_ip__id
 - gf180mcu_ws_ip__logo
 
-# Clock
+# Match hardened core (config_ai_byte_core.yaml). 25 MHz does not close on SS.
 CLOCK_PORT: clk_PAD
 CLOCK_NET: clk_pad/Y
-CLOCK_PERIOD: 40 # 25 MHz
+CLOCK_PERIOD: 100 # 10 MHz
 
-# Fix hold violations
 PL_RESIZER_HOLD_SLACK_MARGIN: 0.35
 GRT_RESIZER_HOLD_SLACK_MARGIN: 0.3
 
-# Increase for more logic
-# on your die (AI_BYTE ~20k cells after FF-mapped SRAMs)
-PL_TARGET_DENSITY_PCT: 50
+# Chip-top stdcell density (glue + pad logic only; bulk is the macro)
+PL_TARGET_DENSITY_PCT: 40
 GRT_ALLOW_CONGESTION: true
 
-# Fix antenna violations after DRT
 DRT_OPT_ITERS: 15
 DRT_ANTENNA_REPAIR_ITERS: 0
-DRT_ANTENNA_REPAIR_MARGIN: 10 # %
+DRT_ANTENNA_REPAIR_MARGIN: 10
 
-# PDN - Straps
 PDN_VWIDTH: 5
 PDN_HWIDTH: 5
 PDN_VSPACING: 1
@@ -109,9 +82,7 @@ PDN_HSPACING: 1
 PDN_VPITCH: 75
 PDN_HPITCH: 75
 
-# PDN - Core ring
 PDN_CORE_RING: True
-# Maximum metal width without slotting: 30um
 PDN_CORE_RING_VWIDTH: 25
 PDN_CORE_RING_HWIDTH: 25
 PDN_CORE_RING_CONNECT_TO_PADS: True
@@ -119,21 +90,10 @@ PDN_ENABLE_PINS: False
 PDN_CORE_VERTICAL_LAYER: Metal2
 PDN_CORE_HORIZONTAL_LAYER: Metal3
 
-# Due to OpenROAD bug
-# https://github.com/The-OpenROAD-Project/OpenROAD/issues/8229
-#PL_TIME_DRIVEN: False
-#PL_ROUTABILITY_DRIVEN: False
-
-# Do not error on magic DRC violations
-# Note: Passing magic DRC is not required for the submission.
-# However, it is recommended to fix or carefully review all violations.
 ERROR_ON_MAGIC_DRC: False
 
-# Prevent false positive DRC errors in I/O cells
 MAGIC_GDS_FLATGLOB:
-# For contacts
 - "*_CDNS_*"
-# Foundry provided SRAMs
 - "*$$*"
 - "M1_N*"
 - "M1_P*"
@@ -146,8 +106,6 @@ MAGIC_GDS_FLATGLOB:
 - "via1_*"
 - "ypass_gate*"
 - "G_ring_*"
-# These additional cells must be flattened to get rid of 3.3V devices
-# (DUALGATE drawn into high-level cells)
 - "dcap_103*"
 - "din_*"
 - "mux821_*"
@@ -162,17 +120,48 @@ MAGIC_GDS_FLATGLOB:
 - "xdec32_*"
 - "sa_*"
 
-# Since we cannot meet the minimum density limit on Metal2,
-# ignore active metal on previous and subsequent layers
-# (DM.5_DM.7 and DM.4_DM.6). Dummy metal is moved to active
-# metal during the precheck.
 KLAYOUT_FILLER_OPTIONS:
   Metal2_ignore_active: true
 
-# Because we have multiple power pads for one power domain
 MAGIC_EXT_UNIQUE: notopports
 
+# ---------------------------------------------------------------------------
+# Hardened AI_BYTE core macro (from make librelane-core → final_core/)
+# Instance hierarchy: chip_top.i_chip_core.u_ai_byte
+# Placement: SW of workshop core (~442..2493 µm). Macro die ~1100×1100 µm.
+# ---------------------------------------------------------------------------
 MACROS:
+  ai_byte_top:
+    gds:
+      - dir::../final_core/gds/ai_byte_top.gds
+    lef:
+      - dir::../final_core/lef/ai_byte_top.lef
+    vh:
+      - dir::../final_core/nl/ai_byte_top.nl.v
+    lib:
+      nom_tt_025C_5v00:
+        - dir::../final_core/lib/nom_tt_025C_5v00/ai_byte_top__nom_tt_025C_5v00.lib
+      nom_ss_125C_4v50:
+        - dir::../final_core/lib/nom_ss_125C_4v50/ai_byte_top__nom_ss_125C_4v50.lib
+      nom_ff_n40C_5v50:
+        - dir::../final_core/lib/nom_ff_n40C_5v50/ai_byte_top__nom_ff_n40C_5v50.lib
+      min_tt_025C_5v00:
+        - dir::../final_core/lib/min_tt_025C_5v00/ai_byte_top__min_tt_025C_5v00.lib
+      min_ss_125C_4v50:
+        - dir::../final_core/lib/min_ss_125C_4v50/ai_byte_top__min_ss_125C_4v50.lib
+      min_ff_n40C_5v50:
+        - dir::../final_core/lib/min_ff_n40C_5v50/ai_byte_top__min_ff_n40C_5v50.lib
+      max_tt_025C_5v00:
+        - dir::../final_core/lib/max_tt_025C_5v00/ai_byte_top__max_tt_025C_5v00.lib
+      max_ss_125C_4v50:
+        - dir::../final_core/lib/max_ss_125C_4v50/ai_byte_top__max_ss_125C_4v50.lib
+      max_ff_n40C_5v50:
+        - dir::../final_core/lib/max_ff_n40C_5v50/ai_byte_top__max_ff_n40C_5v50.lib
+    instances:
+      i_chip_core.u_ai_byte:
+        location: [500, 500]
+        orientation: N
+
   gf180mcu_ws_ip__id:
     gds:
       - dir::../ip/gf180mcu_ws_ip__id/gds/gf180mcu_ws_ip__id.gds
@@ -203,17 +192,10 @@ MACROS:
         location: ["expr::$DIE_AREA[2] + -169.25", "expr::$DIE_AREA[3] + -169.25"]
         orientation: N
 
-# No user macros for the workshop slot -- the core is a trivial
-# counter.  chip_id + wafer.space logo (above) are the only placed
-# macros.
+# Connect chip PDN straps to the hardened core power pins
+PDN_MACRO_CONNECTIONS:
+- ".*u_ai_byte.* VDD VSS VDD VSS"
 
-# No macro PDN connections needed beyond what the PDN grid already
-# supplies through chip_id / logo.  Keep the key as an empty list so
-# the rest of the config still parses.
-PDN_MACRO_CONNECTIONS: []
-
-# Halo size around macros while cutting rows.
-# Workaround for: https://github.com/The-OpenROAD-Project/OpenROAD/issues/8868
 FP_MACRO_HORIZONTAL_HALO: 10
 FP_MACRO_VERTICAL_HALO: 10
 PDN_HORIZONTAL_HALO: 5
