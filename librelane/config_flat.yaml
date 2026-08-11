@@ -98,9 +98,8 @@ GRT_RESIZER_HOLD_SLACK_MARGIN: 0.3
 PL_TARGET_DENSITY_PCT: 50
 GRT_ALLOW_CONGESTION: true
 
-# Fix antenna violations after DRT
-DRT_OPT_ITERS: 15
-DRT_ANTENNA_REPAIR_ITERS: 0
+# Leave DRT_OPT_ITERS / DRT_ANTENNA_REPAIR_ITERS unset so LibreLane
+# uses defaults and can iterate until DRC is clean.
 DRT_ANTENNA_REPAIR_MARGIN: 10 # %
 
 # PDN - Straps
