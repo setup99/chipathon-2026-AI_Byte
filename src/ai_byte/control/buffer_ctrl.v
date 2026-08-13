@@ -133,6 +133,13 @@ module ai_byte_buffer_ctrl_v2
 
     integer ii;
 
+    // Icarus: declare before use in the combinational mux below.
+    reg m_act_ce, m_act_we, m_wt_ce, m_wt_we, m_res_ce, m_res_we;
+    reg [ACT_ADDR_W-1:0] m_act_addr;
+    reg [WT_ADDR_W-1:0]  m_wt_addr;
+    reg [RES_ADDR_W-1:0] m_res_addr;
+    reg [DATA_W-1:0] m_act_wdata, m_wt_wdata, m_res_wdata;
+
     // -------- CPU mux (combinational) --------
     always @(*) begin
         sram_act_ce=0; sram_act_we=0; sram_act_addr=0; sram_act_wdata=0;
@@ -167,12 +174,6 @@ module ai_byte_buffer_ctrl_v2
             sram_res_addr=m_res_addr; sram_res_wdata=m_res_wdata;
         end
     end
-
-    reg m_act_ce, m_act_we, m_wt_ce, m_wt_we, m_res_ce, m_res_we;
-    reg [ACT_ADDR_W-1:0] m_act_addr;
-    reg [WT_ADDR_W-1:0]  m_wt_addr;
-    reg [RES_ADDR_W-1:0] m_res_addr;
-    reg [DATA_W-1:0] m_act_wdata, m_wt_wdata, m_res_wdata;
 
     function automatic signed [15:0] sext8;
         input [7:0] b;

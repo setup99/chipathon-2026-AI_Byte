@@ -1,0 +1,18 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1786618220" />
+    <testcase name="test_smoke_reset" classname="chip_top_tb" file="/home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/cocotb/chip_top_tb.py" lineno="103" time="0.09738731384277344" sim_time_ns="1380.0" ratio_time="14170.223466969584" />
+    <testcase name="test_e2e_illegal" classname="test_ai_byte" file="/home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/cocotb/test_ai_byte.py" lineno="137" time="0.034880876541137695" sim_time_ns="520.0" ratio_time="14907.88224277346" />
+    <testcase name="test_e2e_add" classname="test_ai_byte" file="/home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/cocotb/test_ai_byte.py" lineno="150" time="0.12041068077087402" sim_time_ns="1920.0" ratio_time="15945.429323279985" />
+    <testcase name="test_e2e_sub" classname="test_ai_byte" file="/home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/cocotb/test_ai_byte.py" lineno="175" time="0.09695768356323242" sim_time_ns="1919.9999999999995" ratio_time="19802.45329136646" />
+    <testcase name="test_e2e_mul" classname="test_ai_byte" file="/home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/cocotb/test_ai_byte.py" lineno="200" time="0.10905098915100098" sim_time_ns="2280.0" ratio_time="20907.650794830704" />
+    <testcase name="test_e2e_sqrt" classname="test_ai_byte" file="/home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/cocotb/test_ai_byte.py" lineno="225" time="0.07014727592468262" sim_time_ns="1519.999999999999" ratio_time="21668.696039344828" />
+    <testcase name="test_e2e_recip" classname="test_ai_byte" file="/home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/cocotb/test_ai_byte.py" lineno="248" time="0.06977415084838867" sim_time_ns="1520.0" ratio_time="21784.57181518107" />
+    <testcase name="test_e2e_sigmoid" classname="test_ai_byte" file="/home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/cocotb/test_ai_byte.py" lineno="271" time="0.272402286529541" sim_time_ns="8680.000000000002" ratio_time="31864.63707990457" />
+    <testcase name="test_e2e_tanh" classname="test_ai_byte" file="/home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/cocotb/test_ai_byte.py" lineno="293" time="0.2619307041168213" sim_time_ns="9000.0" ratio_time="34360.232911014486" />
+    <testcase name="test_e2e_softmax" classname="test_ai_byte" file="/home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/cocotb/test_ai_byte.py" lineno="315" time="0.11806488037109375" sim_time_ns="2860.0" ratio_time="24223.968982229402" />
+    <testcase name="test_e2e_microprog" classname="test_ai_byte" file="/home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/cocotb/test_ai_byte.py" lineno="338" time="0.08512234687805176" sim_time_ns="1920.0000000000036" ratio_time="22555.76908318376" />
+    <testcase name="test_e2e_fc" classname="test_ai_byte" file="/home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/cocotb/test_ai_byte.py" lineno="365" time="0.5415542125701904" sim_time_ns="16360.0" ratio_time="30209.348612313846" />
+    <testcase name="test_e2e_conv" classname="test_ai_byte" file="/home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/cocotb/test_ai_byte.py" lineno="390" time="0.31777143478393555" sim_time_ns="9240.0" ratio_time="29077.50347756278" />
+  </testsuite>
+</testsuites>
