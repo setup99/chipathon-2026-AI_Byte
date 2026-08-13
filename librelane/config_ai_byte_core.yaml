@@ -56,9 +56,7 @@ CORE_AREA: [10, 10, 1090, 1090]
 # Clock on bare MMIF ports (not pad-inst hierarchy)
 CLOCK_PORT: clk
 CLOCK_NET: clk
-# 25 MHz (40 ns) fails setup on GF180 SS (~73 ns period_min pre-PnR; worse post-CTS).
-# 10 MHz gives PnR margin; tighten again after RTL piping / multi-cycle.
-CLOCK_PERIOD: 100 # 10 MHz
+CLOCK_PERIOD: 140 # 7.14 MHz
 
 PL_TARGET_DENSITY_PCT: 55
 GRT_ALLOW_CONGESTION: true
