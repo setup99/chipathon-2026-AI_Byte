@@ -216,6 +216,11 @@ sim: ## Run RTL simulation with cocotb
 	cd cocotb; PDK_ROOT=${PDK_ROOT} PDK=${PDK} SLOT=${SLOT} \
 		COCOTB_TEST_MODULES=$${COCOTB_TEST_MODULES:-chip_top_tb,test_ai_byte} \
 		python3 chip_top_tb.py
+	@# sim_build/ stays gitignored; copy the xUnit log for Chipathon reviewers
+	@if [ -f cocotb/sim_build/results.xml ]; then \
+	  cp -f cocotb/sim_build/results.xml cocotb/results.xml; \
+	  echo "Wrote cocotb/results.xml (commit this; keep sim_build/ ignored)"; \
+	fi
 .PHONY: sim
 
 sim-gl: ## Gate-level sim (after copy-final)
