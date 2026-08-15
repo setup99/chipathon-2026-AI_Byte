@@ -22,20 +22,39 @@ project:
   lvs_config: "lvs_config.json"
 
 # ======================================================
-# Pin data (to be filled / expanded per weekly instructions)
-# Functional minimum host nets (package map may add more pads).
-# Format may change when organizers publish the full schema —
-# keep signals accurate; renumber/names to match final pinout table.
+# External pad connections (organizer DEF / padframe integrate)
 # ======================================================
-# pins:
-#   - { name: VDD,  type: power,  direction: inout,  voltage: "5V" }
-#   - { name: VSS,  type: ground, direction: inout }
-#   - { name: CLK,  type: digital, direction: input }
-#   - { name: RST_N, type: digital, direction: input }
-#   - { name: ADDR, type: digital, direction: input,  width: 4 }
-#   - { name: DATA, type: digital, direction: inout,  width: 8 }
-#   - { name: WE,   type: digital, direction: input }
-#   - { name: RE,   type: digital, direction: input }
-#   - { name: IRQ,  type: digital, direction: output }
-#   - { name: DONE, type: digital, direction: output }
-#   - { name: ERROR, type: digital, direction: output }
+# Names match ai_byte_top LEF pins (140 ns signoff run).
+# Order: UL quadrant, clockwise bottom-left → upper-right, aligned
+# with core edges for shorter pad↔core routes:
+#   VDD + clk (west) first, then north-edge signals west→east.
+# Ground omitted — common ground in the padframe.
+# Outputs use bidirectional (no dedicated output io_type).
+# Optional status/debug pins kept (done_o, error_o, debug_state).
+# ======================================================
+pins:
+  - { name: VDD,            io_type: power }
+  - { name: clk,            io_type: input_cmos }
+  - { name: data[7],        io_type: bidirectional }
+  - { name: data[5],        io_type: bidirectional }
+  - { name: data[6],        io_type: bidirectional }
+  - { name: data[4],        io_type: bidirectional }
+  - { name: data[0],        io_type: bidirectional }
+  - { name: data[1],        io_type: bidirectional }
+  - { name: data[2],        io_type: bidirectional }
+  - { name: data[3],        io_type: bidirectional }
+  - { name: addr[0],        io_type: input_cmos }
+  - { name: addr[1],        io_type: input_cmos }
+  - { name: addr[2],        io_type: input_cmos }
+  - { name: addr[3],        io_type: input_cmos }
+  - { name: irq,            io_type: bidirectional }
+  # Removable if pad budget is only 22 pins:
+  # done/error are also in the MMIF status register (CPU-readable); keep debug_state on pads.
+  - { name: error_o,        io_type: bidirectional }  # omit first if short on pads
+  - { name: re,             io_type: input_cmos }
+  - { name: done_o,         io_type: bidirectional }  # omit with error_o if short on pads
+  - { name: debug_state[0], io_type: bidirectional }
+  - { name: debug_state[2], io_type: bidirectional }
+  - { name: debug_state[1], io_type: bidirectional }
+  - { name: we,             io_type: input_cmos }
+  - { name: rst_n,          io_type: input_schmitt }
