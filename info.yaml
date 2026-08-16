@@ -33,28 +33,52 @@ project:
 # Optional status/debug pins kept (done_o, error_o, debug_state).
 # ======================================================
 pins:
-  - { name: VDD,            io_type: power }
-  - { name: clk,            io_type: input_cmos }
-  - { name: data[7],        io_type: bidirectional }
-  - { name: data[5],        io_type: bidirectional }
-  - { name: data[6],        io_type: bidirectional }
-  - { name: data[4],        io_type: bidirectional }
-  - { name: data[0],        io_type: bidirectional }
-  - { name: data[1],        io_type: bidirectional }
-  - { name: data[2],        io_type: bidirectional }
-  - { name: data[3],        io_type: bidirectional }
-  - { name: addr[0],        io_type: input_cmos }
-  - { name: addr[1],        io_type: input_cmos }
-  - { name: addr[2],        io_type: input_cmos }
-  - { name: addr[3],        io_type: input_cmos }
-  - { name: irq,            io_type: bidirectional }
-  # Removable if pad budget is only 22 pins:
-  # done/error are also in the MMIF status register (CPU-readable); keep debug_state on pads.
-  - { name: error_o,        io_type: bidirectional }  # omit first if short on pads
-  - { name: re,             io_type: input_cmos }
-  - { name: done_o,         io_type: bidirectional }  # omit with error_o if short on pads
-  - { name: debug_state[0], io_type: bidirectional }
-  - { name: debug_state[2], io_type: bidirectional }
-  - { name: debug_state[1], io_type: bidirectional }
-  - { name: we,             io_type: input_cmos }
-  - { name: rst_n,          io_type: input_schmitt }
+  - name: VDD
+    io_type: power
+  - name: clk
+    io_type: input_cmos
+  - name: "data[7]"
+    io_type: bidirectional
+  - name: "data[5]"
+    io_type: bidirectional
+  - name: "data[6]"
+    io_type: bidirectional
+  - name: "data[4]"
+    io_type: bidirectional
+  - name: "data[0]"
+    io_type: bidirectional
+  - name: "data[1]"
+    io_type: bidirectional
+  - name: "data[2]"
+    io_type: bidirectional
+  - name: "data[3]"
+    io_type: bidirectional
+  - name: "addr[0]"
+    io_type: input_cmos
+  - name: "addr[1]"
+    io_type: input_cmos
+  - name: "addr[2]"
+    io_type: input_cmos
+  - name: "addr[3]"
+    io_type: input_cmos
+  - name: irq
+    io_type: bidirectional
+  # error_o / done_o are removable if the pad budget is only 22 pins: both are
+  # also in the MMIF status register (CPU-readable). Keep debug_state on pads.
+  - name: error_o # can be removed 
+    io_type: bidirectional
+  - name: re
+    io_type: input_cmos
+  - name: done_o # can be removed 
+    io_type: bidirectional
+  - name: "debug_state[0]"
+    io_type: bidirectional
+  - name: "debug_state[2]"
+    io_type: bidirectional
+  - name: "debug_state[1]"
+    io_type: bidirectional
+  - name: we
+    io_type: input_cmos
+  - name: rst_n
+    io_type: input_schmitt
+
