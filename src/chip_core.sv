@@ -9,8 +9,7 @@
 //   [12]    we             host → chip
 //   [13]    re             host → chip
 //   [14]    irq            chip → host
-//   [15]    done_o         chip → host
-//   [16]    error_o        chip → host
+//   [15:16] unused (done/error are in STATUS; CPU-readable)
 //   [17:19] debug_state    chip → host
 
 `default_nettype none
@@ -64,7 +63,7 @@ module chip_core #(
     wire       data_drive = host_re & ~host_we;
 
     wire [7:0] data_bus;
-    wire       irq_w, done_w, error_w;
+    wire       irq_w;
     wire [2:0] debug_w;
 
     // data bus: pads supply value when host writes; core tri-state bus when reading
@@ -89,10 +88,8 @@ module chip_core #(
 
     assign bidir_oe[14]    = 1'b1;                 // irq
     assign bidir_out[14]   = irq_w;
-    assign bidir_oe[15]    = 1'b1;
-    assign bidir_out[15]   = done_w;
-    assign bidir_oe[16]    = 1'b1;
-    assign bidir_out[16]   = error_w;
+    assign bidir_oe[16:15] = 2'b00;                // unused (done/error via STATUS)
+    assign bidir_out[16:15]= 2'b00;
     assign bidir_oe[19:17] = 3'b111;
     assign bidir_out[19:17]= debug_w;
 
@@ -108,6 +105,8 @@ module chip_core #(
 
     wire _unused = &{1'b0, input_in};
 
+    // Blackbox stub (final_core/vh) declares VDD/VSS under USE_POWER_PINS;
+    // PDN also ties them via PDN_MACRO_CONNECTIONS.
     ai_byte_top u_ai_byte (
 `ifdef USE_POWER_PINS
         .VDD        (VDD),
@@ -120,8 +119,6 @@ module chip_core #(
         .we         (host_we),
         .re         (host_re),
         .irq        (irq_w),
-        .done_o     (done_w),
-        .error_o    (error_w),
         .debug_state(debug_w)
     );
 

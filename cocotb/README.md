@@ -137,8 +137,7 @@ Host drives workshop `bidir_PAD` according to `chip_core.sv` / `ai_byte_pads.py`
 | `[12]` | `we` |
 | `[13]` | `re` |
 | `[14]` | `irq` (chip → host) |
-| `[15]` | `done_o` |
-| `[16]` | `error_o` |
+| `[15:16]` | unused (`done`/`error` are in STATUS) |
 | `[17:19]` | `debug_state` (not scored; left Z on host) |
 
 Dedicated: `clk_PAD`, `rst_n_PAD`.  
@@ -222,6 +221,16 @@ Command used:
 ```bash
 SLOT=workshop make sim
 ```
+
+That also copies `cocotb/sim_build/results.xml` → **`cocotb/results.xml`** (tracked).  
+`sim_build/` stays gitignored. After a green run:
+
+```bash
+git add cocotb/results.xml
+git commit -m "Add cocotb pass log (results.xml)"
+```
+
+Confirm no failures: `grep failure cocotb/results.xml` should print nothing.
 
 Re-run after RTL or pad-map changes and update this table if anything fails.
 

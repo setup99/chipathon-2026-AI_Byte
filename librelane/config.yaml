@@ -59,10 +59,10 @@ IGNORE_DISCONNECTED_MODULES:
 - gf180mcu_ws_ip__id
 - gf180mcu_ws_ip__logo
 
-# Match hardened core (config_ai_byte_core.yaml). 25 MHz does not close on SS.
+# Match hardened core (config_ai_byte_core.yaml).
 CLOCK_PORT: clk_PAD
 CLOCK_NET: clk_pad/Y
-CLOCK_PERIOD: 140 # 7.14 MHz
+CLOCK_PERIOD: 140
 
 PL_RESIZER_HOLD_SLACK_MARGIN: 0.35
 GRT_RESIZER_HOLD_SLACK_MARGIN: 0.3
@@ -81,6 +81,10 @@ PDN_VSPACING: 1
 PDN_HSPACING: 1
 PDN_VPITCH: 75
 PDN_HPITCH: 75
+# Align chip M4/M5 straps with final_core LEF power pins when macro is at
+# [500,500] (core origin 442): pin x0=23.9 → 500+23.9-442=81.9; y0=25.91 → 83.91.
+PDN_VOFFSET: 81.9
+PDN_HOFFSET: 83.91
 
 PDN_CORE_RING: True
 PDN_CORE_RING_VWIDTH: 25
@@ -136,8 +140,10 @@ MACROS:
       - dir::../final_core/gds/ai_byte_top.gds
     lef:
       - dir::../final_core/lef/ai_byte_top.lef
+    # Empty port stub for lint/synth blackbox — do NOT point at nl/*.nl.v
+    # (Verilator would parse ~70k gates and hang for hours).
     vh:
-      - dir::../final_core/nl/ai_byte_top.nl.v
+      - dir::../final_core/vh/ai_byte_top.vh
     lib:
       nom_tt_025C_5v00:
         - dir::../final_core/lib/nom_tt_025C_5v00/ai_byte_top__nom_tt_025C_5v00.lib
@@ -196,9 +202,11 @@ MACROS:
 PDN_MACRO_CONNECTIONS:
 - ".*u_ai_byte.* VDD VSS VDD VSS"
 
-FP_MACRO_HORIZONTAL_HALO: 10
-FP_MACRO_VERTICAL_HALO: 10
-PDN_HORIZONTAL_HALO: 5
-PDN_VERTICAL_HALO: 5
+# LEF Metal2 OBS overhangs ~18 µm past the macro box — keep routes clear.
+FP_MACRO_HORIZONTAL_HALO: 30
+FP_MACRO_VERTICAL_HALO: 30
+# Small PDN halo so aligned M4/M5 straps can meet pin overhangs (~16 µm).
+PDN_HORIZONTAL_HALO: 2
+PDN_VERTICAL_HALO: 2
 
 PDN_CFG: dir::pdn_cfg.tcl

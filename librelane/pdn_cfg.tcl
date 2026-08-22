@@ -182,6 +182,7 @@ if { $::env(PDN_CORE_RING) == 1 } {
     }
 }
 
+# Default macro grid — chip_id / logo and any unspecified macros.
 define_pdn_grid \
     -macro \
     -default \
@@ -193,6 +194,29 @@ add_pdn_connect \
     -grid macro \
     -layers "$::env(PDN_VERTICAL_LAYER) $::env(PDN_HORIZONTAL_LAYER)"
 
-# Adds the core ring if enabled.
-# Hierarchical chip: MACROS + PDN_MACRO_CONNECTIONS in config.yaml
-# connect the hardened ai_byte_top instance (i_chip_core.u_ai_byte).
+# Hardened AI_BYTE core: LEF power pins are on Metal4/Metal5.
+# -grid_over_pg_pins places the grid on those pin shapes (not only the
+# boundary). Also stitch M4/M5 into the M2/M3 core ring that reaches pads.
+define_pdn_grid \
+    -macro \
+    -instances i_chip_core.u_ai_byte \
+    -name ai_byte_macro \
+    -grid_over_pg_pins \
+    -starts_with POWER \
+    -halo "$::env(PDN_HORIZONTAL_HALO) $::env(PDN_VERTICAL_HALO)"
+
+add_pdn_connect \
+    -grid ai_byte_macro \
+    -layers "$::env(PDN_VERTICAL_LAYER) $::env(PDN_HORIZONTAL_LAYER)"
+
+if { [info exists ::env(PDN_CORE_VERTICAL_LAYER)] } {
+    add_pdn_connect \
+        -grid ai_byte_macro \
+        -layers "$::env(PDN_CORE_VERTICAL_LAYER) $::env(PDN_VERTICAL_LAYER)"
+}
+
+if { [info exists ::env(PDN_CORE_HORIZONTAL_LAYER)] } {
+    add_pdn_connect \
+        -grid ai_byte_macro \
+        -layers "$::env(PDN_CORE_HORIZONTAL_LAYER) $::env(PDN_HORIZONTAL_LAYER)"
+}

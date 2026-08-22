@@ -1,5 +1,8 @@
 MAKEFILE_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
+# AI_BYTE LibreLane plugin (AIByte.ResizerTimingPostCTSHoldDly, etc.)
+export PYTHONPATH := $(MAKEFILE_DIR)/librelane/plugins$(if $(PYTHONPATH),:$(PYTHONPATH),)
+
 RUN_TAG = $(shell ls librelane/runs/ | tail -n 1)
 TOP = chip_top
 
@@ -147,7 +150,7 @@ librelane-core: check-pdk ## Core-only full flow + DRC (PDK must already exist)
 
 librelane-core-nodrc: check-pdk ## Core-only without DRC
 	$(write_core_size_yaml)
-	$(LIBRELANE_CORE) --skip KLayout.Antenna --skip KLayout.DRC --skip Magic.DRC
+	$(LIBRELANE_CORE) --skip KLayout.DRC --skip Magic.DRC
 .PHONY: librelane-core-nodrc
 
 # Crispi-style step 2 requires hardened core views from step 1
@@ -177,7 +180,7 @@ librelane: check-pdk check-core-macro ## Full chip: place hardened core macro in
 .PHONY: librelane
 
 librelane-nodrc: check-pdk check-core-macro ## Full chip hierarchical, skip DRC
-	$(LIBRELANE_COMMON) --skip KLayout.Antenna --skip KLayout.DRC --skip Magic.DRC
+	$(LIBRELANE_COMMON) --skip KLayout.DRC --skip Magic.DRC
 .PHONY: librelane-nodrc
 
 librelane-flat: check-pdk ## Full chip flat (re-synth all RTL; no macro). Uses config_flat.yaml
@@ -185,7 +188,7 @@ librelane-flat: check-pdk ## Full chip flat (re-synth all RTL; no macro). Uses c
 .PHONY: librelane-flat
 
 librelane-flat-nodrc: check-pdk ## Flat chip without DRC
-	$(LIBRELANE_FLAT) --skip KLayout.Antenna --skip KLayout.DRC --skip Magic.DRC
+	$(LIBRELANE_FLAT) --skip KLayout.DRC --skip Magic.DRC
 .PHONY: librelane-flat-nodrc
 
 librelane-klayoutdrc: check-pdk check-core-macro ## LibreLane without Magic DRC
