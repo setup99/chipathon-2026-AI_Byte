@@ -46,8 +46,6 @@ module ai_byte_control_wrap
     output wire                         irq,
     output wire [DATA_W-1:0]            buffer_select_o,
     output wire [BUFFER_ADDR_W-1:0]     buffer_addr_o,
-    output wire                         done_o,
-    output wire                         error_o,
     output wire [2:0]                   debug_state,
     output wire                         soft_reset_n,   // active-low soft reset (1-cycle assert)
 
@@ -139,8 +137,6 @@ module ai_byte_control_wrap
     wire act_ready, weight_ready, result_ready;
 
     assign soft_reset_n = soft_reset_n_rf;
-    assign done_o  = status_o[1];
-    assign error_o = status_o[0];
 
     ai_byte_reg_file_v2 #(
         .DATA_W(DATA_W), .REG_ADDR_W(REG_ADDR_W), .BUFFER_ADDR_W(BUFFER_ADDR_W)

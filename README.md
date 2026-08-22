@@ -130,16 +130,17 @@ Treat these as **design contracts** for software and board:
 | `RST_N` | Hard reset, active low |
 | `ADDR[3:0]`, `WE`, `RE` | Drive from host |
 | `DATA[7:0]` | Bidirectional — host drives only when **not** doing a read (`re && !we` is when the chip may drive) |
-| `IRQ`, `DONE`, `ERROR` | Chip → host status |
+| `IRQ` | Chip → host status |
+| `DEBUG_STATE[2:0]` | Optional FSM observability |
 
 **Minimum pin budget (functional):**
 
 ```text
 Area estimate: 1100 um x 1100 um (digital core; padframe die depends on slot)
-Required pins: Power 1, Ground 1, Digital inputs 8, Digital outputs(including I/O) 11, Analog 0
+Required pins: Power 1, Ground 1 (own pad; quiet ground first), Digital 17, Analog 0
 ```
 
-= `CLK`, `RST_N`, `ADDR[3:0]`, `WE`, `RE`, `DATA[7:0]`, `IRQ`, `DONE`, `ERROR`, plus one `VDD` and one `VSS`.
+= `VSS` (quiet ground, listed first in `info.yaml`), `VDD`, then `CLK`, `RST_N`, `ADDR[3:0]`, `WE`, `RE`, `DATA[7:0]`, `IRQ`. Optional: `DEBUG_STATE[2:0]`. `DONE`/`ERROR` are in the STATUS register (CPU-readable), not package pins. Each power pad must be paired with a ground pad (no shared padframe ground).
 
 CSV tables: [`docs/AI_BYTE_pinout_sheet.csv`](docs/AI_BYTE_pinout_sheet.csv).
 
@@ -153,7 +154,7 @@ CSV tables: [`docs/AI_BYTE_pinout_sheet.csv`](docs/AI_BYTE_pinout_sheet.csv).
       write BUFFER_DATA for each byte (addr may auto-increment on access paths)
 4. Write OPCODE, CONFIG, and size regs as required by that op
 5. Write CONTROL = START (bit0)
-6. Wait until IRQ or DONE; read STATUS (check error)
+6. Wait until IRQ; read STATUS (check done/error bits)
 7. Write CONTROL = IRQ clear if needed
 8. Read results: BUFFER_SELECT = Result, walk BUFFER_ADDR / BUFFER_DATA
 9. Next job…
@@ -201,7 +202,8 @@ make sim               # smoke + AI_BYTE opcode suite (default slot as configure
 COCOTB_TEST_MODULES=test_ai_byte make sim
 ```
 
-Needs cocotb + a Verilog simulator. PDK not required for pure RTL cocotb.
+Needs cocotb + a Verilog simulator. PDK not required for pure RTL cocotb.  
+Pass log for reviewers: **`cocotb/results.xml`** (copied from `sim_build/` after `make sim`; `sim_build/` stays gitignored).
 
 ### Place & route
 

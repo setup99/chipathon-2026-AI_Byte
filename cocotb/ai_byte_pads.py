@@ -4,12 +4,12 @@ from cocotb.types import LogicArray
 
 # Pad map (matches src/chip_core.sv)
 # bidir[3:0]=addr [11:4]=data [12]=we [13]=re [14]=irq
-# [15]=done [16]=error [17:19]=debug
+# [15:16] unused (done/error via STATUS) [17:19]=debug
 
 
 def host_la(addr=0, data=0, we=0, re=0):
     """
-    Host drive with Z on chip-driven pins (irq/done/error/debug and data
+    Host drive with Z on chip-driven pins (irq/debug and data
     during read so OE can pull them).
     """
     bits = ["z"] * 20

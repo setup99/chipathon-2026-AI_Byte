@@ -6,7 +6,6 @@
 #
 # Data is pulled from the main branch of the repo.
 # Keep main current with the design / GDS you intend to submit.
-# This file will be updated later (e.g. full pin tables).
 #
 # ======================================================
 # Project metadata (used for documentation / review)
@@ -24,15 +23,26 @@ project:
 # ======================================================
 # External pad connections (organizer DEF / padframe integrate)
 # ======================================================
-# Names match ai_byte_top LEF pins (140 ns signoff run).
-# Order: UL quadrant, clockwise bottom-left → upper-right, aligned
-# with core edges for shorter pad↔core routes:
-#   VDD + clk (west) first, then north-edge signals west→east.
-# Ground omitted — common ground in the padframe.
+# Names must match top pins in the layout (ai_byte_top LEF/GDS text).
+# Layout already exposes VDD + VSS from the core PDN.
+#
+# Mitch (2026-08): no common padframe ground — each power needs a
+# paired ground pad. First quadrant pin is the fixed down-bonded
+# quiet ground; list that ground first.
+#
+# Order after supplies: UL quadrant clockwise bottom-left →
+# upper-right, aligned with core edges for shorter routes
+# (clk west, then north-edge signals west→east).
+#
 # Outputs use bidirectional (no dedicated output io_type).
-# Optional status/debug pins kept (done_o, error_o, debug_state).
+# done/error stay CPU-readable in STATUS (not pads).
+# 22 pins: VSS + VDD + 20 digital (Block A budget ≤22).
 # ======================================================
 pins:
+  # Quiet ground first (fixed down-bond per quadrant)
+  - name: VSS
+    io_type: ground
+  # Power paired with the ground above
   - name: VDD
     io_type: power
   - name: clk
@@ -63,14 +73,8 @@ pins:
     io_type: input_cmos
   - name: irq
     io_type: bidirectional
-  # error_o / done_o are removable if the pad budget is only 22 pins: both are
-  # also in the MMIF status register (CPU-readable). Keep debug_state on pads.
-  - name: error_o # can be removed 
-    io_type: bidirectional
   - name: re
     io_type: input_cmos
-  - name: done_o # can be removed 
-    io_type: bidirectional
   - name: "debug_state[0]"
     io_type: bidirectional
   - name: "debug_state[2]"
@@ -81,4 +85,3 @@ pins:
     io_type: input_cmos
   - name: rst_n
     io_type: input_schmitt
-

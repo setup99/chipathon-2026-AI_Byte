@@ -51,8 +51,6 @@ set io_ports [get_ports {
 }]
 set out_ports [get_ports {
     irq
-    done_o
-    error_o
     debug_state[*]
 }]
 

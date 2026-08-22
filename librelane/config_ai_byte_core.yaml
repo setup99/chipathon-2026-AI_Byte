@@ -2,9 +2,16 @@
 # Default floorplan: 1100 × 1100 µm die, ~10 µm core inset, density 55%.
 # Override size/density without editing this file:
 #   make librelane-core-nodrc CORE_SIDE=1200 PL_DENSITY=55
+#
+# Option 3: EXTRA_EXCLUDED_CELLS bans all dly* for repair_design / setup buffering
+# (forces buf_*). AIByte.ResizerTimingPostCTSHoldDly unset_dont_use dly* for hold only.
+# Signoff: SDC max_tran/max_cap are P&R targets; judge real DRVs vs liberty at signoff.
+# Requires: PYTHONPATH includes librelane/plugins (Makefile sets this).
 meta:
   version: 3
   flow: Classic
+  substituting_steps:
+    OpenROAD.ResizerTimingPostCTS: AIByte.ResizerTimingPostCTSHoldDly
 
 DESIGN_NAME: ai_byte_top
 
@@ -56,7 +63,8 @@ CORE_AREA: [10, 10, 1090, 1090]
 # Clock on bare MMIF ports (not pad-inst hierarchy)
 CLOCK_PORT: clk
 CLOCK_NET: clk
-CLOCK_PERIOD: 140 # 7.14 MHz
+# 140 ns (~7.14 MHz): closes setup/hold on GF180 SS with margin.
+CLOCK_PERIOD: 140
 
 PL_TARGET_DENSITY_PCT: 55
 GRT_ALLOW_CONGESTION: true
@@ -65,6 +73,43 @@ PL_RESIZER_HOLD_SLACK_MARGIN: 0.35
 GRT_RESIZER_HOLD_SLACK_MARGIN: 0.3
 
 DRT_ANTENNA_REPAIR_MARGIN: 10
+
+# P&R electrical targets (Exp4/5 recipe; stock post-GRT repair_design).
+# MAX_TRANSITION 4 ns = TT liberty; overrides PDK default 3. Signoff vs liberty separately.
+MAX_TRANSITION_CONSTRAINT: 4
+
+# CTS: Exp5 clkbuf_4+8, CTS_MAX_CAP 0.15 (0.1 regressed clock caps in Exp7).
+CTS_CLK_BUFFERS:
+- gf180mcu_fd_sc_mcu7t5v0__clkbuf_4
+- gf180mcu_fd_sc_mcu7t5v0__clkbuf_8
+CTS_MAX_CAP: 0.15
+CTS_MAX_SLEW: 2.5
+CTS_SINK_CLUSTERING_SIZE: 8
+CTS_SINK_CLUSTERING_MAX_DIAMETER: 40
+CTS_SINK_BUFFER_MAX_CAP_DERATE_PCT: 50
+
+DESIGN_REPAIR_MAX_SLEW_PCT: 30
+DESIGN_REPAIR_MAX_CAP_PCT: 30
+RUN_POST_GRT_DESIGN_REPAIR: true
+GRT_DESIGN_REPAIR_MAX_SLEW_PCT: 30
+GRT_DESIGN_REPAIR_MAX_CAP_PCT: 30
+# Keep post-GRT *timing* resizer off — hold still uses custom post-CTS step only.
+
+# Ban delay-family from PnR dont_use (DRV/setup). Hold re-enables via
+# AIByte.ResizerTimingPostCTSHoldDly. Do NOT ban buf_1 (slows post-GRT repair).
+EXTRA_EXCLUDED_CELLS:
+- gf180mcu_fd_sc_mcu7t5v0__dlya_1
+- gf180mcu_fd_sc_mcu7t5v0__dlya_2
+- gf180mcu_fd_sc_mcu7t5v0__dlya_4
+- gf180mcu_fd_sc_mcu7t5v0__dlyb_1
+- gf180mcu_fd_sc_mcu7t5v0__dlyb_2
+- gf180mcu_fd_sc_mcu7t5v0__dlyb_4
+- gf180mcu_fd_sc_mcu7t5v0__dlyc_1
+- gf180mcu_fd_sc_mcu7t5v0__dlyc_2
+- gf180mcu_fd_sc_mcu7t5v0__dlyc_4
+- gf180mcu_fd_sc_mcu7t5v0__dlyd_1
+- gf180mcu_fd_sc_mcu7t5v0__dlyd_2
+- gf180mcu_fd_sc_mcu7t5v0__dlyd_4
 
 # PDN — core-only straps (no pad connection)
 PDN_VWIDTH: 5

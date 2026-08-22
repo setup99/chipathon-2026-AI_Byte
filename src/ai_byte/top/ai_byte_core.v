@@ -46,8 +46,6 @@ module ai_byte_core
     output wire                         irq,
     output wire [DATA_W-1:0]            buffer_select_o,
     output wire [BUFFER_ADDR_W-1:0]     buffer_addr_o,
-    output wire                         done_o,
-    output wire                         error_o,
     output wire [2:0]                   debug_state
 );
 
@@ -98,7 +96,7 @@ module ai_byte_core
         .cpu_wdata(cpu_wdata), .cpu_rdata(cpu_rdata),
         .cpu_we(cpu_we), .cpu_re(cpu_re),
         .irq(irq), .buffer_select_o(buffer_select_o), .buffer_addr_o(buffer_addr_o),
-        .done_o(done_o), .error_o(error_o), .debug_state(debug_state),
+        .debug_state(debug_state),
         .soft_reset_n(soft_reset_n),
         .sram_act_ce(sram_act_ce), .sram_act_we(sram_act_we),
         .sram_act_addr(sram_act_addr), .sram_act_wdata(sram_act_wdata),

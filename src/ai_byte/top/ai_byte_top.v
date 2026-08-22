@@ -37,8 +37,6 @@ module ai_byte_top
     output wire                         irq,
 
     // Optional observability (not required on package pins)
-    output wire                         done_o,
-    output wire                         error_o,
     output wire [2:0]                   debug_state
 );
 
@@ -112,8 +110,6 @@ module ai_byte_top
         .irq(irq_core),
         .buffer_select_o(buffer_select_o),
         .buffer_addr_o(buffer_addr_o),
-        .done_o(done_o),
-        .error_o(error_o),
         .debug_state(debug_state)
     );
 

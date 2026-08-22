@@ -42,6 +42,21 @@ from .q88 import (
     scale_int16_to_int8,
     unpack_q88_bytes,
 )
+from .rtl_integration import (
+    CU_ALU,
+    CU_EML,
+    CU_FC,
+    CU_ILLEGAL,
+    CU_PIPELINE,
+    IP_EML,
+    IP_POST,
+    IP_SA,
+    OPCODE_ROUTES,
+    OpcodeRoute,
+    decode_opcode,
+    format_opcode_matrix,
+    integration_rtl_files,
+)
 
 __all__ = [
     "AiByteGolden",
@@ -83,4 +98,17 @@ __all__ = [
     "CFG_BIAS",
     "CFG_SCALE",
     "CFG_EML_SCALE",
+    "OpcodeRoute",
+    "OPCODE_ROUTES",
+    "decode_opcode",
+    "format_opcode_matrix",
+    "integration_rtl_files",
+    "CU_PIPELINE",
+    "CU_FC",
+    "CU_ALU",
+    "CU_EML",
+    "CU_ILLEGAL",
+    "IP_SA",
+    "IP_POST",
+    "IP_EML",
 ]
