@@ -115,7 +115,7 @@ LIBRELANE_FLAT = librelane librelane/slots/slot_${SLOT}.yaml librelane/config_fl
 	--save-views-to $(MAKEFILE_DIR)/final \
 	--pdk ${PDK} --pdk-root ${PDK_ROOT} --scl ${STD_CELL_LIBRARY} --manual-pdk
 
-CORE_SIDE    ?= 1100
+CORE_SIDE    ?= 1110
 CORE_MARGIN  ?= 10
 PL_DENSITY   ?= 55
 CORE_FINAL   := $(MAKEFILE_DIR)/final_core
@@ -124,6 +124,7 @@ CORE_SIZE_YAML := $(MAKEFILE_DIR)/librelane/.core_size_override.yaml
 CORE_GDS     := $(CORE_FINAL)/gds/ai_byte_top.gds
 CORE_LEF     := $(CORE_FINAL)/lef/ai_byte_top.lef
 CORE_NL      := $(CORE_FINAL)/nl/ai_byte_top.nl.v
+CORE_PINS_DEF := $(MAKEFILE_DIR)/librelane/floorplan/A02_A_core_pins.def
 
 define write_core_size_yaml
 	@core_hi=$$(( $(CORE_SIDE) - $(CORE_MARGIN) )); \
@@ -238,3 +239,137 @@ render-image: ## Render final GDS image
 	mkdir -p img/
 	PDK_ROOT=${PDK_ROOT} PDK=${PDK} python3 scripts/lay2img.py final/gds/${TOP}.gds img/${TOP}.png --width 2048 --oversampling 4
 .PHONY: render-image
+
+# Golden 22-pin core (matches organizer variant A). Override if needed.
+CORE_RUN_FINAL ?= $(MAKEFILE_DIR)/librelane/runs/RUN_2026-08-22_11-01-24/final
+
+stage-core-run: ## Copy hardened core final views → final_core/ (A02 chip / merge)
+	bash scripts/stage_core_from_run.sh "$(CORE_RUN_FINAL)"
+.PHONY: stage-core-run
+
+build-a02-power-connectors: ## Generate vss_conn/vdd_conn (Metal2→Metal5) from A02_A.def
+	python3 scripts/build_a02_power_connectors.py
+.PHONY: build-a02-power-connectors
+
+build-a02-core-pins-def: ## Filtered Metal2 pin DEF for FP_DEF_TEMPLATE (22 core ports)
+	python3 scripts/build_a02_core_pins_def.py
+.PHONY: build-a02-core-pins-def
+
+# D10-style: full organizer DEF (unit-scaled) + A02_A pad-control wrapper.
+build-a02-d10-style: ## A02_A_full.def + src/a02/A02_A.v (146 pins)
+	python3 scripts/build_a02_d10_style.py
+.PHONY: build-a02-d10-style
+
+A02_MACRO_CFG := $(MAKEFILE_DIR)/librelane/config_a02_user_macro.yaml
+A02_MACRO_FINAL := $(MAKEFILE_DIR)/final_a02_macro
+
+LIBRELANE_A02_MACRO = librelane $(A02_MACRO_CFG) \
+	--save-views-to $(A02_MACRO_FINAL) \
+	--pdk ${PDK} --pdk-root ${PDK_ROOT} --scl ${STD_CELL_LIBRARY} --manual-pdk
+
+librelane-a02-macro: check-pdk build-a02-d10-style build-a02-power-connectors ## D10-style A02_A harden + DRC
+	$(LIBRELANE_A02_MACRO)
+.PHONY: librelane-a02-macro
+
+# Force a new run dir (required after PDN/config changes — librelane resumes otherwise).
+librelane-a02-macro-fresh: check-pdk build-a02-d10-style build-a02-power-connectors ## Clean rerun from step 1 (--overwrite)
+	$(LIBRELANE_A02_MACRO) --overwrite
+.PHONY: librelane-a02-macro-fresh
+
+# Resume the newest run dir from a given step, e.g. FROM=Magic.StreamOut.
+librelane-a02-macro-resume: check-pdk ## Resume last run from FROM=<step id>
+	$(LIBRELANE_A02_MACRO) --last-run --from $(FROM)
+.PHONY: librelane-a02-macro-resume
+
+# New run dir: full PnR through post-GRT repair (replays synth→GRT, then hub upsize Tcl).
+# Do NOT use --overwrite --from (skips predecessors with no ODB). Phase 2: resume last run.
+librelane-a02-macro-rerun-postgrt: check-pdk build-a02-d10-style build-a02-power-connectors ## Clean rerun to post-GRT repair (--overwrite --to)
+	$(LIBRELANE_A02_MACRO) --overwrite --to AIByte.RepairDesignPostGRTSizeFirst
+.PHONY: librelane-a02-macro-rerun-postgrt
+
+librelane-a02-macro-rerun-postgrt-signoff: check-pdk ## Continue last run after rerun-postgrt (DR→signoff)
+	$(LIBRELANE_A02_MACRO) --last-run
+.PHONY: librelane-a02-macro-rerun-postgrt-signoff
+
+librelane-a02-macro-nodrc: check-pdk build-a02-d10-style build-a02-power-connectors ## D10-style A02_A without DRC
+	$(LIBRELANE_A02_MACRO) --skip KLayout.DRC --skip Magic.DRC
+.PHONY: librelane-a02-macro-nodrc
+
+audit-a02-pins: ## Compare final_core LEF vs A02_A_core_pins.def Metal2 sites
+	python3 scripts/audit_a02_pins.py --lef "$(CORE_LEF)" --def "$(CORE_PINS_DEF)"
+.PHONY: audit-a02-pins
+
+# Prepare A02 floorplan artifacts then harden core (nodrc for iterate).
+librelane-core-a02-setup: build-a02-core-pins-def build-a02-power-connectors ## Regen pin DEF + power connectors
+	@echo "Setup OK:"
+	@echo "  $(CORE_PINS_DEF)"
+	@echo "  connectors/ + config MACROS"
+	@echo "Next:  make librelane-core-nodrc CORE_SIDE=1110"
+	@echo "Then:  make librelane-core CORE_SIDE=1110 && make audit-a02-pins"
+	@echo "Or D10-style (full DEF):  make librelane-a02-macro-nodrc"
+.PHONY: librelane-core-a02-setup
+
+weld-a02-power-connectors: build-a02-power-connectors ## Weld connectors into final_core GDS+LEF
+	python3 scripts/weld_a02_power_connectors.py
+.PHONY: weld-a02-power-connectors
+
+a02-a-merge-test: check-pdk ## Visual merge: A02 A padring DEF + final_core GDS
+	mkdir -p final
+	PDK_ROOT=${PDK_ROOT} PDK=${PDK} python3.12 scripts/a02_acv_merge_test.py --variant A
+.PHONY: a02-a-merge-test
+
+a02-acv-merge-test: check-pdk ## Visual merge: A02 ACV padring DEF + final_core GDS
+	mkdir -p final
+	PDK_ROOT=${PDK_ROOT} PDK=${PDK} python3.12 scripts/a02_acv_merge_test.py --variant ACV
+.PHONY: a02-acv-merge-test
+
+a02-ach-merge-test: check-pdk ## Visual merge: A02 ACH padring DEF + final_core GDS
+	mkdir -p final
+	PDK_ROOT=${PDK_ROOT} PDK=${PDK} python3.12 scripts/a02_acv_merge_test.py --variant ACH
+.PHONY: a02-ach-merge-test
+
+# Pad instances are u_S01/u_W14/… (PadRing + Yosys). Skip Verilator lint for chip PnR.
+LIBRELANE_A02_A_SKIP_LINT = --skip Verilator.Lint --skip Checker.LintTimingConstructs \
+	--skip Checker.LintErrors --skip Checker.LintWarnings
+
+LIBRELANE_A02_A = librelane librelane/slots/slot_a02_a.yaml librelane/config_a02_a.yaml \
+	--save-views-to $(MAKEFILE_DIR)/final_a02_a \
+	--pdk ${PDK} --pdk-root ${PDK_ROOT} --scl ${STD_CELL_LIBRARY} --manual-pdk \
+	$(LIBRELANE_A02_A_SKIP_LINT)
+
+librelane-a02-a: check-pdk check-core-macro ## A02 A routed chip (organizer padring)
+	$(LIBRELANE_A02_A)
+.PHONY: librelane-a02-a
+
+librelane-a02-a-nodrc: check-pdk check-core-macro ## A02 A chip without DRC
+	$(LIBRELANE_A02_A) --skip KLayout.DRC --skip Magic.DRC
+.PHONY: librelane-a02-a-nodrc
+
+librelane-a02-a-klayout: check-pdk ## Open last A02 A run in KLayout
+	librelane librelane/slots/slot_a02_a.yaml librelane/config_a02_a.yaml \
+		--pdk ${PDK} --pdk-root ${PDK_ROOT} --scl ${STD_CELL_LIBRARY} --manual-pdk \
+		--last-run --flow OpenInKLayout
+.PHONY: librelane-a02-a-klayout
+
+LIBRELANE_A02_ACV = librelane librelane/slots/slot_a02_acv.yaml librelane/config_a02_acv.yaml \
+	--save-views-to $(MAKEFILE_DIR)/final_a02_acv \
+	--pdk ${PDK} --pdk-root ${PDK_ROOT} --scl ${STD_CELL_LIBRARY} --manual-pdk
+
+librelane-a02-acv: check-pdk check-core-macro ## A02 ACV routed chip (legacy 23-pin map)
+	$(LIBRELANE_A02_ACV)
+.PHONY: librelane-a02-acv
+
+librelane-a02-acv-nodrc: check-pdk check-core-macro ## A02 ACV chip without DRC
+	$(LIBRELANE_A02_ACV) --skip KLayout.DRC --skip Magic.DRC
+.PHONY: librelane-a02-acv-nodrc
+
+librelane-a02-acv-klayout: check-pdk ## Open last A02 ACV run in KLayout
+	librelane librelane/slots/slot_a02_acv.yaml librelane/config_a02_acv.yaml \
+		--pdk ${PDK} --pdk-root ${PDK_ROOT} --scl ${STD_CELL_LIBRARY} --manual-pdk \
+		--last-run --flow OpenInKLayout
+.PHONY: librelane-a02-acv-klayout
+
+a02-merge-klayout: ## Open final/a02_merge_test.gds in KLayout
+	@test -f final/a02_merge_test.gds || { echo "Missing final/a02_merge_test.gds — run: make a02-a-merge-test"; exit 1; }
+	PDK_ROOT=${PDK_ROOT} PDK=${PDK} klayout -e final/a02_merge_test.gds &
+.PHONY: a02-merge-klayout

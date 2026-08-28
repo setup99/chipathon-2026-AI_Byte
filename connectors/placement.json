@@ -1,0 +1,19 @@
+{
+  "vss_conn": {
+    "location": [
+      0.0,
+      6.36
+    ],
+    "orientation": "N",
+    "net": "VSS"
+  },
+  "vdd_conn": {
+    "location": [
+      0.0,
+      106.36
+    ],
+    "orientation": "N",
+    "net": "VDD"
+  },
+  "width_um": 20.0
+}

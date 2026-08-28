@@ -1,0 +1,51 @@
+VERSION 5.7 ;
+NOWIREEXTENSIONATPIN ON ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+MACRO vss_conn
+  CLASS BLOCK ;
+  FOREIGN vss_conn ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 20.000 BY 72.280 ;
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal2 ;
+        RECT 0.000 62.780 20.000 72.280 ;
+      LAYER Metal5 ;
+        RECT 0.000 62.780 20.000 72.280 ;
+      LAYER Metal2 ;
+        RECT 0.000 49.630 20.000 59.880 ;
+      LAYER Metal5 ;
+        RECT 0.000 49.630 20.000 59.880 ;
+      LAYER Metal2 ;
+        RECT 0.000 37.780 20.000 48.030 ;
+      LAYER Metal5 ;
+        RECT 0.000 37.780 20.000 48.030 ;
+      LAYER Metal2 ;
+        RECT 0.000 24.250 20.000 34.500 ;
+      LAYER Metal5 ;
+        RECT 0.000 24.250 20.000 34.500 ;
+      LAYER Metal2 ;
+        RECT 0.000 12.400 20.000 22.650 ;
+      LAYER Metal5 ;
+        RECT 0.000 12.400 20.000 22.650 ;
+      LAYER Metal2 ;
+        RECT 0.000 0.000 20.000 9.500 ;
+      LAYER Metal5 ;
+        RECT 0.000 0.000 20.000 9.500 ;
+      LAYER Metal2 ;
+        RECT 0.000 0.000 20.000 72.280 ;
+      LAYER Metal5 ;
+        RECT 0.000 0.000 20.000 72.280 ;
+    END
+  END VSS
+  OBS
+    LAYER Metal3 ;
+      RECT 0.000 0.000 20.000 72.280 ;
+    LAYER Metal4 ;
+      RECT 0.000 0.000 20.000 72.280 ;
+  END
+END vss_conn
+END LIBRARY

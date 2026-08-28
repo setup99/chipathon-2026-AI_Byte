@@ -1,7 +1,8 @@
 # AI_BYTE digital core only (no padframe).
-# Default floorplan: 1100 × 1100 µm die, ~10 µm core inset, density 55%.
+# Default floorplan: 1110 × 1110 µm (A02_A user block), ~10 µm core inset, density 55%.
+# Pins forced to organizer Metal2 sites via FP_DEF_TEMPLATE (see floorplan/).
 # Override size/density without editing this file:
-#   make librelane-core-nodrc CORE_SIDE=1200 PL_DENSITY=55
+#   make librelane-core-nodrc CORE_SIDE=1110 PL_DENSITY=55
 #
 # Option 3: EXTRA_EXCLUDED_CELLS bans all dly* for repair_design / setup buffering
 # (forces buf_*). AIByte.ResizerTimingPostCTSHoldDly unset_dont_use dly* for hold only.
@@ -14,6 +15,11 @@ meta:
     OpenROAD.ResizerTimingPostCTS: AIByte.ResizerTimingPostCTSHoldDly
 
 DESIGN_NAME: ai_byte_top
+
+# Ensure VDD/VSS ports + power-connector instances survive Yosys
+# (VERILOG_POWER_DEFINE alone did not define USE_POWER_PINS on user RTL).
+VERILOG_DEFINES:
+- USE_POWER_PINS
 
 VERILOG_FILES:
 - dir::../src/ai_byte/post/alu_q88.v
@@ -42,6 +48,8 @@ VERILOG_FILES:
 - dir::../src/ai_byte/control/control_wrap.v
 - dir::../src/ai_byte/top/ai_byte_core.v
 - dir::../src/ai_byte/top/ai_byte_top.v
+- dir::../connectors/verilog/vss_conn.v
+- dir::../connectors/verilog/vdd_conn.v
 
 PRIMARY_GDSII_STREAMOUT_TOOL: klayout
 
@@ -54,11 +62,15 @@ VDD_NETS:
 GND_NETS:
 - VSS
 
-# Floorplan: core only (no padring). Die = CORE_SIDE².
+# Floorplan: core only (no padring). Die matches A02_A.def user block (1110 µm).
+# Makefile may override via .core_size_override.yaml (CORE_SIDE / CORE_MARGIN).
 FP_SIZING: absolute
-# Placeable core is inset by CORE_MARGIN from die edges (IO pin strip).
-DIE_AREA: [0, 0, 1100, 1100]
-CORE_AREA: [10, 10, 1090, 1090]
+DIE_AREA: [0, 0, 1110, 1110]
+CORE_AREA: [10, 10, 1100, 1100]
+
+# Force IO to A02 Metal2 abutment sites (skip free IO placement).
+# Rebuild: make build-a02-core-pins-def
+FP_DEF_TEMPLATE: dir::floorplan/A02_A_core_pins.def
 
 # Clock on bare MMIF ports (not pad-inst hierarchy)
 CLOCK_PORT: clk
@@ -126,10 +138,47 @@ PDN_ENABLE_PINS: True
 PDN_CORE_VERTICAL_LAYER: Metal2
 PDN_CORE_HORIZONTAL_LAYER: Metal3
 
+# Stdcell M4/M5 straps only — no default macro PDN grid (breaks vss/vdd_conn).
+PDN_CFG: dir::pdn_cfg_core.tcl
+
 ERROR_ON_MAGIC_DRC: False
 
-# No chip-level logos / pad extras
-MACROS: {}
+# A02 padframe Metal2 VDD/VSS abutment (W13/W12). See connectors/README.md.
+MACROS:
+  vss_conn:
+    gds:
+      - dir::../connectors/gds/vss_conn.gds
+    lef:
+      - dir::../connectors/lef/vss_conn.lef
+    instances:
+      u_vss_conn:
+        location: [0.0, 6.36]
+        orientation: N
+  vdd_conn:
+    gds:
+      - dir::../connectors/gds/vdd_conn.gds
+    lef:
+      - dir::../connectors/lef/vdd_conn.lef
+    instances:
+      u_vdd_conn:
+        location: [0.0, 106.36]
+        orientation: N
+
+# Match caravel/D10 LVS for passive power bridges (connect-by-label + flatten).
+LVS_CONNECT_BY_LABEL: true
+MAGIC_GDS_FLATGLOB:
+- "vss_conn"
+- "vdd_conn"
+
+# Connectors are passive M2→M5 bridges — do not auto-insert PDN grids inside them
+# (PDN-0232/0233 on u_vss_conn/u_vdd_conn when this is true).
+PDN_CONNECT_MACROS_TO_GRID: false
+
+# Default halo is 10 µm; that keeps stdcell M4/M5 straps off the 20 µm connectors.
+# Zero halo lets horizontal Metal5 overlap connector Metal5 inside CORE_AREA.
+PDN_HORIZONTAL_HALO: 0
+PDN_VERTICAL_HALO: 0
+
 PDN_MACRO_CONNECTIONS: []
 
 # Skip heavy tapeout checks while exploring core size.
