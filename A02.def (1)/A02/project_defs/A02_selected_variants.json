@@ -1,0 +1,143 @@
+{
+  "project_size": {
+    "source_gds": "/Users/kanobailey/chipathon/2026/gds/A02/ai_byte_top.gds",
+    "top_cell": "ai_byte_top",
+    "layer": 0,
+    "datatype": 0,
+    "layout_dbu_microns": 0.001,
+    "rectangle_dbu": [
+      0,
+      0,
+      1100000,
+      1100000
+    ],
+    "width_microns": "1100",
+    "height_microns": "1100",
+    "top_cell_text": [
+      {
+        "text": "debug_state[0]",
+        "layer": 36,
+        "datatype": 10
+      },
+      {
+        "text": "debug_state[1]",
+        "layer": 36,
+        "datatype": 10
+      },
+      {
+        "text": "debug_state[2]",
+        "layer": 36,
+        "datatype": 10
+      },
+      {
+        "text": "re",
+        "layer": 36,
+        "datatype": 10
+      },
+      {
+        "text": "addr[0]",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "addr[1]",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "addr[2]",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "addr[3]",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "clk",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "data[0]",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "data[1]",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "data[2]",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "data[3]",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "data[4]",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "data[5]",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "data[6]",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "data[7]",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "irq",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "rst_n",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "we",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "VDD",
+        "layer": 46,
+        "datatype": 10
+      },
+      {
+        "text": "VSS",
+        "layer": 46,
+        "datatype": 10
+      },
+      {
+        "text": "VDD",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "VSS",
+        "layer": 81,
+        "datatype": 10
+      }
+    ]
+  },
+  "participant_pin_count": 22,
+  "selected_variants": [
+    "A"
+  ]
+}

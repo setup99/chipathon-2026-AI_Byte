@@ -1,0 +1,429 @@
+{
+  "die_um": [
+    1110,
+    1110
+  ],
+  "units_dbu_per_um": 2000,
+  "source_units_dbu_per_um": 200,
+  "source_interface": "A02.def (1)/A02/project_defs/A/A02_A_interface.yaml",
+  "policy": {
+    "inputs": "Y",
+    "outputs_irq_debug": "A",
+    "data_bidir": "Y (data_IN)",
+    "power": "all DVDD/DVSS rects"
+  },
+  "pins": [
+    {
+      "core_pin": "VSS",
+      "cell_terminal": "DVSS",
+      "project_pin": "VSS",
+      "padring_instance": "W12",
+      "cell": "gf180mcu_fd_io__dvss",
+      "n_rects": 6,
+      "rects_dbu": [
+        [
+          0,
+          138280,
+          2000,
+          157280
+        ],
+        [
+          0,
+          111980,
+          2000,
+          132480
+        ],
+        [
+          0,
+          88280,
+          2000,
+          108780
+        ],
+        [
+          0,
+          61220,
+          2000,
+          81720
+        ],
+        [
+          0,
+          37520,
+          2000,
+          58020
+        ],
+        [
+          0,
+          12720,
+          2000,
+          31720
+        ]
+      ]
+    },
+    {
+      "core_pin": "VDD",
+      "cell_terminal": "DVDD",
+      "project_pin": "VDD",
+      "padring_instance": "W13",
+      "cell": "gf180mcu_fd_io__dvdd",
+      "n_rects": 6,
+      "rects_dbu": [
+        [
+          0,
+          338280,
+          2000,
+          357280
+        ],
+        [
+          0,
+          311980,
+          2000,
+          332480
+        ],
+        [
+          0,
+          288280,
+          2000,
+          308780
+        ],
+        [
+          0,
+          261220,
+          2000,
+          281720
+        ],
+        [
+          0,
+          237520,
+          2000,
+          258020
+        ],
+        [
+          0,
+          212720,
+          2000,
+          231720
+        ]
+      ]
+    },
+    {
+      "core_pin": "clk",
+      "cell_terminal": "Y",
+      "project_pin": "clk",
+      "padring_instance": "W14",
+      "cell": "gf180mcu_fd_io__in_c",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          0,
+          417520,
+          2000,
+          418280
+        ]
+      ]
+    },
+    {
+      "core_pin": "data[7]",
+      "cell_terminal": "Y",
+      "project_pin": "data_IN[7]",
+      "padring_instance": "W15",
+      "cell": "gf180mcu_fd_io__bi_t",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          0,
+          617520,
+          2000,
+          618280
+        ]
+      ]
+    },
+    {
+      "core_pin": "data[5]",
+      "cell_terminal": "Y",
+      "project_pin": "data_IN[5]",
+      "padring_instance": "W16",
+      "cell": "gf180mcu_fd_io__bi_t",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          0,
+          817520,
+          2000,
+          818280
+        ]
+      ]
+    },
+    {
+      "core_pin": "data[6]",
+      "cell_terminal": "Y",
+      "project_pin": "data_IN[6]",
+      "padring_instance": "W17",
+      "cell": "gf180mcu_fd_io__bi_t",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          0,
+          1017520,
+          2000,
+          1018280
+        ]
+      ]
+    },
+    {
+      "core_pin": "data[4]",
+      "cell_terminal": "Y",
+      "project_pin": "data_IN[4]",
+      "padring_instance": "W18",
+      "cell": "gf180mcu_fd_io__bi_t",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          0,
+          1217520,
+          2000,
+          1218280
+        ]
+      ]
+    },
+    {
+      "core_pin": "data[0]",
+      "cell_terminal": "Y",
+      "project_pin": "data_IN[0]",
+      "padring_instance": "W19",
+      "cell": "gf180mcu_fd_io__bi_t",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          0,
+          1417520,
+          2000,
+          1418280
+        ]
+      ]
+    },
+    {
+      "core_pin": "data[1]",
+      "cell_terminal": "Y",
+      "project_pin": "data_IN[1]",
+      "padring_instance": "W20",
+      "cell": "gf180mcu_fd_io__bi_t",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          0,
+          1617520,
+          2000,
+          1618280
+        ]
+      ]
+    },
+    {
+      "core_pin": "data[2]",
+      "cell_terminal": "Y",
+      "project_pin": "data_IN[2]",
+      "padring_instance": "W21",
+      "cell": "gf180mcu_fd_io__bi_t",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          0,
+          1817520,
+          2000,
+          1818280
+        ]
+      ]
+    },
+    {
+      "core_pin": "data[3]",
+      "cell_terminal": "Y",
+      "project_pin": "data_IN[3]",
+      "padring_instance": "W22",
+      "cell": "gf180mcu_fd_io__bi_t",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          0,
+          2017520,
+          2000,
+          2018280
+        ]
+      ]
+    },
+    {
+      "core_pin": "addr[0]",
+      "cell_terminal": "Y",
+      "project_pin": "addr[0]",
+      "padring_instance": "N01",
+      "cell": "gf180mcu_fd_io__in_c",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          67520,
+          2218000,
+          68280,
+          2220000
+        ]
+      ]
+    },
+    {
+      "core_pin": "addr[1]",
+      "cell_terminal": "Y",
+      "project_pin": "addr[1]",
+      "padring_instance": "N02",
+      "cell": "gf180mcu_fd_io__in_c",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          267520,
+          2218000,
+          268280,
+          2220000
+        ]
+      ]
+    },
+    {
+      "core_pin": "addr[2]",
+      "cell_terminal": "Y",
+      "project_pin": "addr[2]",
+      "padring_instance": "N03",
+      "cell": "gf180mcu_fd_io__in_c",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          467520,
+          2218000,
+          468280,
+          2220000
+        ]
+      ]
+    },
+    {
+      "core_pin": "addr[3]",
+      "cell_terminal": "Y",
+      "project_pin": "addr[3]",
+      "padring_instance": "N04",
+      "cell": "gf180mcu_fd_io__in_c",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          667520,
+          2218000,
+          668280,
+          2220000
+        ]
+      ]
+    },
+    {
+      "core_pin": "irq",
+      "cell_terminal": "A",
+      "project_pin": "irq_OUT",
+      "padring_instance": "N05",
+      "cell": "gf180mcu_fd_io__bi_t",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          870440,
+          2218000,
+          871200,
+          2220000
+        ]
+      ]
+    },
+    {
+      "core_pin": "re",
+      "cell_terminal": "Y",
+      "project_pin": "re",
+      "padring_instance": "N06",
+      "cell": "gf180mcu_fd_io__in_c",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          1067520,
+          2218000,
+          1068280,
+          2220000
+        ]
+      ]
+    },
+    {
+      "core_pin": "debug_state[0]",
+      "cell_terminal": "A",
+      "project_pin": "debug_state_OUT[0]",
+      "padring_instance": "N07",
+      "cell": "gf180mcu_fd_io__bi_t",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          1270440,
+          2218000,
+          1271200,
+          2220000
+        ]
+      ]
+    },
+    {
+      "core_pin": "debug_state[2]",
+      "cell_terminal": "A",
+      "project_pin": "debug_state_OUT[2]",
+      "padring_instance": "N08",
+      "cell": "gf180mcu_fd_io__bi_t",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          1470440,
+          2218000,
+          1471200,
+          2220000
+        ]
+      ]
+    },
+    {
+      "core_pin": "debug_state[1]",
+      "cell_terminal": "A",
+      "project_pin": "debug_state_OUT[1]",
+      "padring_instance": "N09",
+      "cell": "gf180mcu_fd_io__bi_t",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          1670440,
+          2218000,
+          1671200,
+          2220000
+        ]
+      ]
+    },
+    {
+      "core_pin": "we",
+      "cell_terminal": "Y",
+      "project_pin": "we",
+      "padring_instance": "N10",
+      "cell": "gf180mcu_fd_io__in_c",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          1867520,
+          2218000,
+          1868280,
+          2220000
+        ]
+      ]
+    },
+    {
+      "core_pin": "rst_n",
+      "cell_terminal": "Y",
+      "project_pin": "rst_n",
+      "padring_instance": "N11",
+      "cell": "gf180mcu_fd_io__in_s",
+      "n_rects": 1,
+      "rects_dbu": [
+        [
+          2067520,
+          2218000,
+          2068280,
+          2220000
+        ]
+      ]
+    }
+  ]
+}

@@ -5,7 +5,7 @@ from __future__ import annotations
 import os
 
 from librelane.steps import Step
-from librelane.steps.openroad import RepairDesignPostGRT, ResizerTimingPostCTS
+from librelane.steps.openroad import GeneratePDN, RepairDesignPostGRT, ResizerTimingPostCTS
 
 
 def _repo_script(*parts: str) -> str:
@@ -15,6 +15,17 @@ def _repo_script(*parts: str) -> str:
     if not os.path.isfile(path):
         raise FileNotFoundError(f"AI_BYTE Tcl not found: {path}")
     return path
+
+
+@Step.factory.register()
+class GeneratePDNWithConnectorStitch(GeneratePDN):
+    """PDN generation plus west-edge vss_conn / vdd_conn Metal5+Metal2 bridges."""
+
+    id = "AIByte.GeneratePDN"
+    name = "Generate PDN (A02 connector stitch)"
+
+    def get_script_path(self) -> str:
+        return _repo_script("pdn_a02.tcl")
 
 
 @Step.factory.register()
@@ -34,8 +45,8 @@ class ResizerTimingPostCTSHoldDly(ResizerTimingPostCTS):
 @Step.factory.register()
 class RepairDesignPostGRTSizeFirst(RepairDesignPostGRT):
     """
-    Exp8a: post-GRT size-up of max-slew drivers via replace_cell, then
-    normal repair_design. (Cannot ban all buf_* — OpenROAD RSZ-0022.)
+    Post-GRT repair: upsize max-slew drivers (replace_cell), then stock
+    repair_design with GRT refresh/retry on RSZ-0074 (macro wrapper).
     """
 
     id = "AIByte.RepairDesignPostGRTSizeFirst"

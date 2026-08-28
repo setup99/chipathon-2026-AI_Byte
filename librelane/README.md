@@ -6,6 +6,7 @@ Run all commands from the **repo root** (`chipathon-2026-AI_Byte/`), not from th
 
 | Flow                                     | Config                                     | Top           | Output                   |
 | ---------------------------------------- | ------------------------------------------ | ------------- | ------------------------ |
+| **A02 tapeout macro** — organizer block  | `config_a02_user_macro.yaml`               | `A02_A`       | `final_a02_macro/`       |
 | **Step A** — harden core macro           | `config_ai_byte_core.yaml`                 | `ai_byte_top` | `final_core/`            |
 | **Step B** — place macro + workshop pads | `config.yaml` + `slots/slot_workshop.yaml` | `chip_top`    | `final/gds/chip_top.gds` |
 | Alternate — flat (no macro)              | `config_flat.yaml`                         | `chip_top`    | `final/`                 |
@@ -135,7 +136,7 @@ make librelane-core-nodrc CORE_SIDE=1200 PL_DENSITY=55
 
 | Variable      | Default | Meaning                       |
 | ------------- | ------- | ----------------------------- |
-| `CORE_SIDE`   | `1100`  | Die side length in µm         |
+| `CORE_SIDE`   | `1110`  | Die side length in µm (A02_A block) |
 | `PL_DENSITY`  | `55`    | Target placement density (%)  |
 | `CORE_MARGIN` | `10`    | Core inset from die edge (µm) |
 
@@ -179,6 +180,8 @@ Uses `config_flat.yaml`. Prefer the hierarchical path above for Crispi-style int
 
 | What                                  | Where                                                                           |
 | ------------------------------------- | ------------------------------------------------------------------------------- |
+| A02 tapeout macro GDS / LEF / NL      | `final_a02_macro/`                                                              |
+| A02 signoff reports                   | `docs/signoff_a02_macro/`                                                       |
 | Core macro GDS / LEF / netlist / libs | `final_core/`                                                                   |
 | Full-chip GDS (submission)            | `final/gds/chip_top.gds`                                                        |
 | Metrics                               | `final/metrics.csv` or `final_core/…` / last `librelane/runs/*/final/metrics.*` |
@@ -200,11 +203,14 @@ make librelane-klayout    # KLayout
 
 ```text
 librelane/
+├── config_a02_user_macro.yaml # A02 tapeout macro (A02_A, organizer DEF)
 ├── config_ai_byte_core.yaml   # Step A: Classic — harden ai_byte_top
 ├── config.yaml                # Step B: Chip — place core macro + workshop pads
 ├── config_flat.yaml           # Alternate: flat Chip (all RTL re-synth)
+├── A02_A.sdc                  # A02 macro timing constraints
 ├── ai_byte_top.sdc            # core timing constraints
 ├── chip_top.sdc               # full-chip timing constraints
+├── scripts/repair_design_postgrt_size_first.tcl
 ├── pdn_cfg.tcl                # power grid
 ├── slots/                     # padframe slot definitions (incl. workshop)
 └── runs/                      # LibreLane run directories (generated)

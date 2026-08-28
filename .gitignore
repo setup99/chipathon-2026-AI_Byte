@@ -13,6 +13,8 @@ librelane/.core_size_override.yaml
 img/
 *.lyrdb
 .ipynb_checkpoints/
+.DS_Store
+._*
 # Scratch metrics at repo root (signoff copies live under docs/signoff_a02_macro/)
 /metrics*.json
 /metrics_*.csv

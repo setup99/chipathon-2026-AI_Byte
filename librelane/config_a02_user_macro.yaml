@@ -1,0 +1,221 @@
+# A02_A user macro — D10-style (organizer DEF + pad-control wrapper).
+#
+# Same method as Lefteris-B / SystemsGenesys D10:
+#   FP_DEF_TEMPLATE = organizer A02_A.def (unit-scaled 200→2000 only)
+#   Top RTL        = A02_A.v (146 ports + OE/IE glue + power connectors)
+#   LVS            = LVS_CONNECT_BY_LABEL + flatten connectors
+#   PDN            = ringless stdcell grid, extended to the DEF outline, plus a
+#                    post-pdngen west-edge stitch (AIByte.GeneratePDN), which
+#                    asserts no power metal escapes DIEAREA
+#   Signoff        = full (Magic/KLayout DRC, LVS, IR-drop, PDN checks — no skips)
+#
+# Build artifacts first:
+#   make build-a02-d10-style
+# Then:
+#   make librelane-a02-macro-nodrc
+#   make librelane-a02-macro
+#
+# Requires: PYTHONPATH includes librelane/plugins (Makefile sets this).
+meta:
+  version: 3
+  flow: Classic
+  substituting_steps:
+    OpenROAD.GeneratePDN: AIByte.GeneratePDN
+    OpenROAD.ResizerTimingPostCTS: AIByte.ResizerTimingPostCTSHoldDly
+    OpenROAD.RepairDesignPostGRT: AIByte.RepairDesignPostGRTSizeFirst
+
+DESIGN_NAME: A02_A
+
+VERILOG_DEFINES:
+- USE_POWER_PINS
+- AI_BYTE_NO_POWER_CONN
+
+VERILOG_FILES:
+- dir::../src/ai_byte/post/alu_q88.v
+- dir::../src/ai_byte/post/relu_int16.v
+- dir::../src/ai_byte/post/pooling_int16.v
+- dir::../src/ai_byte/post/scale_int16_to_int8.v
+- dir::../src/ai_byte/post/block_wrapper.v
+- dir::../src/ai_byte/eml/mitchell_log2_q88.v
+- dir::../src/ai_byte/eml/mitchell_exp2_q88.v
+- dir::../src/ai_byte/eml/eml_tile_q88.v
+- dir::../src/ai_byte/eml/eml_sigmoid_q88_shared.v
+- dir::../src/ai_byte/eml/eml_tanh_q88_shared.v
+- dir::../src/ai_byte/eml/eml_recip_q88_shared.v
+- dir::../src/ai_byte/eml/eml_sqrt_q88_shared.v
+- dir::../src/ai_byte/eml/eml_softmax_q88_serial.v
+- dir::../src/ai_byte/eml/eml_feedback_cell_q88_shared.v
+- dir::../src/ai_byte/eml/eml_wrapper_q88_serial.v
+- dir::../src/ai_byte/sa/ram_sdp.v
+- dir::../src/ai_byte/sa/pe_gemv_ws.v
+- dir::../src/ai_byte/sa/gemm_systolic_2d.v
+- dir::../src/ai_byte/buffers/ai_byte_sram_buffer.v
+- dir::../src/ai_byte/interface/ai_byte_mmif.v
+- dir::../src/ai_byte/control/reg_file.v
+- dir::../src/ai_byte/control/control_unit.v
+- dir::../src/ai_byte/control/buffer_ctrl.v
+- dir::../src/ai_byte/control/control_wrap.v
+- dir::../src/ai_byte/top/ai_byte_core.v
+- dir::../src/ai_byte/top/ai_byte_top.v
+- dir::../src/a02/A02_A.v
+- dir::../connectors/verilog/vss_conn.v
+- dir::../connectors/verilog/vdd_conn.v
+
+PRIMARY_GDSII_STREAMOUT_TOOL: klayout
+
+# The organizer connector GDS (vss_conn/vdd_conn) carries only Metal2..Metal5 and
+# via layers — no PR-boundary layer — so Magic's blackbox path cannot derive a
+# FIXED_BBOX and Magic.StreamOut aborts with "Failed to extract PR boundary".
+# Read the macros hierarchically instead; they hold plain metal, no std cells.
+MAGIC_MACRO_STD_CELL_SOURCE: PDK
+
+PNR_SDC_FILE: dir::A02_A.sdc
+SIGNOFF_SDC_FILE: dir::A02_A.sdc
+FALLBACK_SDC: dir::A02_A.sdc
+
+VDD_NETS:
+- VDD
+GND_NETS:
+- VSS
+
+FP_SIZING: absolute
+DIE_AREA: [0, 0, 1110, 1110]
+CORE_AREA: [10, 10, 1100, 1100]
+
+# Organizer DEF, unit-scaled only (make build-a02-d10-style).
+FP_DEF_TEMPLATE: dir::floorplan/A02_A_full.def
+
+CLOCK_PORT: clk
+CLOCK_NET: clk
+CLOCK_PERIOD: 140
+
+PL_TARGET_DENSITY_PCT: 55
+GRT_ALLOW_CONGESTION: true
+
+# D10 closure knobs (adapted period for AI_BYTE size).
+# 10 (LibreLane's own default), not 4: gf180mcu's liberty declares no max_fanout
+# at all, and a limit of 4 pinned 5004 nets to exactly 4 while the resizer still
+# left 6 nets one or two loads over. At 10 the constraint binds on far fewer nets,
+# which is what an earlier run of this RTL used to reach zero fanout violations.
+MAX_FANOUT_CONSTRAINT: 10
+PL_RESIZER_SETUP_SLACK_MARGIN: 4.0
+MAX_CAPACITANCE_CONSTRAINT: 0.4
+
+# Relaxing MAX_FANOUT_CONSTRAINT to 10 removed most of the datapath buffering that
+# used to hand hold a free margin: post-CTS repair at 0.35 ns no longer survived
+# routing (-1.27 ns in every corner). 1.5 ns over-fixed (7395 hold buffers) and
+# legalization failed on 403 cells. 0.8 ns is between those two, with a second
+# hold pass after global routing where the parasitics are close to final.
+PL_RESIZER_HOLD_SLACK_MARGIN: 0.8
+GRT_RESIZER_HOLD_SLACK_MARGIN: 0.5
+RUN_POST_GRT_RESIZER_TIMING: true
+
+DRT_ANTENNA_REPAIR_MARGIN: 10
+# The default 3 iterations ran out mid-convergence: 10 -> 3 -> 1 violations left
+# inside DetailedRouting. Extra passes cost another detailed-route each but land
+# the last net. Same story for the pre-routing pass, which inserted 2 then 1 diodes.
+DRT_ANTENNA_REPAIR_ITERS: 6
+GRT_ANTENNA_REPAIR_ITERS: 5
+
+MAX_TRANSITION_CONSTRAINT: 4
+
+CTS_CLK_BUFFERS:
+- gf180mcu_fd_sc_mcu7t5v0__clkbuf_4
+- gf180mcu_fd_sc_mcu7t5v0__clkbuf_8
+CTS_MAX_CAP: 0.15
+CTS_MAX_SLEW: 2.5
+CTS_SINK_CLUSTERING_SIZE: 8
+CTS_SINK_CLUSTERING_MAX_DIAMETER: 40
+CTS_SINK_BUFFER_MAX_CAP_DERATE_PCT: 50
+# Without this, TritonCTS leaves three H-tree levels unbuffered and collapses
+# 4x4 branching into 32 clock nets carrying 16 loads each. 20 um is just above the
+# 19 um wire segment unit, so no level can collapse: worst clock net drops to 9
+# loads. Clock path deepens to 10-11 buffers from 5-6, but skew moved only
+# 0.07 ns and the tree needs fewer buffers overall (1132 vs 1495).
+CTS_DISTANCE_BETWEEN_BUFFERS: 20
+
+DESIGN_REPAIR_MAX_SLEW_PCT: 30
+DESIGN_REPAIR_MAX_CAP_PCT: 30
+# Core recipe: post-GRT repair @ 30% margins. Exp8a substitutes stock step
+# (size-up drivers first + GRT refresh/retry on macro RSZ-0074).
+RUN_POST_GRT_DESIGN_REPAIR: true
+GRT_DESIGN_REPAIR_MAX_SLEW_PCT: 30
+GRT_DESIGN_REPAIR_MAX_CAP_PCT: 30
+
+EXTRA_EXCLUDED_CELLS:
+# Ban delay cells for setup/fanout (hold re-enables dly* in post-CTS step).
+- gf180mcu_fd_sc_mcu7t5v0__dlya_1
+- gf180mcu_fd_sc_mcu7t5v0__dlya_2
+- gf180mcu_fd_sc_mcu7t5v0__dlya_4
+- gf180mcu_fd_sc_mcu7t5v0__dlyb_1
+- gf180mcu_fd_sc_mcu7t5v0__dlyb_2
+- gf180mcu_fd_sc_mcu7t5v0__dlyb_4
+- gf180mcu_fd_sc_mcu7t5v0__dlyc_1
+- gf180mcu_fd_sc_mcu7t5v0__dlyc_2
+- gf180mcu_fd_sc_mcu7t5v0__dlyc_4
+- gf180mcu_fd_sc_mcu7t5v0__dlyd_1
+- gf180mcu_fd_sc_mcu7t5v0__dlyd_2
+- gf180mcu_fd_sc_mcu7t5v0__dlyd_4
+
+PDN_VWIDTH: 5
+PDN_HWIDTH: 5
+PDN_VSPACING: 1
+PDN_HSPACING: 1
+PDN_VPITCH: 75
+PDN_HPITCH: 75
+# No core ring: it needs offset 6 + 10 + spacing 1.7 + 10 = 27.7 um outside the
+# core, which either lands past the 1110 um die edge of the organizer DEF or
+# runs straight through the west-edge connectors at x = 0..20. Straps extend to
+# the die boundary instead, so no power metal leaves the provided outline.
+PDN_CORE_RING: False
+PDN_EXTEND_TO: boundary
+PDN_ENABLE_PINS: True
+
+PDN_CFG: dir::pdn_cfg_core.tcl
+
+# Full signoff: do not skip / defer checks.
+ERROR_ON_MAGIC_DRC: true
+ERROR_ON_TR_DRC: true
+ERROR_ON_LVS_ERROR: true
+ERROR_ON_PDN_VIOLATIONS: true
+ERROR_ON_KLAYOUT_DRC: true
+ERROR_ON_KLAYOUT_ANTENNA: true
+RUN_IRDROP_REPORT: true
+RUN_LVS: true
+RUN_MAGIC_DRC: true
+RUN_KLAYOUT_DRC: true
+
+
+MACROS:
+  vss_conn:
+    gds:
+      - dir::../connectors/gds/vss_conn.gds
+    lef:
+      - dir::../connectors/lef/vss_conn.lef
+    instances:
+      u_vss_conn:
+        location: [0.0, 6.36]
+        orientation: N
+  vdd_conn:
+    gds:
+      - dir::../connectors/gds/vdd_conn.gds
+    lef:
+      - dir::../connectors/lef/vdd_conn.lef
+    instances:
+      u_vdd_conn:
+        location: [0.0, 106.36]
+        orientation: N
+
+LVS_CONNECT_BY_LABEL: true
+MAGIC_GDS_FLATGLOB:
+- "vss_conn"
+- "vdd_conn"
+
+PDN_CONNECT_MACROS_TO_GRID: false
+PDN_HORIZONTAL_HALO: 0
+PDN_VERTICAL_HALO: 0
+PDN_MACRO_CONNECTIONS: []
+
+IGNORE_DISCONNECTED_MODULES:
+- vss_conn
+- vdd_conn

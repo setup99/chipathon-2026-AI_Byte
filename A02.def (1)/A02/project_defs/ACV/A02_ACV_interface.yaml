@@ -1,0 +1,4248 @@
+spec_blob_sha: 7398a4da36e4d6ad9f9b76c06813b073c9c0ed2f
+source_mapping: build/padframes/A02/project_defs/ACV/A02_ACV_pad_map.yaml
+source_padring_def: build/padframes/A02/project_defs/ACV/A02_ACV_padring.def
+variant: ACV
+origin_microns:
+- '350'
+- '1475'
+origin_dbu:
+- 70000
+- 295000
+size_microns:
+- '1675'
+- '1110'
+diearea_dbu:
+- 0
+- 0
+- 335000
+- 222000
+usable_area: 1859250
+vss_fixed:
+- W12
+blockages: []
+routing_blockage_layers:
+- Metal1
+- Metal2
+- Metal3
+- Metal4
+- Metal5
+pins:
+- user_pin_name: VDD
+  project_pin: VDD
+  cell_terminal: DVDD
+  padring_instance: W13
+  physical_pad_slot: W13
+  cell: gf180mcu_fd_io__dvdd
+  direction: INOUT
+  use: POWER
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 69069
+    - 328828
+    - 70000
+    - 330728
+    extended_top_level:
+    - 70000
+    - 328828
+    - 70200
+    - 330728
+    translated_user:
+    - 0
+    - 33828
+    - 200
+    - 35728
+  - routing_layer: Metal2
+    top_level:
+    - 69069
+    - 326198
+    - 70000
+    - 328248
+    extended_top_level:
+    - 70000
+    - 326198
+    - 70200
+    - 328248
+    translated_user:
+    - 0
+    - 31198
+    - 200
+    - 33248
+  - routing_layer: Metal2
+    top_level:
+    - 69069
+    - 323828
+    - 70000
+    - 325878
+    extended_top_level:
+    - 70000
+    - 323828
+    - 70200
+    - 325878
+    translated_user:
+    - 0
+    - 28828
+    - 200
+    - 30878
+  - routing_layer: Metal2
+    top_level:
+    - 69069
+    - 321122
+    - 70000
+    - 323172
+    extended_top_level:
+    - 70000
+    - 321122
+    - 70200
+    - 323172
+    translated_user:
+    - 0
+    - 26122
+    - 200
+    - 28172
+  - routing_layer: Metal2
+    top_level:
+    - 69069
+    - 318752
+    - 70000
+    - 320802
+    extended_top_level:
+    - 70000
+    - 318752
+    - 70200
+    - 320802
+    translated_user:
+    - 0
+    - 23752
+    - 200
+    - 25802
+  - routing_layer: Metal2
+    top_level:
+    - 69069
+    - 316272
+    - 70000
+    - 318172
+    extended_top_level:
+    - 70000
+    - 316272
+    - 70200
+    - 318172
+    translated_user:
+    - 0
+    - 21272
+    - 200
+    - 23172
+- user_pin_name: clk
+  project_pin: clk_PU
+  cell_terminal: PU
+  padring_instance: W14
+  physical_pad_slot: W14
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66054
+    - 349731
+    - 70000
+    - 349807
+    extended_top_level:
+    - 70000
+    - 349731
+    - 70200
+    - 349807
+    translated_user:
+    - 0
+    - 54731
+    - 200
+    - 54807
+- user_pin_name: clk
+  project_pin: clk_PD
+  cell_terminal: PD
+  padring_instance: W14
+  physical_pad_slot: W14
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 65990
+    - 348858
+    - 70000
+    - 348934
+    extended_top_level:
+    - 70000
+    - 348858
+    - 70200
+    - 348934
+    translated_user:
+    - 0
+    - 53858
+    - 200
+    - 53934
+- user_pin_name: clk
+  project_pin: clk
+  cell_terminal: Y
+  padring_instance: W14
+  physical_pad_slot: W14
+  cell: gf180mcu_fd_io__in_c
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 63950
+    - 336752
+    - 70000
+    - 336828
+    extended_top_level:
+    - 70000
+    - 336752
+    - 70200
+    - 336828
+    translated_user:
+    - 0
+    - 41752
+    - 200
+    - 41828
+- user_pin_name: data[7]
+  project_pin: data_7_CS
+  cell_terminal: CS
+  padring_instance: W15
+  physical_pad_slot: W15
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 65709
+    - 370252
+    - 70000
+    - 370328
+    extended_top_level:
+    - 70000
+    - 370252
+    - 70200
+    - 370328
+    translated_user:
+    - 0
+    - 75252
+    - 200
+    - 75328
+- user_pin_name: data[7]
+  project_pin: data_7_SL
+  cell_terminal: SL
+  padring_instance: W15
+  physical_pad_slot: W15
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 53028
+    - 357190
+    - 70000
+    - 357266
+    extended_top_level:
+    - 70000
+    - 357190
+    - 70200
+    - 357266
+    translated_user:
+    - 0
+    - 62190
+    - 200
+    - 62266
+- user_pin_name: data[7]
+  project_pin: data_7_IE
+  cell_terminal: IE
+  padring_instance: W15
+  physical_pad_slot: W15
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66984
+    - 368647
+    - 70000
+    - 368723
+    extended_top_level:
+    - 70000
+    - 368647
+    - 70200
+    - 368723
+    translated_user:
+    - 0
+    - 73647
+    - 200
+    - 73723
+- user_pin_name: data[7]
+  project_pin: data_7_OE
+  cell_terminal: OE
+  padring_instance: W15
+  physical_pad_slot: W15
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 53268
+    - 356898
+    - 70000
+    - 356974
+    extended_top_level:
+    - 70000
+    - 356898
+    - 70200
+    - 356974
+    translated_user:
+    - 0
+    - 61898
+    - 200
+    - 61974
+- user_pin_name: data[7]
+  project_pin: data_7_PU
+  cell_terminal: PU
+  padring_instance: W15
+  physical_pad_slot: W15
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66084
+    - 369731
+    - 70000
+    - 369807
+    extended_top_level:
+    - 70000
+    - 369731
+    - 70200
+    - 369807
+    translated_user:
+    - 0
+    - 74731
+    - 200
+    - 74807
+- user_pin_name: data[7]
+  project_pin: data_7_PD
+  cell_terminal: PD
+  padring_instance: W15
+  physical_pad_slot: W15
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66020
+    - 368858
+    - 70000
+    - 368934
+    extended_top_level:
+    - 70000
+    - 368858
+    - 70200
+    - 368934
+    translated_user:
+    - 0
+    - 73858
+    - 200
+    - 73934
+- user_pin_name: data[7]
+  project_pin: data_7_OUT
+  cell_terminal: A
+  padring_instance: W15
+  physical_pad_slot: W15
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52892
+    - 357044
+    - 70000
+    - 357120
+    extended_top_level:
+    - 70000
+    - 357044
+    - 70200
+    - 357120
+    translated_user:
+    - 0
+    - 62044
+    - 200
+    - 62120
+- user_pin_name: data[7]
+  project_pin: data_7_PDRV0
+  cell_terminal: PDRV0
+  padring_instance: W15
+  physical_pad_slot: W15
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52933
+    - 369502
+    - 70000
+    - 369578
+    extended_top_level:
+    - 70000
+    - 369502
+    - 70200
+    - 369578
+    translated_user:
+    - 0
+    - 74502
+    - 200
+    - 74578
+- user_pin_name: data[7]
+  project_pin: data_7_PDRV1
+  cell_terminal: PDRV1
+  padring_instance: W15
+  physical_pad_slot: W15
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52998
+    - 369360
+    - 70000
+    - 369436
+    extended_top_level:
+    - 70000
+    - 369360
+    - 70200
+    - 369436
+    translated_user:
+    - 0
+    - 74360
+    - 200
+    - 74436
+- user_pin_name: data[7]
+  project_pin: data_7_IN
+  cell_terminal: Y
+  padring_instance: W15
+  physical_pad_slot: W15
+  cell: gf180mcu_fd_io__bi_t
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 63980
+    - 356752
+    - 70000
+    - 356828
+    extended_top_level:
+    - 70000
+    - 356752
+    - 70200
+    - 356828
+    translated_user:
+    - 0
+    - 61752
+    - 200
+    - 61828
+- user_pin_name: data[5]
+  project_pin: data_5_CS
+  cell_terminal: CS
+  padring_instance: W16
+  physical_pad_slot: W16
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 65709
+    - 390252
+    - 70000
+    - 390328
+    extended_top_level:
+    - 70000
+    - 390252
+    - 70200
+    - 390328
+    translated_user:
+    - 0
+    - 95252
+    - 200
+    - 95328
+- user_pin_name: data[5]
+  project_pin: data_5_SL
+  cell_terminal: SL
+  padring_instance: W16
+  physical_pad_slot: W16
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 53028
+    - 377190
+    - 70000
+    - 377266
+    extended_top_level:
+    - 70000
+    - 377190
+    - 70200
+    - 377266
+    translated_user:
+    - 0
+    - 82190
+    - 200
+    - 82266
+- user_pin_name: data[5]
+  project_pin: data_5_IE
+  cell_terminal: IE
+  padring_instance: W16
+  physical_pad_slot: W16
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66984
+    - 388647
+    - 70000
+    - 388723
+    extended_top_level:
+    - 70000
+    - 388647
+    - 70200
+    - 388723
+    translated_user:
+    - 0
+    - 93647
+    - 200
+    - 93723
+- user_pin_name: data[5]
+  project_pin: data_5_OE
+  cell_terminal: OE
+  padring_instance: W16
+  physical_pad_slot: W16
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 53268
+    - 376898
+    - 70000
+    - 376974
+    extended_top_level:
+    - 70000
+    - 376898
+    - 70200
+    - 376974
+    translated_user:
+    - 0
+    - 81898
+    - 200
+    - 81974
+- user_pin_name: data[5]
+  project_pin: data_5_PU
+  cell_terminal: PU
+  padring_instance: W16
+  physical_pad_slot: W16
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66084
+    - 389731
+    - 70000
+    - 389807
+    extended_top_level:
+    - 70000
+    - 389731
+    - 70200
+    - 389807
+    translated_user:
+    - 0
+    - 94731
+    - 200
+    - 94807
+- user_pin_name: data[5]
+  project_pin: data_5_PD
+  cell_terminal: PD
+  padring_instance: W16
+  physical_pad_slot: W16
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66020
+    - 388858
+    - 70000
+    - 388934
+    extended_top_level:
+    - 70000
+    - 388858
+    - 70200
+    - 388934
+    translated_user:
+    - 0
+    - 93858
+    - 200
+    - 93934
+- user_pin_name: data[5]
+  project_pin: data_5_OUT
+  cell_terminal: A
+  padring_instance: W16
+  physical_pad_slot: W16
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52892
+    - 377044
+    - 70000
+    - 377120
+    extended_top_level:
+    - 70000
+    - 377044
+    - 70200
+    - 377120
+    translated_user:
+    - 0
+    - 82044
+    - 200
+    - 82120
+- user_pin_name: data[5]
+  project_pin: data_5_PDRV0
+  cell_terminal: PDRV0
+  padring_instance: W16
+  physical_pad_slot: W16
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52933
+    - 389502
+    - 70000
+    - 389578
+    extended_top_level:
+    - 70000
+    - 389502
+    - 70200
+    - 389578
+    translated_user:
+    - 0
+    - 94502
+    - 200
+    - 94578
+- user_pin_name: data[5]
+  project_pin: data_5_PDRV1
+  cell_terminal: PDRV1
+  padring_instance: W16
+  physical_pad_slot: W16
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52998
+    - 389360
+    - 70000
+    - 389436
+    extended_top_level:
+    - 70000
+    - 389360
+    - 70200
+    - 389436
+    translated_user:
+    - 0
+    - 94360
+    - 200
+    - 94436
+- user_pin_name: data[5]
+  project_pin: data_5_IN
+  cell_terminal: Y
+  padring_instance: W16
+  physical_pad_slot: W16
+  cell: gf180mcu_fd_io__bi_t
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 63980
+    - 376752
+    - 70000
+    - 376828
+    extended_top_level:
+    - 70000
+    - 376752
+    - 70200
+    - 376828
+    translated_user:
+    - 0
+    - 81752
+    - 200
+    - 81828
+- user_pin_name: data[6]
+  project_pin: data_6_CS
+  cell_terminal: CS
+  padring_instance: W17
+  physical_pad_slot: W17
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 65709
+    - 410252
+    - 70000
+    - 410328
+    extended_top_level:
+    - 70000
+    - 410252
+    - 70200
+    - 410328
+    translated_user:
+    - 0
+    - 115252
+    - 200
+    - 115328
+- user_pin_name: data[6]
+  project_pin: data_6_SL
+  cell_terminal: SL
+  padring_instance: W17
+  physical_pad_slot: W17
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 53028
+    - 397190
+    - 70000
+    - 397266
+    extended_top_level:
+    - 70000
+    - 397190
+    - 70200
+    - 397266
+    translated_user:
+    - 0
+    - 102190
+    - 200
+    - 102266
+- user_pin_name: data[6]
+  project_pin: data_6_IE
+  cell_terminal: IE
+  padring_instance: W17
+  physical_pad_slot: W17
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66984
+    - 408647
+    - 70000
+    - 408723
+    extended_top_level:
+    - 70000
+    - 408647
+    - 70200
+    - 408723
+    translated_user:
+    - 0
+    - 113647
+    - 200
+    - 113723
+- user_pin_name: data[6]
+  project_pin: data_6_OE
+  cell_terminal: OE
+  padring_instance: W17
+  physical_pad_slot: W17
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 53268
+    - 396898
+    - 70000
+    - 396974
+    extended_top_level:
+    - 70000
+    - 396898
+    - 70200
+    - 396974
+    translated_user:
+    - 0
+    - 101898
+    - 200
+    - 101974
+- user_pin_name: data[6]
+  project_pin: data_6_PU
+  cell_terminal: PU
+  padring_instance: W17
+  physical_pad_slot: W17
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66084
+    - 409731
+    - 70000
+    - 409807
+    extended_top_level:
+    - 70000
+    - 409731
+    - 70200
+    - 409807
+    translated_user:
+    - 0
+    - 114731
+    - 200
+    - 114807
+- user_pin_name: data[6]
+  project_pin: data_6_PD
+  cell_terminal: PD
+  padring_instance: W17
+  physical_pad_slot: W17
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66020
+    - 408858
+    - 70000
+    - 408934
+    extended_top_level:
+    - 70000
+    - 408858
+    - 70200
+    - 408934
+    translated_user:
+    - 0
+    - 113858
+    - 200
+    - 113934
+- user_pin_name: data[6]
+  project_pin: data_6_OUT
+  cell_terminal: A
+  padring_instance: W17
+  physical_pad_slot: W17
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52892
+    - 397044
+    - 70000
+    - 397120
+    extended_top_level:
+    - 70000
+    - 397044
+    - 70200
+    - 397120
+    translated_user:
+    - 0
+    - 102044
+    - 200
+    - 102120
+- user_pin_name: data[6]
+  project_pin: data_6_PDRV0
+  cell_terminal: PDRV0
+  padring_instance: W17
+  physical_pad_slot: W17
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52933
+    - 409502
+    - 70000
+    - 409578
+    extended_top_level:
+    - 70000
+    - 409502
+    - 70200
+    - 409578
+    translated_user:
+    - 0
+    - 114502
+    - 200
+    - 114578
+- user_pin_name: data[6]
+  project_pin: data_6_PDRV1
+  cell_terminal: PDRV1
+  padring_instance: W17
+  physical_pad_slot: W17
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52998
+    - 409360
+    - 70000
+    - 409436
+    extended_top_level:
+    - 70000
+    - 409360
+    - 70200
+    - 409436
+    translated_user:
+    - 0
+    - 114360
+    - 200
+    - 114436
+- user_pin_name: data[6]
+  project_pin: data_6_IN
+  cell_terminal: Y
+  padring_instance: W17
+  physical_pad_slot: W17
+  cell: gf180mcu_fd_io__bi_t
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 63980
+    - 396752
+    - 70000
+    - 396828
+    extended_top_level:
+    - 70000
+    - 396752
+    - 70200
+    - 396828
+    translated_user:
+    - 0
+    - 101752
+    - 200
+    - 101828
+- user_pin_name: data[4]
+  project_pin: data_4_CS
+  cell_terminal: CS
+  padring_instance: W18
+  physical_pad_slot: W18
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 65709
+    - 430252
+    - 70000
+    - 430328
+    extended_top_level:
+    - 70000
+    - 430252
+    - 70200
+    - 430328
+    translated_user:
+    - 0
+    - 135252
+    - 200
+    - 135328
+- user_pin_name: data[4]
+  project_pin: data_4_SL
+  cell_terminal: SL
+  padring_instance: W18
+  physical_pad_slot: W18
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 53028
+    - 417190
+    - 70000
+    - 417266
+    extended_top_level:
+    - 70000
+    - 417190
+    - 70200
+    - 417266
+    translated_user:
+    - 0
+    - 122190
+    - 200
+    - 122266
+- user_pin_name: data[4]
+  project_pin: data_4_IE
+  cell_terminal: IE
+  padring_instance: W18
+  physical_pad_slot: W18
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66984
+    - 428647
+    - 70000
+    - 428723
+    extended_top_level:
+    - 70000
+    - 428647
+    - 70200
+    - 428723
+    translated_user:
+    - 0
+    - 133647
+    - 200
+    - 133723
+- user_pin_name: data[4]
+  project_pin: data_4_OE
+  cell_terminal: OE
+  padring_instance: W18
+  physical_pad_slot: W18
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 53268
+    - 416898
+    - 70000
+    - 416974
+    extended_top_level:
+    - 70000
+    - 416898
+    - 70200
+    - 416974
+    translated_user:
+    - 0
+    - 121898
+    - 200
+    - 121974
+- user_pin_name: data[4]
+  project_pin: data_4_PU
+  cell_terminal: PU
+  padring_instance: W18
+  physical_pad_slot: W18
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66084
+    - 429731
+    - 70000
+    - 429807
+    extended_top_level:
+    - 70000
+    - 429731
+    - 70200
+    - 429807
+    translated_user:
+    - 0
+    - 134731
+    - 200
+    - 134807
+- user_pin_name: data[4]
+  project_pin: data_4_PD
+  cell_terminal: PD
+  padring_instance: W18
+  physical_pad_slot: W18
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66020
+    - 428858
+    - 70000
+    - 428934
+    extended_top_level:
+    - 70000
+    - 428858
+    - 70200
+    - 428934
+    translated_user:
+    - 0
+    - 133858
+    - 200
+    - 133934
+- user_pin_name: data[4]
+  project_pin: data_4_OUT
+  cell_terminal: A
+  padring_instance: W18
+  physical_pad_slot: W18
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52892
+    - 417044
+    - 70000
+    - 417120
+    extended_top_level:
+    - 70000
+    - 417044
+    - 70200
+    - 417120
+    translated_user:
+    - 0
+    - 122044
+    - 200
+    - 122120
+- user_pin_name: data[4]
+  project_pin: data_4_PDRV0
+  cell_terminal: PDRV0
+  padring_instance: W18
+  physical_pad_slot: W18
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52933
+    - 429502
+    - 70000
+    - 429578
+    extended_top_level:
+    - 70000
+    - 429502
+    - 70200
+    - 429578
+    translated_user:
+    - 0
+    - 134502
+    - 200
+    - 134578
+- user_pin_name: data[4]
+  project_pin: data_4_PDRV1
+  cell_terminal: PDRV1
+  padring_instance: W18
+  physical_pad_slot: W18
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52998
+    - 429360
+    - 70000
+    - 429436
+    extended_top_level:
+    - 70000
+    - 429360
+    - 70200
+    - 429436
+    translated_user:
+    - 0
+    - 134360
+    - 200
+    - 134436
+- user_pin_name: data[4]
+  project_pin: data_4_IN
+  cell_terminal: Y
+  padring_instance: W18
+  physical_pad_slot: W18
+  cell: gf180mcu_fd_io__bi_t
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 63980
+    - 416752
+    - 70000
+    - 416828
+    extended_top_level:
+    - 70000
+    - 416752
+    - 70200
+    - 416828
+    translated_user:
+    - 0
+    - 121752
+    - 200
+    - 121828
+- user_pin_name: data[0]
+  project_pin: data_0_CS
+  cell_terminal: CS
+  padring_instance: W19
+  physical_pad_slot: W19
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 65709
+    - 450252
+    - 70000
+    - 450328
+    extended_top_level:
+    - 70000
+    - 450252
+    - 70200
+    - 450328
+    translated_user:
+    - 0
+    - 155252
+    - 200
+    - 155328
+- user_pin_name: data[0]
+  project_pin: data_0_SL
+  cell_terminal: SL
+  padring_instance: W19
+  physical_pad_slot: W19
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 53028
+    - 437190
+    - 70000
+    - 437266
+    extended_top_level:
+    - 70000
+    - 437190
+    - 70200
+    - 437266
+    translated_user:
+    - 0
+    - 142190
+    - 200
+    - 142266
+- user_pin_name: data[0]
+  project_pin: data_0_IE
+  cell_terminal: IE
+  padring_instance: W19
+  physical_pad_slot: W19
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66984
+    - 448647
+    - 70000
+    - 448723
+    extended_top_level:
+    - 70000
+    - 448647
+    - 70200
+    - 448723
+    translated_user:
+    - 0
+    - 153647
+    - 200
+    - 153723
+- user_pin_name: data[0]
+  project_pin: data_0_OE
+  cell_terminal: OE
+  padring_instance: W19
+  physical_pad_slot: W19
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 53268
+    - 436898
+    - 70000
+    - 436974
+    extended_top_level:
+    - 70000
+    - 436898
+    - 70200
+    - 436974
+    translated_user:
+    - 0
+    - 141898
+    - 200
+    - 141974
+- user_pin_name: data[0]
+  project_pin: data_0_PU
+  cell_terminal: PU
+  padring_instance: W19
+  physical_pad_slot: W19
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66084
+    - 449731
+    - 70000
+    - 449807
+    extended_top_level:
+    - 70000
+    - 449731
+    - 70200
+    - 449807
+    translated_user:
+    - 0
+    - 154731
+    - 200
+    - 154807
+- user_pin_name: data[0]
+  project_pin: data_0_PD
+  cell_terminal: PD
+  padring_instance: W19
+  physical_pad_slot: W19
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66020
+    - 448858
+    - 70000
+    - 448934
+    extended_top_level:
+    - 70000
+    - 448858
+    - 70200
+    - 448934
+    translated_user:
+    - 0
+    - 153858
+    - 200
+    - 153934
+- user_pin_name: data[0]
+  project_pin: data_0_OUT
+  cell_terminal: A
+  padring_instance: W19
+  physical_pad_slot: W19
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52892
+    - 437044
+    - 70000
+    - 437120
+    extended_top_level:
+    - 70000
+    - 437044
+    - 70200
+    - 437120
+    translated_user:
+    - 0
+    - 142044
+    - 200
+    - 142120
+- user_pin_name: data[0]
+  project_pin: data_0_PDRV0
+  cell_terminal: PDRV0
+  padring_instance: W19
+  physical_pad_slot: W19
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52933
+    - 449502
+    - 70000
+    - 449578
+    extended_top_level:
+    - 70000
+    - 449502
+    - 70200
+    - 449578
+    translated_user:
+    - 0
+    - 154502
+    - 200
+    - 154578
+- user_pin_name: data[0]
+  project_pin: data_0_PDRV1
+  cell_terminal: PDRV1
+  padring_instance: W19
+  physical_pad_slot: W19
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52998
+    - 449360
+    - 70000
+    - 449436
+    extended_top_level:
+    - 70000
+    - 449360
+    - 70200
+    - 449436
+    translated_user:
+    - 0
+    - 154360
+    - 200
+    - 154436
+- user_pin_name: data[0]
+  project_pin: data_0_IN
+  cell_terminal: Y
+  padring_instance: W19
+  physical_pad_slot: W19
+  cell: gf180mcu_fd_io__bi_t
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 63980
+    - 436752
+    - 70000
+    - 436828
+    extended_top_level:
+    - 70000
+    - 436752
+    - 70200
+    - 436828
+    translated_user:
+    - 0
+    - 141752
+    - 200
+    - 141828
+- user_pin_name: data[1]
+  project_pin: data_1_CS
+  cell_terminal: CS
+  padring_instance: W20
+  physical_pad_slot: W20
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 65709
+    - 470252
+    - 70000
+    - 470328
+    extended_top_level:
+    - 70000
+    - 470252
+    - 70200
+    - 470328
+    translated_user:
+    - 0
+    - 175252
+    - 200
+    - 175328
+- user_pin_name: data[1]
+  project_pin: data_1_SL
+  cell_terminal: SL
+  padring_instance: W20
+  physical_pad_slot: W20
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 53028
+    - 457190
+    - 70000
+    - 457266
+    extended_top_level:
+    - 70000
+    - 457190
+    - 70200
+    - 457266
+    translated_user:
+    - 0
+    - 162190
+    - 200
+    - 162266
+- user_pin_name: data[1]
+  project_pin: data_1_IE
+  cell_terminal: IE
+  padring_instance: W20
+  physical_pad_slot: W20
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66984
+    - 468647
+    - 70000
+    - 468723
+    extended_top_level:
+    - 70000
+    - 468647
+    - 70200
+    - 468723
+    translated_user:
+    - 0
+    - 173647
+    - 200
+    - 173723
+- user_pin_name: data[1]
+  project_pin: data_1_OE
+  cell_terminal: OE
+  padring_instance: W20
+  physical_pad_slot: W20
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 53268
+    - 456898
+    - 70000
+    - 456974
+    extended_top_level:
+    - 70000
+    - 456898
+    - 70200
+    - 456974
+    translated_user:
+    - 0
+    - 161898
+    - 200
+    - 161974
+- user_pin_name: data[1]
+  project_pin: data_1_PU
+  cell_terminal: PU
+  padring_instance: W20
+  physical_pad_slot: W20
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66084
+    - 469731
+    - 70000
+    - 469807
+    extended_top_level:
+    - 70000
+    - 469731
+    - 70200
+    - 469807
+    translated_user:
+    - 0
+    - 174731
+    - 200
+    - 174807
+- user_pin_name: data[1]
+  project_pin: data_1_PD
+  cell_terminal: PD
+  padring_instance: W20
+  physical_pad_slot: W20
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66020
+    - 468858
+    - 70000
+    - 468934
+    extended_top_level:
+    - 70000
+    - 468858
+    - 70200
+    - 468934
+    translated_user:
+    - 0
+    - 173858
+    - 200
+    - 173934
+- user_pin_name: data[1]
+  project_pin: data_1_OUT
+  cell_terminal: A
+  padring_instance: W20
+  physical_pad_slot: W20
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52892
+    - 457044
+    - 70000
+    - 457120
+    extended_top_level:
+    - 70000
+    - 457044
+    - 70200
+    - 457120
+    translated_user:
+    - 0
+    - 162044
+    - 200
+    - 162120
+- user_pin_name: data[1]
+  project_pin: data_1_PDRV0
+  cell_terminal: PDRV0
+  padring_instance: W20
+  physical_pad_slot: W20
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52933
+    - 469502
+    - 70000
+    - 469578
+    extended_top_level:
+    - 70000
+    - 469502
+    - 70200
+    - 469578
+    translated_user:
+    - 0
+    - 174502
+    - 200
+    - 174578
+- user_pin_name: data[1]
+  project_pin: data_1_PDRV1
+  cell_terminal: PDRV1
+  padring_instance: W20
+  physical_pad_slot: W20
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52998
+    - 469360
+    - 70000
+    - 469436
+    extended_top_level:
+    - 70000
+    - 469360
+    - 70200
+    - 469436
+    translated_user:
+    - 0
+    - 174360
+    - 200
+    - 174436
+- user_pin_name: data[1]
+  project_pin: data_1_IN
+  cell_terminal: Y
+  padring_instance: W20
+  physical_pad_slot: W20
+  cell: gf180mcu_fd_io__bi_t
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 63980
+    - 456752
+    - 70000
+    - 456828
+    extended_top_level:
+    - 70000
+    - 456752
+    - 70200
+    - 456828
+    translated_user:
+    - 0
+    - 161752
+    - 200
+    - 161828
+- user_pin_name: data[2]
+  project_pin: data_2_CS
+  cell_terminal: CS
+  padring_instance: W21
+  physical_pad_slot: W21
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 65709
+    - 490252
+    - 70000
+    - 490328
+    extended_top_level:
+    - 70000
+    - 490252
+    - 70200
+    - 490328
+    translated_user:
+    - 0
+    - 195252
+    - 200
+    - 195328
+- user_pin_name: data[2]
+  project_pin: data_2_SL
+  cell_terminal: SL
+  padring_instance: W21
+  physical_pad_slot: W21
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 53028
+    - 477190
+    - 70000
+    - 477266
+    extended_top_level:
+    - 70000
+    - 477190
+    - 70200
+    - 477266
+    translated_user:
+    - 0
+    - 182190
+    - 200
+    - 182266
+- user_pin_name: data[2]
+  project_pin: data_2_IE
+  cell_terminal: IE
+  padring_instance: W21
+  physical_pad_slot: W21
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66984
+    - 488647
+    - 70000
+    - 488723
+    extended_top_level:
+    - 70000
+    - 488647
+    - 70200
+    - 488723
+    translated_user:
+    - 0
+    - 193647
+    - 200
+    - 193723
+- user_pin_name: data[2]
+  project_pin: data_2_OE
+  cell_terminal: OE
+  padring_instance: W21
+  physical_pad_slot: W21
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 53268
+    - 476898
+    - 70000
+    - 476974
+    extended_top_level:
+    - 70000
+    - 476898
+    - 70200
+    - 476974
+    translated_user:
+    - 0
+    - 181898
+    - 200
+    - 181974
+- user_pin_name: data[2]
+  project_pin: data_2_PU
+  cell_terminal: PU
+  padring_instance: W21
+  physical_pad_slot: W21
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66084
+    - 489731
+    - 70000
+    - 489807
+    extended_top_level:
+    - 70000
+    - 489731
+    - 70200
+    - 489807
+    translated_user:
+    - 0
+    - 194731
+    - 200
+    - 194807
+- user_pin_name: data[2]
+  project_pin: data_2_PD
+  cell_terminal: PD
+  padring_instance: W21
+  physical_pad_slot: W21
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66020
+    - 488858
+    - 70000
+    - 488934
+    extended_top_level:
+    - 70000
+    - 488858
+    - 70200
+    - 488934
+    translated_user:
+    - 0
+    - 193858
+    - 200
+    - 193934
+- user_pin_name: data[2]
+  project_pin: data_2_OUT
+  cell_terminal: A
+  padring_instance: W21
+  physical_pad_slot: W21
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52892
+    - 477044
+    - 70000
+    - 477120
+    extended_top_level:
+    - 70000
+    - 477044
+    - 70200
+    - 477120
+    translated_user:
+    - 0
+    - 182044
+    - 200
+    - 182120
+- user_pin_name: data[2]
+  project_pin: data_2_PDRV0
+  cell_terminal: PDRV0
+  padring_instance: W21
+  physical_pad_slot: W21
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52933
+    - 489502
+    - 70000
+    - 489578
+    extended_top_level:
+    - 70000
+    - 489502
+    - 70200
+    - 489578
+    translated_user:
+    - 0
+    - 194502
+    - 200
+    - 194578
+- user_pin_name: data[2]
+  project_pin: data_2_PDRV1
+  cell_terminal: PDRV1
+  padring_instance: W21
+  physical_pad_slot: W21
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52998
+    - 489360
+    - 70000
+    - 489436
+    extended_top_level:
+    - 70000
+    - 489360
+    - 70200
+    - 489436
+    translated_user:
+    - 0
+    - 194360
+    - 200
+    - 194436
+- user_pin_name: data[2]
+  project_pin: data_2_IN
+  cell_terminal: Y
+  padring_instance: W21
+  physical_pad_slot: W21
+  cell: gf180mcu_fd_io__bi_t
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 63980
+    - 476752
+    - 70000
+    - 476828
+    extended_top_level:
+    - 70000
+    - 476752
+    - 70200
+    - 476828
+    translated_user:
+    - 0
+    - 181752
+    - 200
+    - 181828
+- user_pin_name: data[3]
+  project_pin: data_3_CS
+  cell_terminal: CS
+  padring_instance: W22
+  physical_pad_slot: W22
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 65709
+    - 510252
+    - 70000
+    - 510328
+    extended_top_level:
+    - 70000
+    - 510252
+    - 70200
+    - 510328
+    translated_user:
+    - 0
+    - 215252
+    - 200
+    - 215328
+- user_pin_name: data[3]
+  project_pin: data_3_SL
+  cell_terminal: SL
+  padring_instance: W22
+  physical_pad_slot: W22
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 53028
+    - 497190
+    - 70000
+    - 497266
+    extended_top_level:
+    - 70000
+    - 497190
+    - 70200
+    - 497266
+    translated_user:
+    - 0
+    - 202190
+    - 200
+    - 202266
+- user_pin_name: data[3]
+  project_pin: data_3_IE
+  cell_terminal: IE
+  padring_instance: W22
+  physical_pad_slot: W22
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66984
+    - 508647
+    - 70000
+    - 508723
+    extended_top_level:
+    - 70000
+    - 508647
+    - 70200
+    - 508723
+    translated_user:
+    - 0
+    - 213647
+    - 200
+    - 213723
+- user_pin_name: data[3]
+  project_pin: data_3_OE
+  cell_terminal: OE
+  padring_instance: W22
+  physical_pad_slot: W22
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 53268
+    - 496898
+    - 70000
+    - 496974
+    extended_top_level:
+    - 70000
+    - 496898
+    - 70200
+    - 496974
+    translated_user:
+    - 0
+    - 201898
+    - 200
+    - 201974
+- user_pin_name: data[3]
+  project_pin: data_3_PU
+  cell_terminal: PU
+  padring_instance: W22
+  physical_pad_slot: W22
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66084
+    - 509731
+    - 70000
+    - 509807
+    extended_top_level:
+    - 70000
+    - 509731
+    - 70200
+    - 509807
+    translated_user:
+    - 0
+    - 214731
+    - 200
+    - 214807
+- user_pin_name: data[3]
+  project_pin: data_3_PD
+  cell_terminal: PD
+  padring_instance: W22
+  physical_pad_slot: W22
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66020
+    - 508858
+    - 70000
+    - 508934
+    extended_top_level:
+    - 70000
+    - 508858
+    - 70200
+    - 508934
+    translated_user:
+    - 0
+    - 213858
+    - 200
+    - 213934
+- user_pin_name: data[3]
+  project_pin: data_3_OUT
+  cell_terminal: A
+  padring_instance: W22
+  physical_pad_slot: W22
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52892
+    - 497044
+    - 70000
+    - 497120
+    extended_top_level:
+    - 70000
+    - 497044
+    - 70200
+    - 497120
+    translated_user:
+    - 0
+    - 202044
+    - 200
+    - 202120
+- user_pin_name: data[3]
+  project_pin: data_3_PDRV0
+  cell_terminal: PDRV0
+  padring_instance: W22
+  physical_pad_slot: W22
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52933
+    - 509502
+    - 70000
+    - 509578
+    extended_top_level:
+    - 70000
+    - 509502
+    - 70200
+    - 509578
+    translated_user:
+    - 0
+    - 214502
+    - 200
+    - 214578
+- user_pin_name: data[3]
+  project_pin: data_3_PDRV1
+  cell_terminal: PDRV1
+  padring_instance: W22
+  physical_pad_slot: W22
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 52998
+    - 509360
+    - 70000
+    - 509436
+    extended_top_level:
+    - 70000
+    - 509360
+    - 70200
+    - 509436
+    translated_user:
+    - 0
+    - 214360
+    - 200
+    - 214436
+- user_pin_name: data[3]
+  project_pin: data_3_IN
+  cell_terminal: Y
+  padring_instance: W22
+  physical_pad_slot: W22
+  cell: gf180mcu_fd_io__bi_t
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 63980
+    - 496752
+    - 70000
+    - 496828
+    extended_top_level:
+    - 70000
+    - 496752
+    - 70200
+    - 496828
+    translated_user:
+    - 0
+    - 201752
+    - 200
+    - 201828
+- user_pin_name: addr[0]
+  project_pin: addr_0_PU
+  cell_terminal: PU
+  padring_instance: N01
+  physical_pad_slot: N01
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 89731
+    - 517000
+    - 89807
+    - 520946
+    extended_top_level:
+    - 89731
+    - 516800
+    - 89807
+    - 517000
+    translated_user:
+    - 19731
+    - 221800
+    - 19807
+    - 222000
+- user_pin_name: addr[0]
+  project_pin: addr_0_PD
+  cell_terminal: PD
+  padring_instance: N01
+  physical_pad_slot: N01
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 88858
+    - 517000
+    - 88934
+    - 521010
+    extended_top_level:
+    - 88858
+    - 516800
+    - 88934
+    - 517000
+    translated_user:
+    - 18858
+    - 221800
+    - 18934
+    - 222000
+- user_pin_name: addr[0]
+  project_pin: addr_0
+  cell_terminal: Y
+  padring_instance: N01
+  physical_pad_slot: N01
+  cell: gf180mcu_fd_io__in_c
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 76752
+    - 517000
+    - 76828
+    - 523050
+    extended_top_level:
+    - 76752
+    - 516800
+    - 76828
+    - 517000
+    translated_user:
+    - 6752
+    - 221800
+    - 6828
+    - 222000
+- user_pin_name: addr[1]
+  project_pin: addr_1_PU
+  cell_terminal: PU
+  padring_instance: N02
+  physical_pad_slot: N02
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 109731
+    - 517000
+    - 109807
+    - 520946
+    extended_top_level:
+    - 109731
+    - 516800
+    - 109807
+    - 517000
+    translated_user:
+    - 39731
+    - 221800
+    - 39807
+    - 222000
+- user_pin_name: addr[1]
+  project_pin: addr_1_PD
+  cell_terminal: PD
+  padring_instance: N02
+  physical_pad_slot: N02
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 108858
+    - 517000
+    - 108934
+    - 521010
+    extended_top_level:
+    - 108858
+    - 516800
+    - 108934
+    - 517000
+    translated_user:
+    - 38858
+    - 221800
+    - 38934
+    - 222000
+- user_pin_name: addr[1]
+  project_pin: addr_1
+  cell_terminal: Y
+  padring_instance: N02
+  physical_pad_slot: N02
+  cell: gf180mcu_fd_io__in_c
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 96752
+    - 517000
+    - 96828
+    - 523050
+    extended_top_level:
+    - 96752
+    - 516800
+    - 96828
+    - 517000
+    translated_user:
+    - 26752
+    - 221800
+    - 26828
+    - 222000
+- user_pin_name: addr[2]
+  project_pin: addr_2_PU
+  cell_terminal: PU
+  padring_instance: N03
+  physical_pad_slot: N03
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 129731
+    - 517000
+    - 129807
+    - 520946
+    extended_top_level:
+    - 129731
+    - 516800
+    - 129807
+    - 517000
+    translated_user:
+    - 59731
+    - 221800
+    - 59807
+    - 222000
+- user_pin_name: addr[2]
+  project_pin: addr_2_PD
+  cell_terminal: PD
+  padring_instance: N03
+  physical_pad_slot: N03
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 128858
+    - 517000
+    - 128934
+    - 521010
+    extended_top_level:
+    - 128858
+    - 516800
+    - 128934
+    - 517000
+    translated_user:
+    - 58858
+    - 221800
+    - 58934
+    - 222000
+- user_pin_name: addr[2]
+  project_pin: addr_2
+  cell_terminal: Y
+  padring_instance: N03
+  physical_pad_slot: N03
+  cell: gf180mcu_fd_io__in_c
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 116752
+    - 517000
+    - 116828
+    - 523050
+    extended_top_level:
+    - 116752
+    - 516800
+    - 116828
+    - 517000
+    translated_user:
+    - 46752
+    - 221800
+    - 46828
+    - 222000
+- user_pin_name: addr[3]
+  project_pin: addr_3_PU
+  cell_terminal: PU
+  padring_instance: N04
+  physical_pad_slot: N04
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 149731
+    - 517000
+    - 149807
+    - 520946
+    extended_top_level:
+    - 149731
+    - 516800
+    - 149807
+    - 517000
+    translated_user:
+    - 79731
+    - 221800
+    - 79807
+    - 222000
+- user_pin_name: addr[3]
+  project_pin: addr_3_PD
+  cell_terminal: PD
+  padring_instance: N04
+  physical_pad_slot: N04
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 148858
+    - 517000
+    - 148934
+    - 521010
+    extended_top_level:
+    - 148858
+    - 516800
+    - 148934
+    - 517000
+    translated_user:
+    - 78858
+    - 221800
+    - 78934
+    - 222000
+- user_pin_name: addr[3]
+  project_pin: addr_3
+  cell_terminal: Y
+  padring_instance: N04
+  physical_pad_slot: N04
+  cell: gf180mcu_fd_io__in_c
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 136752
+    - 517000
+    - 136828
+    - 523050
+    extended_top_level:
+    - 136752
+    - 516800
+    - 136828
+    - 517000
+    translated_user:
+    - 66752
+    - 221800
+    - 66828
+    - 222000
+- user_pin_name: irq
+  project_pin: irq_CS
+  cell_terminal: CS
+  padring_instance: N05
+  physical_pad_slot: N05
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 170252
+    - 517000
+    - 170328
+    - 521291
+    extended_top_level:
+    - 170252
+    - 516800
+    - 170328
+    - 517000
+    translated_user:
+    - 100252
+    - 221800
+    - 100328
+    - 222000
+- user_pin_name: irq
+  project_pin: irq_SL
+  cell_terminal: SL
+  padring_instance: N05
+  physical_pad_slot: N05
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 157190
+    - 517000
+    - 157266
+    - 533972
+    extended_top_level:
+    - 157190
+    - 516800
+    - 157266
+    - 517000
+    translated_user:
+    - 87190
+    - 221800
+    - 87266
+    - 222000
+- user_pin_name: irq
+  project_pin: irq_IE
+  cell_terminal: IE
+  padring_instance: N05
+  physical_pad_slot: N05
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 168647
+    - 517000
+    - 168723
+    - 520016
+    extended_top_level:
+    - 168647
+    - 516800
+    - 168723
+    - 517000
+    translated_user:
+    - 98647
+    - 221800
+    - 98723
+    - 222000
+- user_pin_name: irq
+  project_pin: irq_OE
+  cell_terminal: OE
+  padring_instance: N05
+  physical_pad_slot: N05
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 156898
+    - 517000
+    - 156974
+    - 533732
+    extended_top_level:
+    - 156898
+    - 516800
+    - 156974
+    - 517000
+    translated_user:
+    - 86898
+    - 221800
+    - 86974
+    - 222000
+- user_pin_name: irq
+  project_pin: irq_PU
+  cell_terminal: PU
+  padring_instance: N05
+  physical_pad_slot: N05
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 169731
+    - 517000
+    - 169807
+    - 520916
+    extended_top_level:
+    - 169731
+    - 516800
+    - 169807
+    - 517000
+    translated_user:
+    - 99731
+    - 221800
+    - 99807
+    - 222000
+- user_pin_name: irq
+  project_pin: irq_PD
+  cell_terminal: PD
+  padring_instance: N05
+  physical_pad_slot: N05
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 168858
+    - 517000
+    - 168934
+    - 520980
+    extended_top_level:
+    - 168858
+    - 516800
+    - 168934
+    - 517000
+    translated_user:
+    - 98858
+    - 221800
+    - 98934
+    - 222000
+- user_pin_name: irq
+  project_pin: irq_OUT
+  cell_terminal: A
+  padring_instance: N05
+  physical_pad_slot: N05
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 157044
+    - 517000
+    - 157120
+    - 534108
+    extended_top_level:
+    - 157044
+    - 516800
+    - 157120
+    - 517000
+    translated_user:
+    - 87044
+    - 221800
+    - 87120
+    - 222000
+- user_pin_name: irq
+  project_pin: irq_PDRV0
+  cell_terminal: PDRV0
+  padring_instance: N05
+  physical_pad_slot: N05
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 169502
+    - 517000
+    - 169578
+    - 534067
+    extended_top_level:
+    - 169502
+    - 516800
+    - 169578
+    - 517000
+    translated_user:
+    - 99502
+    - 221800
+    - 99578
+    - 222000
+- user_pin_name: irq
+  project_pin: irq_PDRV1
+  cell_terminal: PDRV1
+  padring_instance: N05
+  physical_pad_slot: N05
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 169360
+    - 517000
+    - 169436
+    - 534002
+    extended_top_level:
+    - 169360
+    - 516800
+    - 169436
+    - 517000
+    translated_user:
+    - 99360
+    - 221800
+    - 99436
+    - 222000
+- user_pin_name: irq
+  project_pin: irq_IN
+  cell_terminal: Y
+  padring_instance: N05
+  physical_pad_slot: N05
+  cell: gf180mcu_fd_io__bi_t
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 156752
+    - 517000
+    - 156828
+    - 523020
+    extended_top_level:
+    - 156752
+    - 516800
+    - 156828
+    - 517000
+    translated_user:
+    - 86752
+    - 221800
+    - 86828
+    - 222000
+- user_pin_name: error_o
+  project_pin: error_o_CS
+  cell_terminal: CS
+  padring_instance: N06
+  physical_pad_slot: N06
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 190252
+    - 517000
+    - 190328
+    - 521291
+    extended_top_level:
+    - 190252
+    - 516800
+    - 190328
+    - 517000
+    translated_user:
+    - 120252
+    - 221800
+    - 120328
+    - 222000
+- user_pin_name: error_o
+  project_pin: error_o_SL
+  cell_terminal: SL
+  padring_instance: N06
+  physical_pad_slot: N06
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 177190
+    - 517000
+    - 177266
+    - 533972
+    extended_top_level:
+    - 177190
+    - 516800
+    - 177266
+    - 517000
+    translated_user:
+    - 107190
+    - 221800
+    - 107266
+    - 222000
+- user_pin_name: error_o
+  project_pin: error_o_IE
+  cell_terminal: IE
+  padring_instance: N06
+  physical_pad_slot: N06
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 188647
+    - 517000
+    - 188723
+    - 520016
+    extended_top_level:
+    - 188647
+    - 516800
+    - 188723
+    - 517000
+    translated_user:
+    - 118647
+    - 221800
+    - 118723
+    - 222000
+- user_pin_name: error_o
+  project_pin: error_o_OE
+  cell_terminal: OE
+  padring_instance: N06
+  physical_pad_slot: N06
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 176898
+    - 517000
+    - 176974
+    - 533732
+    extended_top_level:
+    - 176898
+    - 516800
+    - 176974
+    - 517000
+    translated_user:
+    - 106898
+    - 221800
+    - 106974
+    - 222000
+- user_pin_name: error_o
+  project_pin: error_o_PU
+  cell_terminal: PU
+  padring_instance: N06
+  physical_pad_slot: N06
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 189731
+    - 517000
+    - 189807
+    - 520916
+    extended_top_level:
+    - 189731
+    - 516800
+    - 189807
+    - 517000
+    translated_user:
+    - 119731
+    - 221800
+    - 119807
+    - 222000
+- user_pin_name: error_o
+  project_pin: error_o_PD
+  cell_terminal: PD
+  padring_instance: N06
+  physical_pad_slot: N06
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 188858
+    - 517000
+    - 188934
+    - 520980
+    extended_top_level:
+    - 188858
+    - 516800
+    - 188934
+    - 517000
+    translated_user:
+    - 118858
+    - 221800
+    - 118934
+    - 222000
+- user_pin_name: error_o
+  project_pin: error_o_OUT
+  cell_terminal: A
+  padring_instance: N06
+  physical_pad_slot: N06
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 177044
+    - 517000
+    - 177120
+    - 534108
+    extended_top_level:
+    - 177044
+    - 516800
+    - 177120
+    - 517000
+    translated_user:
+    - 107044
+    - 221800
+    - 107120
+    - 222000
+- user_pin_name: error_o
+  project_pin: error_o_PDRV0
+  cell_terminal: PDRV0
+  padring_instance: N06
+  physical_pad_slot: N06
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 189502
+    - 517000
+    - 189578
+    - 534067
+    extended_top_level:
+    - 189502
+    - 516800
+    - 189578
+    - 517000
+    translated_user:
+    - 119502
+    - 221800
+    - 119578
+    - 222000
+- user_pin_name: error_o
+  project_pin: error_o_PDRV1
+  cell_terminal: PDRV1
+  padring_instance: N06
+  physical_pad_slot: N06
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 189360
+    - 517000
+    - 189436
+    - 534002
+    extended_top_level:
+    - 189360
+    - 516800
+    - 189436
+    - 517000
+    translated_user:
+    - 119360
+    - 221800
+    - 119436
+    - 222000
+- user_pin_name: error_o
+  project_pin: error_o_IN
+  cell_terminal: Y
+  padring_instance: N06
+  physical_pad_slot: N06
+  cell: gf180mcu_fd_io__bi_t
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 176752
+    - 517000
+    - 176828
+    - 523020
+    extended_top_level:
+    - 176752
+    - 516800
+    - 176828
+    - 517000
+    translated_user:
+    - 106752
+    - 221800
+    - 106828
+    - 222000
+- user_pin_name: re
+  project_pin: re_PU
+  cell_terminal: PU
+  padring_instance: N07
+  physical_pad_slot: N07
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 209731
+    - 517000
+    - 209807
+    - 520946
+    extended_top_level:
+    - 209731
+    - 516800
+    - 209807
+    - 517000
+    translated_user:
+    - 139731
+    - 221800
+    - 139807
+    - 222000
+- user_pin_name: re
+  project_pin: re_PD
+  cell_terminal: PD
+  padring_instance: N07
+  physical_pad_slot: N07
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 208858
+    - 517000
+    - 208934
+    - 521010
+    extended_top_level:
+    - 208858
+    - 516800
+    - 208934
+    - 517000
+    translated_user:
+    - 138858
+    - 221800
+    - 138934
+    - 222000
+- user_pin_name: re
+  project_pin: re
+  cell_terminal: Y
+  padring_instance: N07
+  physical_pad_slot: N07
+  cell: gf180mcu_fd_io__in_c
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 196752
+    - 517000
+    - 196828
+    - 523050
+    extended_top_level:
+    - 196752
+    - 516800
+    - 196828
+    - 517000
+    translated_user:
+    - 126752
+    - 221800
+    - 126828
+    - 222000
+- user_pin_name: done_o
+  project_pin: done_o_CS
+  cell_terminal: CS
+  padring_instance: N08
+  physical_pad_slot: N08
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 230252
+    - 517000
+    - 230328
+    - 521291
+    extended_top_level:
+    - 230252
+    - 516800
+    - 230328
+    - 517000
+    translated_user:
+    - 160252
+    - 221800
+    - 160328
+    - 222000
+- user_pin_name: done_o
+  project_pin: done_o_SL
+  cell_terminal: SL
+  padring_instance: N08
+  physical_pad_slot: N08
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 217190
+    - 517000
+    - 217266
+    - 533972
+    extended_top_level:
+    - 217190
+    - 516800
+    - 217266
+    - 517000
+    translated_user:
+    - 147190
+    - 221800
+    - 147266
+    - 222000
+- user_pin_name: done_o
+  project_pin: done_o_IE
+  cell_terminal: IE
+  padring_instance: N08
+  physical_pad_slot: N08
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 228647
+    - 517000
+    - 228723
+    - 520016
+    extended_top_level:
+    - 228647
+    - 516800
+    - 228723
+    - 517000
+    translated_user:
+    - 158647
+    - 221800
+    - 158723
+    - 222000
+- user_pin_name: done_o
+  project_pin: done_o_OE
+  cell_terminal: OE
+  padring_instance: N08
+  physical_pad_slot: N08
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 216898
+    - 517000
+    - 216974
+    - 533732
+    extended_top_level:
+    - 216898
+    - 516800
+    - 216974
+    - 517000
+    translated_user:
+    - 146898
+    - 221800
+    - 146974
+    - 222000
+- user_pin_name: done_o
+  project_pin: done_o_PU
+  cell_terminal: PU
+  padring_instance: N08
+  physical_pad_slot: N08
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 229731
+    - 517000
+    - 229807
+    - 520916
+    extended_top_level:
+    - 229731
+    - 516800
+    - 229807
+    - 517000
+    translated_user:
+    - 159731
+    - 221800
+    - 159807
+    - 222000
+- user_pin_name: done_o
+  project_pin: done_o_PD
+  cell_terminal: PD
+  padring_instance: N08
+  physical_pad_slot: N08
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 228858
+    - 517000
+    - 228934
+    - 520980
+    extended_top_level:
+    - 228858
+    - 516800
+    - 228934
+    - 517000
+    translated_user:
+    - 158858
+    - 221800
+    - 158934
+    - 222000
+- user_pin_name: done_o
+  project_pin: done_o_OUT
+  cell_terminal: A
+  padring_instance: N08
+  physical_pad_slot: N08
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 217044
+    - 517000
+    - 217120
+    - 534108
+    extended_top_level:
+    - 217044
+    - 516800
+    - 217120
+    - 517000
+    translated_user:
+    - 147044
+    - 221800
+    - 147120
+    - 222000
+- user_pin_name: done_o
+  project_pin: done_o_PDRV0
+  cell_terminal: PDRV0
+  padring_instance: N08
+  physical_pad_slot: N08
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 229502
+    - 517000
+    - 229578
+    - 534067
+    extended_top_level:
+    - 229502
+    - 516800
+    - 229578
+    - 517000
+    translated_user:
+    - 159502
+    - 221800
+    - 159578
+    - 222000
+- user_pin_name: done_o
+  project_pin: done_o_PDRV1
+  cell_terminal: PDRV1
+  padring_instance: N08
+  physical_pad_slot: N08
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 229360
+    - 517000
+    - 229436
+    - 534002
+    extended_top_level:
+    - 229360
+    - 516800
+    - 229436
+    - 517000
+    translated_user:
+    - 159360
+    - 221800
+    - 159436
+    - 222000
+- user_pin_name: done_o
+  project_pin: done_o_IN
+  cell_terminal: Y
+  padring_instance: N08
+  physical_pad_slot: N08
+  cell: gf180mcu_fd_io__bi_t
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 216752
+    - 517000
+    - 216828
+    - 523020
+    extended_top_level:
+    - 216752
+    - 516800
+    - 216828
+    - 517000
+    translated_user:
+    - 146752
+    - 221800
+    - 146828
+    - 222000
+- user_pin_name: debug_state[0]
+  project_pin: debug_state_0_CS
+  cell_terminal: CS
+  padring_instance: N09
+  physical_pad_slot: N09
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 250252
+    - 517000
+    - 250328
+    - 521291
+    extended_top_level:
+    - 250252
+    - 516800
+    - 250328
+    - 517000
+    translated_user:
+    - 180252
+    - 221800
+    - 180328
+    - 222000
+- user_pin_name: debug_state[0]
+  project_pin: debug_state_0_SL
+  cell_terminal: SL
+  padring_instance: N09
+  physical_pad_slot: N09
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 237190
+    - 517000
+    - 237266
+    - 533972
+    extended_top_level:
+    - 237190
+    - 516800
+    - 237266
+    - 517000
+    translated_user:
+    - 167190
+    - 221800
+    - 167266
+    - 222000
+- user_pin_name: debug_state[0]
+  project_pin: debug_state_0_IE
+  cell_terminal: IE
+  padring_instance: N09
+  physical_pad_slot: N09
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 248647
+    - 517000
+    - 248723
+    - 520016
+    extended_top_level:
+    - 248647
+    - 516800
+    - 248723
+    - 517000
+    translated_user:
+    - 178647
+    - 221800
+    - 178723
+    - 222000
+- user_pin_name: debug_state[0]
+  project_pin: debug_state_0_OE
+  cell_terminal: OE
+  padring_instance: N09
+  physical_pad_slot: N09
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 236898
+    - 517000
+    - 236974
+    - 533732
+    extended_top_level:
+    - 236898
+    - 516800
+    - 236974
+    - 517000
+    translated_user:
+    - 166898
+    - 221800
+    - 166974
+    - 222000
+- user_pin_name: debug_state[0]
+  project_pin: debug_state_0_PU
+  cell_terminal: PU
+  padring_instance: N09
+  physical_pad_slot: N09
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 249731
+    - 517000
+    - 249807
+    - 520916
+    extended_top_level:
+    - 249731
+    - 516800
+    - 249807
+    - 517000
+    translated_user:
+    - 179731
+    - 221800
+    - 179807
+    - 222000
+- user_pin_name: debug_state[0]
+  project_pin: debug_state_0_PD
+  cell_terminal: PD
+  padring_instance: N09
+  physical_pad_slot: N09
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 248858
+    - 517000
+    - 248934
+    - 520980
+    extended_top_level:
+    - 248858
+    - 516800
+    - 248934
+    - 517000
+    translated_user:
+    - 178858
+    - 221800
+    - 178934
+    - 222000
+- user_pin_name: debug_state[0]
+  project_pin: debug_state_0_OUT
+  cell_terminal: A
+  padring_instance: N09
+  physical_pad_slot: N09
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 237044
+    - 517000
+    - 237120
+    - 534108
+    extended_top_level:
+    - 237044
+    - 516800
+    - 237120
+    - 517000
+    translated_user:
+    - 167044
+    - 221800
+    - 167120
+    - 222000
+- user_pin_name: debug_state[0]
+  project_pin: debug_state_0_PDRV0
+  cell_terminal: PDRV0
+  padring_instance: N09
+  physical_pad_slot: N09
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 249502
+    - 517000
+    - 249578
+    - 534067
+    extended_top_level:
+    - 249502
+    - 516800
+    - 249578
+    - 517000
+    translated_user:
+    - 179502
+    - 221800
+    - 179578
+    - 222000
+- user_pin_name: debug_state[0]
+  project_pin: debug_state_0_PDRV1
+  cell_terminal: PDRV1
+  padring_instance: N09
+  physical_pad_slot: N09
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 249360
+    - 517000
+    - 249436
+    - 534002
+    extended_top_level:
+    - 249360
+    - 516800
+    - 249436
+    - 517000
+    translated_user:
+    - 179360
+    - 221800
+    - 179436
+    - 222000
+- user_pin_name: debug_state[0]
+  project_pin: debug_state_0_IN
+  cell_terminal: Y
+  padring_instance: N09
+  physical_pad_slot: N09
+  cell: gf180mcu_fd_io__bi_t
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 236752
+    - 517000
+    - 236828
+    - 523020
+    extended_top_level:
+    - 236752
+    - 516800
+    - 236828
+    - 517000
+    translated_user:
+    - 166752
+    - 221800
+    - 166828
+    - 222000
+- user_pin_name: debug_state[2]
+  project_pin: debug_state_2_CS
+  cell_terminal: CS
+  padring_instance: N10
+  physical_pad_slot: N10
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 270252
+    - 517000
+    - 270328
+    - 521291
+    extended_top_level:
+    - 270252
+    - 516800
+    - 270328
+    - 517000
+    translated_user:
+    - 200252
+    - 221800
+    - 200328
+    - 222000
+- user_pin_name: debug_state[2]
+  project_pin: debug_state_2_SL
+  cell_terminal: SL
+  padring_instance: N10
+  physical_pad_slot: N10
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 257190
+    - 517000
+    - 257266
+    - 533972
+    extended_top_level:
+    - 257190
+    - 516800
+    - 257266
+    - 517000
+    translated_user:
+    - 187190
+    - 221800
+    - 187266
+    - 222000
+- user_pin_name: debug_state[2]
+  project_pin: debug_state_2_IE
+  cell_terminal: IE
+  padring_instance: N10
+  physical_pad_slot: N10
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 268647
+    - 517000
+    - 268723
+    - 520016
+    extended_top_level:
+    - 268647
+    - 516800
+    - 268723
+    - 517000
+    translated_user:
+    - 198647
+    - 221800
+    - 198723
+    - 222000
+- user_pin_name: debug_state[2]
+  project_pin: debug_state_2_OE
+  cell_terminal: OE
+  padring_instance: N10
+  physical_pad_slot: N10
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 256898
+    - 517000
+    - 256974
+    - 533732
+    extended_top_level:
+    - 256898
+    - 516800
+    - 256974
+    - 517000
+    translated_user:
+    - 186898
+    - 221800
+    - 186974
+    - 222000
+- user_pin_name: debug_state[2]
+  project_pin: debug_state_2_PU
+  cell_terminal: PU
+  padring_instance: N10
+  physical_pad_slot: N10
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 269731
+    - 517000
+    - 269807
+    - 520916
+    extended_top_level:
+    - 269731
+    - 516800
+    - 269807
+    - 517000
+    translated_user:
+    - 199731
+    - 221800
+    - 199807
+    - 222000
+- user_pin_name: debug_state[2]
+  project_pin: debug_state_2_PD
+  cell_terminal: PD
+  padring_instance: N10
+  physical_pad_slot: N10
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 268858
+    - 517000
+    - 268934
+    - 520980
+    extended_top_level:
+    - 268858
+    - 516800
+    - 268934
+    - 517000
+    translated_user:
+    - 198858
+    - 221800
+    - 198934
+    - 222000
+- user_pin_name: debug_state[2]
+  project_pin: debug_state_2_OUT
+  cell_terminal: A
+  padring_instance: N10
+  physical_pad_slot: N10
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 257044
+    - 517000
+    - 257120
+    - 534108
+    extended_top_level:
+    - 257044
+    - 516800
+    - 257120
+    - 517000
+    translated_user:
+    - 187044
+    - 221800
+    - 187120
+    - 222000
+- user_pin_name: debug_state[2]
+  project_pin: debug_state_2_PDRV0
+  cell_terminal: PDRV0
+  padring_instance: N10
+  physical_pad_slot: N10
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 269502
+    - 517000
+    - 269578
+    - 534067
+    extended_top_level:
+    - 269502
+    - 516800
+    - 269578
+    - 517000
+    translated_user:
+    - 199502
+    - 221800
+    - 199578
+    - 222000
+- user_pin_name: debug_state[2]
+  project_pin: debug_state_2_PDRV1
+  cell_terminal: PDRV1
+  padring_instance: N10
+  physical_pad_slot: N10
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 269360
+    - 517000
+    - 269436
+    - 534002
+    extended_top_level:
+    - 269360
+    - 516800
+    - 269436
+    - 517000
+    translated_user:
+    - 199360
+    - 221800
+    - 199436
+    - 222000
+- user_pin_name: debug_state[2]
+  project_pin: debug_state_2_IN
+  cell_terminal: Y
+  padring_instance: N10
+  physical_pad_slot: N10
+  cell: gf180mcu_fd_io__bi_t
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 256752
+    - 517000
+    - 256828
+    - 523020
+    extended_top_level:
+    - 256752
+    - 516800
+    - 256828
+    - 517000
+    translated_user:
+    - 186752
+    - 221800
+    - 186828
+    - 222000
+- user_pin_name: debug_state[1]
+  project_pin: debug_state_1_CS
+  cell_terminal: CS
+  padring_instance: N11
+  physical_pad_slot: N11
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 290252
+    - 517000
+    - 290328
+    - 521291
+    extended_top_level:
+    - 290252
+    - 516800
+    - 290328
+    - 517000
+    translated_user:
+    - 220252
+    - 221800
+    - 220328
+    - 222000
+- user_pin_name: debug_state[1]
+  project_pin: debug_state_1_SL
+  cell_terminal: SL
+  padring_instance: N11
+  physical_pad_slot: N11
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 277190
+    - 517000
+    - 277266
+    - 533972
+    extended_top_level:
+    - 277190
+    - 516800
+    - 277266
+    - 517000
+    translated_user:
+    - 207190
+    - 221800
+    - 207266
+    - 222000
+- user_pin_name: debug_state[1]
+  project_pin: debug_state_1_IE
+  cell_terminal: IE
+  padring_instance: N11
+  physical_pad_slot: N11
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 288647
+    - 517000
+    - 288723
+    - 520016
+    extended_top_level:
+    - 288647
+    - 516800
+    - 288723
+    - 517000
+    translated_user:
+    - 218647
+    - 221800
+    - 218723
+    - 222000
+- user_pin_name: debug_state[1]
+  project_pin: debug_state_1_OE
+  cell_terminal: OE
+  padring_instance: N11
+  physical_pad_slot: N11
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 276898
+    - 517000
+    - 276974
+    - 533732
+    extended_top_level:
+    - 276898
+    - 516800
+    - 276974
+    - 517000
+    translated_user:
+    - 206898
+    - 221800
+    - 206974
+    - 222000
+- user_pin_name: debug_state[1]
+  project_pin: debug_state_1_PU
+  cell_terminal: PU
+  padring_instance: N11
+  physical_pad_slot: N11
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 289731
+    - 517000
+    - 289807
+    - 520916
+    extended_top_level:
+    - 289731
+    - 516800
+    - 289807
+    - 517000
+    translated_user:
+    - 219731
+    - 221800
+    - 219807
+    - 222000
+- user_pin_name: debug_state[1]
+  project_pin: debug_state_1_PD
+  cell_terminal: PD
+  padring_instance: N11
+  physical_pad_slot: N11
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 288858
+    - 517000
+    - 288934
+    - 520980
+    extended_top_level:
+    - 288858
+    - 516800
+    - 288934
+    - 517000
+    translated_user:
+    - 218858
+    - 221800
+    - 218934
+    - 222000
+- user_pin_name: debug_state[1]
+  project_pin: debug_state_1_OUT
+  cell_terminal: A
+  padring_instance: N11
+  physical_pad_slot: N11
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 277044
+    - 517000
+    - 277120
+    - 534108
+    extended_top_level:
+    - 277044
+    - 516800
+    - 277120
+    - 517000
+    translated_user:
+    - 207044
+    - 221800
+    - 207120
+    - 222000
+- user_pin_name: debug_state[1]
+  project_pin: debug_state_1_PDRV0
+  cell_terminal: PDRV0
+  padring_instance: N11
+  physical_pad_slot: N11
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 289502
+    - 517000
+    - 289578
+    - 534067
+    extended_top_level:
+    - 289502
+    - 516800
+    - 289578
+    - 517000
+    translated_user:
+    - 219502
+    - 221800
+    - 219578
+    - 222000
+- user_pin_name: debug_state[1]
+  project_pin: debug_state_1_PDRV1
+  cell_terminal: PDRV1
+  padring_instance: N11
+  physical_pad_slot: N11
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 289360
+    - 517000
+    - 289436
+    - 534002
+    extended_top_level:
+    - 289360
+    - 516800
+    - 289436
+    - 517000
+    translated_user:
+    - 219360
+    - 221800
+    - 219436
+    - 222000
+- user_pin_name: debug_state[1]
+  project_pin: debug_state_1_IN
+  cell_terminal: Y
+  padring_instance: N11
+  physical_pad_slot: N11
+  cell: gf180mcu_fd_io__bi_t
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 276752
+    - 517000
+    - 276828
+    - 523020
+    extended_top_level:
+    - 276752
+    - 516800
+    - 276828
+    - 517000
+    translated_user:
+    - 206752
+    - 221800
+    - 206828
+    - 222000
+- user_pin_name: we
+  project_pin: we_PU
+  cell_terminal: PU
+  padring_instance: N12
+  physical_pad_slot: N12
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 309731
+    - 517000
+    - 309807
+    - 520946
+    extended_top_level:
+    - 309731
+    - 516800
+    - 309807
+    - 517000
+    translated_user:
+    - 239731
+    - 221800
+    - 239807
+    - 222000
+- user_pin_name: we
+  project_pin: we_PD
+  cell_terminal: PD
+  padring_instance: N12
+  physical_pad_slot: N12
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 308858
+    - 517000
+    - 308934
+    - 521010
+    extended_top_level:
+    - 308858
+    - 516800
+    - 308934
+    - 517000
+    translated_user:
+    - 238858
+    - 221800
+    - 238934
+    - 222000
+- user_pin_name: we
+  project_pin: we
+  cell_terminal: Y
+  padring_instance: N12
+  physical_pad_slot: N12
+  cell: gf180mcu_fd_io__in_c
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 296752
+    - 517000
+    - 296828
+    - 523050
+    extended_top_level:
+    - 296752
+    - 516800
+    - 296828
+    - 517000
+    translated_user:
+    - 226752
+    - 221800
+    - 226828
+    - 222000
+- user_pin_name: rst_n
+  project_pin: rst_n_PU
+  cell_terminal: PU
+  padring_instance: N13
+  physical_pad_slot: N13
+  cell: gf180mcu_fd_io__in_s
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 329731
+    - 517000
+    - 329807
+    - 520946
+    extended_top_level:
+    - 329731
+    - 516800
+    - 329807
+    - 517000
+    translated_user:
+    - 259731
+    - 221800
+    - 259807
+    - 222000
+- user_pin_name: rst_n
+  project_pin: rst_n_PD
+  cell_terminal: PD
+  padring_instance: N13
+  physical_pad_slot: N13
+  cell: gf180mcu_fd_io__in_s
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 328858
+    - 517000
+    - 328934
+    - 521010
+    extended_top_level:
+    - 328858
+    - 516800
+    - 328934
+    - 517000
+    translated_user:
+    - 258858
+    - 221800
+    - 258934
+    - 222000
+- user_pin_name: rst_n
+  project_pin: rst_n
+  cell_terminal: Y
+  padring_instance: N13
+  physical_pad_slot: N13
+  cell: gf180mcu_fd_io__in_s
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 316752
+    - 517000
+    - 316828
+    - 523050
+    extended_top_level:
+    - 316752
+    - 516800
+    - 316828
+    - 517000
+    translated_user:
+    - 246752
+    - 221800
+    - 246828
+    - 222000
+project_gds_size:
+  source_gds: gds/A02/ai_byte_top.gds
+  top_cell: ai_byte_top
+  layer: 0
+  datatype: 0
+  layout_dbu_microns: 0.001
+  rectangle_dbu:
+  - 0
+  - 0
+  - 1100000
+  - 1100000
+  width_microns: '1100'
+  height_microns: '1100'
+participant_pin_count: 23

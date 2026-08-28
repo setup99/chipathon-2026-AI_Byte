@@ -1,0 +1,1897 @@
+DESIGN A02_ACV_padring ;
+UNITS DISTANCE MICRONS 200 ; 
+COMPONENTS 552 ;
+  - CORNER_4 gf180mcu_fd_io__cor
+    + PLACED ( 0 516000 ) E ;
+  - CORNER_3 gf180mcu_fd_io__cor
+    + PLACED ( 516000 516000 ) S ;
+  - CORNER_2 gf180mcu_fd_io__cor
+    + PLACED ( 0 0 ) N ;
+  - CORNER_1 gf180mcu_fd_io__cor
+    + PLACED ( 516000 0 ) W ;
+  - FILL_N00_1 gf180mcu_fd_io__fill5
+    + PLACED ( 71000 517000 )  S ;
+  - FILL_N00_2 gf180mcu_fd_io__fill5
+    + PLACED ( 72000 517000 )  S ;
+  - FILL_N00_3 gf180mcu_fd_io__fill5
+    + PLACED ( 73000 517000 )  S ;
+  - FILL_N00_4 gf180mcu_fd_io__fill5
+    + PLACED ( 74000 517000 )  S ;
+  - FILL_N00_5 gf180mcu_fd_io__fill5
+    + PLACED ( 75000 517000 )  S ;
+  - N01 gf180mcu_fd_io__in_c
+    + PLACED ( 76000 517000 )  S ;
+  - FILL_N01_1 gf180mcu_fd_io__fill5
+    + PLACED ( 91000 517000 )  S ;
+  - FILL_N01_2 gf180mcu_fd_io__fill5
+    + PLACED ( 92000 517000 )  S ;
+  - FILL_N01_3 gf180mcu_fd_io__fill5
+    + PLACED ( 93000 517000 )  S ;
+  - FILL_N01_4 gf180mcu_fd_io__fill5
+    + PLACED ( 94000 517000 )  S ;
+  - FILL_N01_5 gf180mcu_fd_io__fill5
+    + PLACED ( 95000 517000 )  S ;
+  - N02 gf180mcu_fd_io__in_c
+    + PLACED ( 96000 517000 )  S ;
+  - FILL_N02_1 gf180mcu_fd_io__fill5
+    + PLACED ( 111000 517000 )  S ;
+  - FILL_N02_2 gf180mcu_fd_io__fill5
+    + PLACED ( 112000 517000 )  S ;
+  - FILL_N02_3 gf180mcu_fd_io__fill5
+    + PLACED ( 113000 517000 )  S ;
+  - FILL_N02_4 gf180mcu_fd_io__fill5
+    + PLACED ( 114000 517000 )  S ;
+  - FILL_N02_5 gf180mcu_fd_io__fill5
+    + PLACED ( 115000 517000 )  S ;
+  - N03 gf180mcu_fd_io__in_c
+    + PLACED ( 116000 517000 )  S ;
+  - FILL_N03_1 gf180mcu_fd_io__fill5
+    + PLACED ( 131000 517000 )  S ;
+  - FILL_N03_2 gf180mcu_fd_io__fill5
+    + PLACED ( 132000 517000 )  S ;
+  - FILL_N03_3 gf180mcu_fd_io__fill5
+    + PLACED ( 133000 517000 )  S ;
+  - FILL_N03_4 gf180mcu_fd_io__fill5
+    + PLACED ( 134000 517000 )  S ;
+  - FILL_N03_5 gf180mcu_fd_io__fill5
+    + PLACED ( 135000 517000 )  S ;
+  - N04 gf180mcu_fd_io__in_c
+    + PLACED ( 136000 517000 )  S ;
+  - FILL_N04_1 gf180mcu_fd_io__fill5
+    + PLACED ( 151000 517000 )  S ;
+  - FILL_N04_2 gf180mcu_fd_io__fill5
+    + PLACED ( 152000 517000 )  S ;
+  - FILL_N04_3 gf180mcu_fd_io__fill5
+    + PLACED ( 153000 517000 )  S ;
+  - FILL_N04_4 gf180mcu_fd_io__fill5
+    + PLACED ( 154000 517000 )  S ;
+  - FILL_N04_5 gf180mcu_fd_io__fill5
+    + PLACED ( 155000 517000 )  S ;
+  - N05 gf180mcu_fd_io__bi_t
+    + PLACED ( 156000 517000 )  S ;
+  - FILL_N05_1 gf180mcu_fd_io__fill5
+    + PLACED ( 171000 517000 )  S ;
+  - FILL_N05_2 gf180mcu_fd_io__fill5
+    + PLACED ( 172000 517000 )  S ;
+  - FILL_N05_3 gf180mcu_fd_io__fill5
+    + PLACED ( 173000 517000 )  S ;
+  - FILL_N05_4 gf180mcu_fd_io__fill5
+    + PLACED ( 174000 517000 )  S ;
+  - FILL_N05_5 gf180mcu_fd_io__fill5
+    + PLACED ( 175000 517000 )  S ;
+  - N06 gf180mcu_fd_io__bi_t
+    + PLACED ( 176000 517000 )  S ;
+  - FILL_N06_1 gf180mcu_fd_io__fill5
+    + PLACED ( 191000 517000 )  S ;
+  - FILL_N06_2 gf180mcu_fd_io__fill5
+    + PLACED ( 192000 517000 )  S ;
+  - FILL_N06_3 gf180mcu_fd_io__fill5
+    + PLACED ( 193000 517000 )  S ;
+  - FILL_N06_4 gf180mcu_fd_io__fill5
+    + PLACED ( 194000 517000 )  S ;
+  - FILL_N06_5 gf180mcu_fd_io__fill5
+    + PLACED ( 195000 517000 )  S ;
+  - N07 gf180mcu_fd_io__in_c
+    + PLACED ( 196000 517000 )  S ;
+  - FILL_N07_1 gf180mcu_fd_io__fill5
+    + PLACED ( 211000 517000 )  S ;
+  - FILL_N07_2 gf180mcu_fd_io__fill5
+    + PLACED ( 212000 517000 )  S ;
+  - FILL_N07_3 gf180mcu_fd_io__fill5
+    + PLACED ( 213000 517000 )  S ;
+  - FILL_N07_4 gf180mcu_fd_io__fill5
+    + PLACED ( 214000 517000 )  S ;
+  - FILL_N07_5 gf180mcu_fd_io__fill5
+    + PLACED ( 215000 517000 )  S ;
+  - N08 gf180mcu_fd_io__bi_t
+    + PLACED ( 216000 517000 )  S ;
+  - FILL_N08_1 gf180mcu_fd_io__fill5
+    + PLACED ( 231000 517000 )  S ;
+  - FILL_N08_2 gf180mcu_fd_io__fill5
+    + PLACED ( 232000 517000 )  S ;
+  - FILL_N08_3 gf180mcu_fd_io__fill5
+    + PLACED ( 233000 517000 )  S ;
+  - FILL_N08_4 gf180mcu_fd_io__fill5
+    + PLACED ( 234000 517000 )  S ;
+  - FILL_N08_5 gf180mcu_fd_io__fill5
+    + PLACED ( 235000 517000 )  S ;
+  - N09 gf180mcu_fd_io__bi_t
+    + PLACED ( 236000 517000 )  S ;
+  - FILL_N09_1 gf180mcu_fd_io__fill5
+    + PLACED ( 251000 517000 )  S ;
+  - FILL_N09_2 gf180mcu_fd_io__fill5
+    + PLACED ( 252000 517000 )  S ;
+  - FILL_N09_3 gf180mcu_fd_io__fill5
+    + PLACED ( 253000 517000 )  S ;
+  - FILL_N09_4 gf180mcu_fd_io__fill5
+    + PLACED ( 254000 517000 )  S ;
+  - FILL_N09_5 gf180mcu_fd_io__fill5
+    + PLACED ( 255000 517000 )  S ;
+  - N10 gf180mcu_fd_io__bi_t
+    + PLACED ( 256000 517000 )  S ;
+  - FILL_N10_1 gf180mcu_fd_io__fill5
+    + PLACED ( 271000 517000 )  S ;
+  - FILL_N10_2 gf180mcu_fd_io__fill5
+    + PLACED ( 272000 517000 )  S ;
+  - FILL_N10_3 gf180mcu_fd_io__fill5
+    + PLACED ( 273000 517000 )  S ;
+  - FILL_N10_4 gf180mcu_fd_io__fill5
+    + PLACED ( 274000 517000 )  S ;
+  - FILL_N10_5 gf180mcu_fd_io__fill5
+    + PLACED ( 275000 517000 )  S ;
+  - N11 gf180mcu_fd_io__bi_t
+    + PLACED ( 276000 517000 )  S ;
+  - FILL_N11_1 gf180mcu_fd_io__fill5
+    + PLACED ( 291000 517000 )  S ;
+  - FILL_N11_2 gf180mcu_fd_io__fill5
+    + PLACED ( 292000 517000 )  S ;
+  - FILL_N11_3 gf180mcu_fd_io__fill5
+    + PLACED ( 293000 517000 )  S ;
+  - FILL_N11_4 gf180mcu_fd_io__fill5
+    + PLACED ( 294000 517000 )  S ;
+  - FILL_N11_5 gf180mcu_fd_io__fill5
+    + PLACED ( 295000 517000 )  S ;
+  - N12 gf180mcu_fd_io__in_c
+    + PLACED ( 296000 517000 )  S ;
+  - FILL_N12_1 gf180mcu_fd_io__fill5
+    + PLACED ( 311000 517000 )  S ;
+  - FILL_N12_2 gf180mcu_fd_io__fill5
+    + PLACED ( 312000 517000 )  S ;
+  - FILL_N12_3 gf180mcu_fd_io__fill5
+    + PLACED ( 313000 517000 )  S ;
+  - FILL_N12_4 gf180mcu_fd_io__fill5
+    + PLACED ( 314000 517000 )  S ;
+  - FILL_N12_5 gf180mcu_fd_io__fill5
+    + PLACED ( 315000 517000 )  S ;
+  - N13 gf180mcu_fd_io__in_s
+    + PLACED ( 316000 517000 )  S ;
+  - BRK_N13_1 gf180mcu_fd_io__brk5
+    + PLACED ( 331000 517000 )  S ;
+  - BRK_N13_2 gf180mcu_fd_io__brk5
+    + PLACED ( 332000 517000 )  S ;
+  - BRK_N13_3 gf180mcu_fd_io__brk5
+    + PLACED ( 333000 517000 )  S ;
+  - BRK_N13_4 gf180mcu_fd_io__brk5
+    + PLACED ( 334000 517000 )  S ;
+  - BRK_N13_5 gf180mcu_fd_io__brk5
+    + PLACED ( 335000 517000 )  S ;
+  - N14 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 336000 517000 )  S ;
+  - FILL_N14_1 gf180mcu_fd_io__fill5
+    + PLACED ( 351000 517000 )  S ;
+  - FILL_N14_2 gf180mcu_fd_io__fill5
+    + PLACED ( 352000 517000 )  S ;
+  - FILL_N14_3 gf180mcu_fd_io__fill5
+    + PLACED ( 353000 517000 )  S ;
+  - FILL_N14_4 gf180mcu_fd_io__fill5
+    + PLACED ( 354000 517000 )  S ;
+  - FILL_N14_5 gf180mcu_fd_io__fill5
+    + PLACED ( 355000 517000 )  S ;
+  - N15 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 356000 517000 )  S ;
+  - FILL_N15_1 gf180mcu_fd_io__fill5
+    + PLACED ( 371000 517000 )  S ;
+  - FILL_N15_2 gf180mcu_fd_io__fill5
+    + PLACED ( 372000 517000 )  S ;
+  - FILL_N15_3 gf180mcu_fd_io__fill5
+    + PLACED ( 373000 517000 )  S ;
+  - FILL_N15_4 gf180mcu_fd_io__fill5
+    + PLACED ( 374000 517000 )  S ;
+  - FILL_N15_5 gf180mcu_fd_io__fill5
+    + PLACED ( 375000 517000 )  S ;
+  - N16 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 376000 517000 )  S ;
+  - FILL_N16_1 gf180mcu_fd_io__fill5
+    + PLACED ( 391000 517000 )  S ;
+  - FILL_N16_2 gf180mcu_fd_io__fill5
+    + PLACED ( 392000 517000 )  S ;
+  - FILL_N16_3 gf180mcu_fd_io__fill5
+    + PLACED ( 393000 517000 )  S ;
+  - FILL_N16_4 gf180mcu_fd_io__fill5
+    + PLACED ( 394000 517000 )  S ;
+  - FILL_N16_5 gf180mcu_fd_io__fill5
+    + PLACED ( 395000 517000 )  S ;
+  - N17 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 396000 517000 )  S ;
+  - FILL_N17_1 gf180mcu_fd_io__fill5
+    + PLACED ( 411000 517000 )  S ;
+  - FILL_N17_2 gf180mcu_fd_io__fill5
+    + PLACED ( 412000 517000 )  S ;
+  - FILL_N17_3 gf180mcu_fd_io__fill5
+    + PLACED ( 413000 517000 )  S ;
+  - FILL_N17_4 gf180mcu_fd_io__fill5
+    + PLACED ( 414000 517000 )  S ;
+  - FILL_N17_5 gf180mcu_fd_io__fill5
+    + PLACED ( 415000 517000 )  S ;
+  - N18 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 416000 517000 )  S ;
+  - FILL_N18_1 gf180mcu_fd_io__fill5
+    + PLACED ( 431000 517000 )  S ;
+  - FILL_N18_2 gf180mcu_fd_io__fill5
+    + PLACED ( 432000 517000 )  S ;
+  - FILL_N18_3 gf180mcu_fd_io__fill5
+    + PLACED ( 433000 517000 )  S ;
+  - FILL_N18_4 gf180mcu_fd_io__fill5
+    + PLACED ( 434000 517000 )  S ;
+  - FILL_N18_5 gf180mcu_fd_io__fill5
+    + PLACED ( 435000 517000 )  S ;
+  - N19 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 436000 517000 )  S ;
+  - FILL_N19_1 gf180mcu_fd_io__fill5
+    + PLACED ( 451000 517000 )  S ;
+  - FILL_N19_2 gf180mcu_fd_io__fill5
+    + PLACED ( 452000 517000 )  S ;
+  - FILL_N19_3 gf180mcu_fd_io__fill5
+    + PLACED ( 453000 517000 )  S ;
+  - FILL_N19_4 gf180mcu_fd_io__fill5
+    + PLACED ( 454000 517000 )  S ;
+  - FILL_N19_5 gf180mcu_fd_io__fill5
+    + PLACED ( 455000 517000 )  S ;
+  - N20 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 456000 517000 )  S ;
+  - FILL_N20_1 gf180mcu_fd_io__fill5
+    + PLACED ( 471000 517000 )  S ;
+  - FILL_N20_2 gf180mcu_fd_io__fill5
+    + PLACED ( 472000 517000 )  S ;
+  - FILL_N20_3 gf180mcu_fd_io__fill5
+    + PLACED ( 473000 517000 )  S ;
+  - FILL_N20_4 gf180mcu_fd_io__fill5
+    + PLACED ( 474000 517000 )  S ;
+  - FILL_N20_5 gf180mcu_fd_io__fill5
+    + PLACED ( 475000 517000 )  S ;
+  - N21 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 476000 517000 )  S ;
+  - FILL_N21_1 gf180mcu_fd_io__fill5
+    + PLACED ( 491000 517000 )  S ;
+  - FILL_N21_2 gf180mcu_fd_io__fill5
+    + PLACED ( 492000 517000 )  S ;
+  - FILL_N21_3 gf180mcu_fd_io__fill5
+    + PLACED ( 493000 517000 )  S ;
+  - FILL_N21_4 gf180mcu_fd_io__fill5
+    + PLACED ( 494000 517000 )  S ;
+  - FILL_N21_5 gf180mcu_fd_io__fill5
+    + PLACED ( 495000 517000 )  S ;
+  - N22 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 496000 517000 )  S ;
+  - FILL_N22_1 gf180mcu_fd_io__fill5
+    + PLACED ( 511000 517000 )  S ;
+  - FILL_N22_2 gf180mcu_fd_io__fill5
+    + PLACED ( 512000 517000 )  S ;
+  - FILL_N22_3 gf180mcu_fd_io__fill5
+    + PLACED ( 513000 517000 )  S ;
+  - FILL_N22_4 gf180mcu_fd_io__fill5
+    + PLACED ( 514000 517000 )  S ;
+  - FILL_N22_5 gf180mcu_fd_io__fill5
+    + PLACED ( 515000 517000 )  S ;
+  - FILL_S00_1 gf180mcu_fd_io__fill5
+    + PLACED ( 71000 0 )  N ;
+  - FILL_S00_2 gf180mcu_fd_io__fill5
+    + PLACED ( 72000 0 )  N ;
+  - FILL_S00_3 gf180mcu_fd_io__fill5
+    + PLACED ( 73000 0 )  N ;
+  - FILL_S00_4 gf180mcu_fd_io__fill5
+    + PLACED ( 74000 0 )  N ;
+  - FILL_S00_5 gf180mcu_fd_io__fill5
+    + PLACED ( 75000 0 )  N ;
+  - S01 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 76000 0 )  N ;
+  - FILL_S01_1 gf180mcu_fd_io__fill5
+    + PLACED ( 91000 0 )  N ;
+  - FILL_S01_2 gf180mcu_fd_io__fill5
+    + PLACED ( 92000 0 )  N ;
+  - FILL_S01_3 gf180mcu_fd_io__fill5
+    + PLACED ( 93000 0 )  N ;
+  - FILL_S01_4 gf180mcu_fd_io__fill5
+    + PLACED ( 94000 0 )  N ;
+  - FILL_S01_5 gf180mcu_fd_io__fill5
+    + PLACED ( 95000 0 )  N ;
+  - S02 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 96000 0 )  N ;
+  - FILL_S02_1 gf180mcu_fd_io__fill5
+    + PLACED ( 111000 0 )  N ;
+  - FILL_S02_2 gf180mcu_fd_io__fill5
+    + PLACED ( 112000 0 )  N ;
+  - FILL_S02_3 gf180mcu_fd_io__fill5
+    + PLACED ( 113000 0 )  N ;
+  - FILL_S02_4 gf180mcu_fd_io__fill5
+    + PLACED ( 114000 0 )  N ;
+  - FILL_S02_5 gf180mcu_fd_io__fill5
+    + PLACED ( 115000 0 )  N ;
+  - S03 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 116000 0 )  N ;
+  - FILL_S03_1 gf180mcu_fd_io__fill5
+    + PLACED ( 131000 0 )  N ;
+  - FILL_S03_2 gf180mcu_fd_io__fill5
+    + PLACED ( 132000 0 )  N ;
+  - FILL_S03_3 gf180mcu_fd_io__fill5
+    + PLACED ( 133000 0 )  N ;
+  - FILL_S03_4 gf180mcu_fd_io__fill5
+    + PLACED ( 134000 0 )  N ;
+  - FILL_S03_5 gf180mcu_fd_io__fill5
+    + PLACED ( 135000 0 )  N ;
+  - S04 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 136000 0 )  N ;
+  - FILL_S04_1 gf180mcu_fd_io__fill5
+    + PLACED ( 151000 0 )  N ;
+  - FILL_S04_2 gf180mcu_fd_io__fill5
+    + PLACED ( 152000 0 )  N ;
+  - FILL_S04_3 gf180mcu_fd_io__fill5
+    + PLACED ( 153000 0 )  N ;
+  - FILL_S04_4 gf180mcu_fd_io__fill5
+    + PLACED ( 154000 0 )  N ;
+  - FILL_S04_5 gf180mcu_fd_io__fill5
+    + PLACED ( 155000 0 )  N ;
+  - S05 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 156000 0 )  N ;
+  - FILL_S05_1 gf180mcu_fd_io__fill5
+    + PLACED ( 171000 0 )  N ;
+  - FILL_S05_2 gf180mcu_fd_io__fill5
+    + PLACED ( 172000 0 )  N ;
+  - FILL_S05_3 gf180mcu_fd_io__fill5
+    + PLACED ( 173000 0 )  N ;
+  - FILL_S05_4 gf180mcu_fd_io__fill5
+    + PLACED ( 174000 0 )  N ;
+  - FILL_S05_5 gf180mcu_fd_io__fill5
+    + PLACED ( 175000 0 )  N ;
+  - S06 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 176000 0 )  N ;
+  - FILL_S06_1 gf180mcu_fd_io__fill5
+    + PLACED ( 191000 0 )  N ;
+  - FILL_S06_2 gf180mcu_fd_io__fill5
+    + PLACED ( 192000 0 )  N ;
+  - FILL_S06_3 gf180mcu_fd_io__fill5
+    + PLACED ( 193000 0 )  N ;
+  - FILL_S06_4 gf180mcu_fd_io__fill5
+    + PLACED ( 194000 0 )  N ;
+  - FILL_S06_5 gf180mcu_fd_io__fill5
+    + PLACED ( 195000 0 )  N ;
+  - S07 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 196000 0 )  N ;
+  - FILL_S07_1 gf180mcu_fd_io__fill5
+    + PLACED ( 211000 0 )  N ;
+  - FILL_S07_2 gf180mcu_fd_io__fill5
+    + PLACED ( 212000 0 )  N ;
+  - FILL_S07_3 gf180mcu_fd_io__fill5
+    + PLACED ( 213000 0 )  N ;
+  - FILL_S07_4 gf180mcu_fd_io__fill5
+    + PLACED ( 214000 0 )  N ;
+  - FILL_S07_5 gf180mcu_fd_io__fill5
+    + PLACED ( 215000 0 )  N ;
+  - S08 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 216000 0 )  N ;
+  - FILL_S08_1 gf180mcu_fd_io__fill5
+    + PLACED ( 231000 0 )  N ;
+  - FILL_S08_2 gf180mcu_fd_io__fill5
+    + PLACED ( 232000 0 )  N ;
+  - FILL_S08_3 gf180mcu_fd_io__fill5
+    + PLACED ( 233000 0 )  N ;
+  - FILL_S08_4 gf180mcu_fd_io__fill5
+    + PLACED ( 234000 0 )  N ;
+  - FILL_S08_5 gf180mcu_fd_io__fill5
+    + PLACED ( 235000 0 )  N ;
+  - S09 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 236000 0 )  N ;
+  - FILL_S09_1 gf180mcu_fd_io__fill5
+    + PLACED ( 251000 0 )  N ;
+  - FILL_S09_2 gf180mcu_fd_io__fill5
+    + PLACED ( 252000 0 )  N ;
+  - FILL_S09_3 gf180mcu_fd_io__fill5
+    + PLACED ( 253000 0 )  N ;
+  - FILL_S09_4 gf180mcu_fd_io__fill5
+    + PLACED ( 254000 0 )  N ;
+  - FILL_S09_5 gf180mcu_fd_io__fill5
+    + PLACED ( 255000 0 )  N ;
+  - S10 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 256000 0 )  N ;
+  - FILL_S10_1 gf180mcu_fd_io__fill5
+    + PLACED ( 271000 0 )  N ;
+  - FILL_S10_2 gf180mcu_fd_io__fill5
+    + PLACED ( 272000 0 )  N ;
+  - FILL_S10_3 gf180mcu_fd_io__fill5
+    + PLACED ( 273000 0 )  N ;
+  - FILL_S10_4 gf180mcu_fd_io__fill5
+    + PLACED ( 274000 0 )  N ;
+  - FILL_S10_5 gf180mcu_fd_io__fill5
+    + PLACED ( 275000 0 )  N ;
+  - S11 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 276000 0 )  N ;
+  - FILL_S11_1 gf180mcu_fd_io__fill5
+    + PLACED ( 291000 0 )  N ;
+  - FILL_S11_2 gf180mcu_fd_io__fill5
+    + PLACED ( 292000 0 )  N ;
+  - FILL_S11_3 gf180mcu_fd_io__fill5
+    + PLACED ( 293000 0 )  N ;
+  - FILL_S11_4 gf180mcu_fd_io__fill5
+    + PLACED ( 294000 0 )  N ;
+  - FILL_S11_5 gf180mcu_fd_io__fill5
+    + PLACED ( 295000 0 )  N ;
+  - S12 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 296000 0 )  N ;
+  - FILL_S12_1 gf180mcu_fd_io__fill5
+    + PLACED ( 311000 0 )  N ;
+  - FILL_S12_2 gf180mcu_fd_io__fill5
+    + PLACED ( 312000 0 )  N ;
+  - FILL_S12_3 gf180mcu_fd_io__fill5
+    + PLACED ( 313000 0 )  N ;
+  - FILL_S12_4 gf180mcu_fd_io__fill5
+    + PLACED ( 314000 0 )  N ;
+  - FILL_S12_5 gf180mcu_fd_io__fill5
+    + PLACED ( 315000 0 )  N ;
+  - S13 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 316000 0 )  N ;
+  - FILL_S13_1 gf180mcu_fd_io__fill5
+    + PLACED ( 331000 0 )  N ;
+  - FILL_S13_2 gf180mcu_fd_io__fill5
+    + PLACED ( 332000 0 )  N ;
+  - FILL_S13_3 gf180mcu_fd_io__fill5
+    + PLACED ( 333000 0 )  N ;
+  - FILL_S13_4 gf180mcu_fd_io__fill5
+    + PLACED ( 334000 0 )  N ;
+  - FILL_S13_5 gf180mcu_fd_io__fill5
+    + PLACED ( 335000 0 )  N ;
+  - S14 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 336000 0 )  N ;
+  - FILL_S14_1 gf180mcu_fd_io__fill5
+    + PLACED ( 351000 0 )  N ;
+  - FILL_S14_2 gf180mcu_fd_io__fill5
+    + PLACED ( 352000 0 )  N ;
+  - FILL_S14_3 gf180mcu_fd_io__fill5
+    + PLACED ( 353000 0 )  N ;
+  - FILL_S14_4 gf180mcu_fd_io__fill5
+    + PLACED ( 354000 0 )  N ;
+  - FILL_S14_5 gf180mcu_fd_io__fill5
+    + PLACED ( 355000 0 )  N ;
+  - S15 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 356000 0 )  N ;
+  - FILL_S15_1 gf180mcu_fd_io__fill5
+    + PLACED ( 371000 0 )  N ;
+  - FILL_S15_2 gf180mcu_fd_io__fill5
+    + PLACED ( 372000 0 )  N ;
+  - FILL_S15_3 gf180mcu_fd_io__fill5
+    + PLACED ( 373000 0 )  N ;
+  - FILL_S15_4 gf180mcu_fd_io__fill5
+    + PLACED ( 374000 0 )  N ;
+  - FILL_S15_5 gf180mcu_fd_io__fill5
+    + PLACED ( 375000 0 )  N ;
+  - S16 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 376000 0 )  N ;
+  - FILL_S16_1 gf180mcu_fd_io__fill5
+    + PLACED ( 391000 0 )  N ;
+  - FILL_S16_2 gf180mcu_fd_io__fill5
+    + PLACED ( 392000 0 )  N ;
+  - FILL_S16_3 gf180mcu_fd_io__fill5
+    + PLACED ( 393000 0 )  N ;
+  - FILL_S16_4 gf180mcu_fd_io__fill5
+    + PLACED ( 394000 0 )  N ;
+  - FILL_S16_5 gf180mcu_fd_io__fill5
+    + PLACED ( 395000 0 )  N ;
+  - S17 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 396000 0 )  N ;
+  - FILL_S17_1 gf180mcu_fd_io__fill5
+    + PLACED ( 411000 0 )  N ;
+  - FILL_S17_2 gf180mcu_fd_io__fill5
+    + PLACED ( 412000 0 )  N ;
+  - FILL_S17_3 gf180mcu_fd_io__fill5
+    + PLACED ( 413000 0 )  N ;
+  - FILL_S17_4 gf180mcu_fd_io__fill5
+    + PLACED ( 414000 0 )  N ;
+  - FILL_S17_5 gf180mcu_fd_io__fill5
+    + PLACED ( 415000 0 )  N ;
+  - S18 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 416000 0 )  N ;
+  - FILL_S18_1 gf180mcu_fd_io__fill5
+    + PLACED ( 431000 0 )  N ;
+  - FILL_S18_2 gf180mcu_fd_io__fill5
+    + PLACED ( 432000 0 )  N ;
+  - FILL_S18_3 gf180mcu_fd_io__fill5
+    + PLACED ( 433000 0 )  N ;
+  - FILL_S18_4 gf180mcu_fd_io__fill5
+    + PLACED ( 434000 0 )  N ;
+  - FILL_S18_5 gf180mcu_fd_io__fill5
+    + PLACED ( 435000 0 )  N ;
+  - S19 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 436000 0 )  N ;
+  - FILL_S19_1 gf180mcu_fd_io__fill5
+    + PLACED ( 451000 0 )  N ;
+  - FILL_S19_2 gf180mcu_fd_io__fill5
+    + PLACED ( 452000 0 )  N ;
+  - FILL_S19_3 gf180mcu_fd_io__fill5
+    + PLACED ( 453000 0 )  N ;
+  - FILL_S19_4 gf180mcu_fd_io__fill5
+    + PLACED ( 454000 0 )  N ;
+  - FILL_S19_5 gf180mcu_fd_io__fill5
+    + PLACED ( 455000 0 )  N ;
+  - S20 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 456000 0 )  N ;
+  - FILL_S20_1 gf180mcu_fd_io__fill5
+    + PLACED ( 471000 0 )  N ;
+  - FILL_S20_2 gf180mcu_fd_io__fill5
+    + PLACED ( 472000 0 )  N ;
+  - FILL_S20_3 gf180mcu_fd_io__fill5
+    + PLACED ( 473000 0 )  N ;
+  - FILL_S20_4 gf180mcu_fd_io__fill5
+    + PLACED ( 474000 0 )  N ;
+  - FILL_S20_5 gf180mcu_fd_io__fill5
+    + PLACED ( 475000 0 )  N ;
+  - S21 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 476000 0 )  N ;
+  - FILL_S21_1 gf180mcu_fd_io__fill5
+    + PLACED ( 491000 0 )  N ;
+  - FILL_S21_2 gf180mcu_fd_io__fill5
+    + PLACED ( 492000 0 )  N ;
+  - FILL_S21_3 gf180mcu_fd_io__fill5
+    + PLACED ( 493000 0 )  N ;
+  - FILL_S21_4 gf180mcu_fd_io__fill5
+    + PLACED ( 494000 0 )  N ;
+  - FILL_S21_5 gf180mcu_fd_io__fill5
+    + PLACED ( 495000 0 )  N ;
+  - S22 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 496000 0 )  N ;
+  - FILL_S22_1 gf180mcu_fd_io__fill5
+    + PLACED ( 511000 0 )  N ;
+  - FILL_S22_2 gf180mcu_fd_io__fill5
+    + PLACED ( 512000 0 )  N ;
+  - FILL_S22_3 gf180mcu_fd_io__fill5
+    + PLACED ( 513000 0 )  N ;
+  - FILL_S22_4 gf180mcu_fd_io__fill5
+    + PLACED ( 514000 0 )  N ;
+  - FILL_S22_5 gf180mcu_fd_io__fill5
+    + PLACED ( 515000 0 )  N ;
+  - FILL_W00_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 71000 )  E ;
+  - FILL_W00_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 72000 )  E ;
+  - FILL_W00_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 73000 )  E ;
+  - FILL_W00_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 74000 )  E ;
+  - FILL_W00_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 75000 )  E ;
+  - W01 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 76000 )  E ;
+  - FILL_W01_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 91000 )  E ;
+  - FILL_W01_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 92000 )  E ;
+  - FILL_W01_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 93000 )  E ;
+  - FILL_W01_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 94000 )  E ;
+  - FILL_W01_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 95000 )  E ;
+  - W02 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 96000 )  E ;
+  - FILL_W02_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 111000 )  E ;
+  - FILL_W02_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 112000 )  E ;
+  - FILL_W02_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 113000 )  E ;
+  - FILL_W02_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 114000 )  E ;
+  - FILL_W02_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 115000 )  E ;
+  - W03 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 116000 )  E ;
+  - FILL_W03_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 131000 )  E ;
+  - FILL_W03_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 132000 )  E ;
+  - FILL_W03_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 133000 )  E ;
+  - FILL_W03_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 134000 )  E ;
+  - FILL_W03_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 135000 )  E ;
+  - W04 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 136000 )  E ;
+  - FILL_W04_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 151000 )  E ;
+  - FILL_W04_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 152000 )  E ;
+  - FILL_W04_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 153000 )  E ;
+  - FILL_W04_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 154000 )  E ;
+  - FILL_W04_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 155000 )  E ;
+  - W05 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 156000 )  E ;
+  - FILL_W05_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 171000 )  E ;
+  - FILL_W05_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 172000 )  E ;
+  - FILL_W05_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 173000 )  E ;
+  - FILL_W05_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 174000 )  E ;
+  - FILL_W05_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 175000 )  E ;
+  - W06 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 176000 )  E ;
+  - FILL_W06_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 191000 )  E ;
+  - FILL_W06_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 192000 )  E ;
+  - FILL_W06_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 193000 )  E ;
+  - FILL_W06_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 194000 )  E ;
+  - FILL_W06_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 195000 )  E ;
+  - W07 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 196000 )  E ;
+  - FILL_W07_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 211000 )  E ;
+  - FILL_W07_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 212000 )  E ;
+  - FILL_W07_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 213000 )  E ;
+  - FILL_W07_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 214000 )  E ;
+  - FILL_W07_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 215000 )  E ;
+  - W08 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 216000 )  E ;
+  - FILL_W08_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 231000 )  E ;
+  - FILL_W08_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 232000 )  E ;
+  - FILL_W08_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 233000 )  E ;
+  - FILL_W08_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 234000 )  E ;
+  - FILL_W08_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 235000 )  E ;
+  - W09 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 236000 )  E ;
+  - FILL_W09_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 251000 )  E ;
+  - FILL_W09_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 252000 )  E ;
+  - FILL_W09_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 253000 )  E ;
+  - FILL_W09_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 254000 )  E ;
+  - FILL_W09_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 255000 )  E ;
+  - W10 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 0 256000 )  E ;
+  - FILL_W10_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 271000 )  E ;
+  - FILL_W10_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 272000 )  E ;
+  - FILL_W10_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 273000 )  E ;
+  - FILL_W10_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 274000 )  E ;
+  - FILL_W10_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 275000 )  E ;
+  - W11 gf180mcu_fd_io__dvss
+    + PLACED ( 0 276000 )  E ;
+  - BRK_W11_1 gf180mcu_fd_io__brk5
+    + PLACED ( 0 291000 )  E ;
+  - BRK_W11_2 gf180mcu_fd_io__brk5
+    + PLACED ( 0 292000 )  E ;
+  - BRK_W11_3 gf180mcu_fd_io__brk5
+    + PLACED ( 0 293000 )  E ;
+  - BRK_W11_4 gf180mcu_fd_io__brk5
+    + PLACED ( 0 294000 )  E ;
+  - BRK_W11_5 gf180mcu_fd_io__brk5
+    + PLACED ( 0 295000 )  E ;
+  - W12 gf180mcu_fd_io__dvss
+    + PLACED ( 0 296000 )  E ;
+  - FILL_W12_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 311000 )  E ;
+  - FILL_W12_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 312000 )  E ;
+  - FILL_W12_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 313000 )  E ;
+  - FILL_W12_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 314000 )  E ;
+  - FILL_W12_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 315000 )  E ;
+  - W13 gf180mcu_fd_io__dvdd
+    + PLACED ( 0 316000 )  E ;
+  - FILL_W13_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 331000 )  E ;
+  - FILL_W13_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 332000 )  E ;
+  - FILL_W13_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 333000 )  E ;
+  - FILL_W13_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 334000 )  E ;
+  - FILL_W13_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 335000 )  E ;
+  - W14 gf180mcu_fd_io__in_c
+    + PLACED ( 0 336000 )  E ;
+  - FILL_W14_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 351000 )  E ;
+  - FILL_W14_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 352000 )  E ;
+  - FILL_W14_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 353000 )  E ;
+  - FILL_W14_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 354000 )  E ;
+  - FILL_W14_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 355000 )  E ;
+  - W15 gf180mcu_fd_io__bi_t
+    + PLACED ( 0 356000 )  E ;
+  - FILL_W15_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 371000 )  E ;
+  - FILL_W15_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 372000 )  E ;
+  - FILL_W15_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 373000 )  E ;
+  - FILL_W15_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 374000 )  E ;
+  - FILL_W15_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 375000 )  E ;
+  - W16 gf180mcu_fd_io__bi_t
+    + PLACED ( 0 376000 )  E ;
+  - FILL_W16_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 391000 )  E ;
+  - FILL_W16_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 392000 )  E ;
+  - FILL_W16_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 393000 )  E ;
+  - FILL_W16_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 394000 )  E ;
+  - FILL_W16_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 395000 )  E ;
+  - W17 gf180mcu_fd_io__bi_t
+    + PLACED ( 0 396000 )  E ;
+  - FILL_W17_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 411000 )  E ;
+  - FILL_W17_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 412000 )  E ;
+  - FILL_W17_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 413000 )  E ;
+  - FILL_W17_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 414000 )  E ;
+  - FILL_W17_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 415000 )  E ;
+  - W18 gf180mcu_fd_io__bi_t
+    + PLACED ( 0 416000 )  E ;
+  - FILL_W18_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 431000 )  E ;
+  - FILL_W18_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 432000 )  E ;
+  - FILL_W18_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 433000 )  E ;
+  - FILL_W18_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 434000 )  E ;
+  - FILL_W18_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 435000 )  E ;
+  - W19 gf180mcu_fd_io__bi_t
+    + PLACED ( 0 436000 )  E ;
+  - FILL_W19_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 451000 )  E ;
+  - FILL_W19_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 452000 )  E ;
+  - FILL_W19_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 453000 )  E ;
+  - FILL_W19_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 454000 )  E ;
+  - FILL_W19_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 455000 )  E ;
+  - W20 gf180mcu_fd_io__bi_t
+    + PLACED ( 0 456000 )  E ;
+  - FILL_W20_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 471000 )  E ;
+  - FILL_W20_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 472000 )  E ;
+  - FILL_W20_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 473000 )  E ;
+  - FILL_W20_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 474000 )  E ;
+  - FILL_W20_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 475000 )  E ;
+  - W21 gf180mcu_fd_io__bi_t
+    + PLACED ( 0 476000 )  E ;
+  - FILL_W21_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 491000 )  E ;
+  - FILL_W21_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 492000 )  E ;
+  - FILL_W21_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 493000 )  E ;
+  - FILL_W21_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 494000 )  E ;
+  - FILL_W21_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 495000 )  E ;
+  - W22 gf180mcu_fd_io__bi_t
+    + PLACED ( 0 496000 )  E ;
+  - FILL_W22_1 gf180mcu_fd_io__fill5
+    + PLACED ( 0 511000 )  E ;
+  - FILL_W22_2 gf180mcu_fd_io__fill5
+    + PLACED ( 0 512000 )  E ;
+  - FILL_W22_3 gf180mcu_fd_io__fill5
+    + PLACED ( 0 513000 )  E ;
+  - FILL_W22_4 gf180mcu_fd_io__fill5
+    + PLACED ( 0 514000 )  E ;
+  - FILL_W22_5 gf180mcu_fd_io__fill5
+    + PLACED ( 0 515000 )  E ;
+  - FILL_E00_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 71000 )  W ;
+  - FILL_E00_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 72000 )  W ;
+  - FILL_E00_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 73000 )  W ;
+  - FILL_E00_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 74000 )  W ;
+  - FILL_E00_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 75000 )  W ;
+  - E01 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 76000 )  W ;
+  - FILL_E01_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 91000 )  W ;
+  - FILL_E01_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 92000 )  W ;
+  - FILL_E01_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 93000 )  W ;
+  - FILL_E01_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 94000 )  W ;
+  - FILL_E01_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 95000 )  W ;
+  - E02 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 96000 )  W ;
+  - FILL_E02_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 111000 )  W ;
+  - FILL_E02_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 112000 )  W ;
+  - FILL_E02_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 113000 )  W ;
+  - FILL_E02_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 114000 )  W ;
+  - FILL_E02_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 115000 )  W ;
+  - E03 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 116000 )  W ;
+  - FILL_E03_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 131000 )  W ;
+  - FILL_E03_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 132000 )  W ;
+  - FILL_E03_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 133000 )  W ;
+  - FILL_E03_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 134000 )  W ;
+  - FILL_E03_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 135000 )  W ;
+  - E04 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 136000 )  W ;
+  - FILL_E04_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 151000 )  W ;
+  - FILL_E04_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 152000 )  W ;
+  - FILL_E04_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 153000 )  W ;
+  - FILL_E04_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 154000 )  W ;
+  - FILL_E04_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 155000 )  W ;
+  - E05 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 156000 )  W ;
+  - FILL_E05_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 171000 )  W ;
+  - FILL_E05_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 172000 )  W ;
+  - FILL_E05_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 173000 )  W ;
+  - FILL_E05_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 174000 )  W ;
+  - FILL_E05_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 175000 )  W ;
+  - E06 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 176000 )  W ;
+  - FILL_E06_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 191000 )  W ;
+  - FILL_E06_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 192000 )  W ;
+  - FILL_E06_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 193000 )  W ;
+  - FILL_E06_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 194000 )  W ;
+  - FILL_E06_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 195000 )  W ;
+  - E07 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 196000 )  W ;
+  - FILL_E07_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 211000 )  W ;
+  - FILL_E07_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 212000 )  W ;
+  - FILL_E07_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 213000 )  W ;
+  - FILL_E07_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 214000 )  W ;
+  - FILL_E07_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 215000 )  W ;
+  - E08 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 216000 )  W ;
+  - FILL_E08_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 231000 )  W ;
+  - FILL_E08_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 232000 )  W ;
+  - FILL_E08_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 233000 )  W ;
+  - FILL_E08_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 234000 )  W ;
+  - FILL_E08_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 235000 )  W ;
+  - E09 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 236000 )  W ;
+  - FILL_E09_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 251000 )  W ;
+  - FILL_E09_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 252000 )  W ;
+  - FILL_E09_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 253000 )  W ;
+  - FILL_E09_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 254000 )  W ;
+  - FILL_E09_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 255000 )  W ;
+  - E10 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 256000 )  W ;
+  - FILL_E10_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 271000 )  W ;
+  - FILL_E10_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 272000 )  W ;
+  - FILL_E10_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 273000 )  W ;
+  - FILL_E10_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 274000 )  W ;
+  - FILL_E10_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 275000 )  W ;
+  - E11 gf180mcu_fd_io__dvss
+    + PLACED ( 517000 276000 )  W ;
+  - BRK_E11_1 gf180mcu_fd_io__brk5
+    + PLACED ( 517000 291000 )  W ;
+  - BRK_E11_2 gf180mcu_fd_io__brk5
+    + PLACED ( 517000 292000 )  W ;
+  - BRK_E11_3 gf180mcu_fd_io__brk5
+    + PLACED ( 517000 293000 )  W ;
+  - BRK_E11_4 gf180mcu_fd_io__brk5
+    + PLACED ( 517000 294000 )  W ;
+  - BRK_E11_5 gf180mcu_fd_io__brk5
+    + PLACED ( 517000 295000 )  W ;
+  - E12 gf180mcu_fd_io__dvss
+    + PLACED ( 517000 296000 )  W ;
+  - FILL_E12_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 311000 )  W ;
+  - FILL_E12_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 312000 )  W ;
+  - FILL_E12_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 313000 )  W ;
+  - FILL_E12_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 314000 )  W ;
+  - FILL_E12_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 315000 )  W ;
+  - E13 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 316000 )  W ;
+  - FILL_E13_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 331000 )  W ;
+  - FILL_E13_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 332000 )  W ;
+  - FILL_E13_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 333000 )  W ;
+  - FILL_E13_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 334000 )  W ;
+  - FILL_E13_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 335000 )  W ;
+  - E14 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 336000 )  W ;
+  - FILL_E14_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 351000 )  W ;
+  - FILL_E14_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 352000 )  W ;
+  - FILL_E14_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 353000 )  W ;
+  - FILL_E14_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 354000 )  W ;
+  - FILL_E14_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 355000 )  W ;
+  - E15 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 356000 )  W ;
+  - FILL_E15_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 371000 )  W ;
+  - FILL_E15_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 372000 )  W ;
+  - FILL_E15_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 373000 )  W ;
+  - FILL_E15_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 374000 )  W ;
+  - FILL_E15_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 375000 )  W ;
+  - E16 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 376000 )  W ;
+  - FILL_E16_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 391000 )  W ;
+  - FILL_E16_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 392000 )  W ;
+  - FILL_E16_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 393000 )  W ;
+  - FILL_E16_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 394000 )  W ;
+  - FILL_E16_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 395000 )  W ;
+  - E17 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 396000 )  W ;
+  - FILL_E17_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 411000 )  W ;
+  - FILL_E17_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 412000 )  W ;
+  - FILL_E17_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 413000 )  W ;
+  - FILL_E17_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 414000 )  W ;
+  - FILL_E17_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 415000 )  W ;
+  - E18 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 416000 )  W ;
+  - FILL_E18_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 431000 )  W ;
+  - FILL_E18_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 432000 )  W ;
+  - FILL_E18_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 433000 )  W ;
+  - FILL_E18_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 434000 )  W ;
+  - FILL_E18_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 435000 )  W ;
+  - E19 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 436000 )  W ;
+  - FILL_E19_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 451000 )  W ;
+  - FILL_E19_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 452000 )  W ;
+  - FILL_E19_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 453000 )  W ;
+  - FILL_E19_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 454000 )  W ;
+  - FILL_E19_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 455000 )  W ;
+  - E20 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 456000 )  W ;
+  - FILL_E20_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 471000 )  W ;
+  - FILL_E20_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 472000 )  W ;
+  - FILL_E20_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 473000 )  W ;
+  - FILL_E20_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 474000 )  W ;
+  - FILL_E20_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 475000 )  W ;
+  - E21 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 476000 )  W ;
+  - FILL_E21_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 491000 )  W ;
+  - FILL_E21_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 492000 )  W ;
+  - FILL_E21_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 493000 )  W ;
+  - FILL_E21_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 494000 )  W ;
+  - FILL_E21_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 495000 )  W ;
+  - E22 gf180mcu_fd_io__asig_5p0
+    + PLACED ( 517000 496000 )  W ;
+  - FILL_E22_1 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 511000 )  W ;
+  - FILL_E22_2 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 512000 )  W ;
+  - FILL_E22_3 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 513000 )  W ;
+  - FILL_E22_4 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 514000 )  W ;
+  - FILL_E22_5 gf180mcu_fd_io__fill5
+    + PLACED ( 517000 515000 )  W ;
+END COMPONENTS
+PINS 252 ;
+- N01 + NET N01 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 81000 578000 ) ( 86000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N02 + NET N02 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 101000 578000 ) ( 106000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N03 + NET N03 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 121000 578000 ) ( 126000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N04 + NET N04 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 141000 578000 ) ( 146000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N05 + NET N05 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 161000 578000 ) ( 166000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N06 + NET N06 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 181000 578000 ) ( 186000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N07 + NET N07 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 201000 578000 ) ( 206000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N08 + NET N08 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 221000 578000 ) ( 226000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N09 + NET N09 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 241000 578000 ) ( 246000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N10 + NET N10 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 261000 578000 ) ( 266000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N11 + NET N11 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 281000 578000 ) ( 286000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N12 + NET N12 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 301000 578000 ) ( 306000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N13 + NET N13 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 321000 578000 ) ( 326000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N14 + NET N14 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 341000 578000 ) ( 346000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N15 + NET N15 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 361000 578000 ) ( 366000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N16 + NET N16 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 381000 578000 ) ( 386000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N17 + NET N17 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 401000 578000 ) ( 406000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N18 + NET N18 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 421000 578000 ) ( 426000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N19 + NET N19 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 441000 578000 ) ( 446000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N20 + NET N20 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 461000 578000 ) ( 466000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N21 + NET N21 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 481000 578000 ) ( 486000 583000 )
+  + FIXED ( 0 0 ) N ;
+- N22 + NET N22 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 501000 578000 ) ( 506000 583000 )
+  + FIXED ( 0 0 ) N ;
+- E01 + NET E01 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 81000 ) ( 583000 86000 )
+  + FIXED ( 0 0 ) N ;
+- E02 + NET E02 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 101000 ) ( 583000 106000 )
+  + FIXED ( 0 0 ) N ;
+- E03 + NET E03 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 121000 ) ( 583000 126000 )
+  + FIXED ( 0 0 ) N ;
+- E04 + NET E04 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 141000 ) ( 583000 146000 )
+  + FIXED ( 0 0 ) N ;
+- E05 + NET E05 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 161000 ) ( 583000 166000 )
+  + FIXED ( 0 0 ) N ;
+- E06 + NET E06 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 181000 ) ( 583000 186000 )
+  + FIXED ( 0 0 ) N ;
+- E07 + NET E07 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 201000 ) ( 583000 206000 )
+  + FIXED ( 0 0 ) N ;
+- E08 + NET E08 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 221000 ) ( 583000 226000 )
+  + FIXED ( 0 0 ) N ;
+- E09 + NET E09 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 241000 ) ( 583000 246000 )
+  + FIXED ( 0 0 ) N ;
+- E10 + NET E10 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 261000 ) ( 583000 266000 )
+  + FIXED ( 0 0 ) N ;
+- E11 + NET E11 + DIRECTION INOUT + USE GROUND
+  + LAYER Metal5 ( 578000 281000 ) ( 583000 286000 )
+  + LAYER Metal2 ( 517000 276272 ) ( 517200 278172 )
+  + LAYER Metal2 ( 517000 278752 ) ( 517200 280802 )
+  + LAYER Metal2 ( 517000 281122 ) ( 517200 283172 )
+  + LAYER Metal2 ( 517000 283828 ) ( 517200 285878 )
+  + LAYER Metal2 ( 517000 286198 ) ( 517200 288248 )
+  + LAYER Metal2 ( 517000 288828 ) ( 517200 290728 )
+  + FIXED ( 0 0 ) N ;
+- E12 + NET E12 + DIRECTION INOUT + USE GROUND
+  + LAYER Metal5 ( 578000 301000 ) ( 583000 306000 )
+  + LAYER Metal2 ( 517000 296272 ) ( 517200 298172 )
+  + LAYER Metal2 ( 517000 298752 ) ( 517200 300802 )
+  + LAYER Metal2 ( 517000 301122 ) ( 517200 303172 )
+  + LAYER Metal2 ( 517000 303828 ) ( 517200 305878 )
+  + LAYER Metal2 ( 517000 306198 ) ( 517200 308248 )
+  + LAYER Metal2 ( 517000 308828 ) ( 517200 310728 )
+  + FIXED ( 0 0 ) N ;
+- E13 + NET E13 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 321000 ) ( 583000 326000 )
+  + FIXED ( 0 0 ) N ;
+- E14 + NET E14 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 341000 ) ( 583000 346000 )
+  + FIXED ( 0 0 ) N ;
+- E15 + NET E15 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 361000 ) ( 583000 366000 )
+  + FIXED ( 0 0 ) N ;
+- E16 + NET E16 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 381000 ) ( 583000 386000 )
+  + FIXED ( 0 0 ) N ;
+- E17 + NET E17 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 401000 ) ( 583000 406000 )
+  + FIXED ( 0 0 ) N ;
+- E18 + NET E18 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 421000 ) ( 583000 426000 )
+  + FIXED ( 0 0 ) N ;
+- E19 + NET E19 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 441000 ) ( 583000 446000 )
+  + FIXED ( 0 0 ) N ;
+- E20 + NET E20 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 461000 ) ( 583000 466000 )
+  + FIXED ( 0 0 ) N ;
+- E21 + NET E21 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 481000 ) ( 583000 486000 )
+  + FIXED ( 0 0 ) N ;
+- E22 + NET E22 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 578000 501000 ) ( 583000 506000 )
+  + FIXED ( 0 0 ) N ;
+- S01 + NET S01 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 81000 4000 ) ( 86000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S02 + NET S02 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 101000 4000 ) ( 106000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S03 + NET S03 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 121000 4000 ) ( 126000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S04 + NET S04 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 141000 4000 ) ( 146000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S05 + NET S05 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 161000 4000 ) ( 166000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S06 + NET S06 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 181000 4000 ) ( 186000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S07 + NET S07 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 201000 4000 ) ( 206000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S08 + NET S08 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 221000 4000 ) ( 226000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S09 + NET S09 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 241000 4000 ) ( 246000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S10 + NET S10 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 261000 4000 ) ( 266000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S11 + NET S11 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 281000 4000 ) ( 286000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S12 + NET S12 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 301000 4000 ) ( 306000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S13 + NET S13 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 321000 4000 ) ( 326000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S14 + NET S14 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 341000 4000 ) ( 346000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S15 + NET S15 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 361000 4000 ) ( 366000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S16 + NET S16 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 381000 4000 ) ( 386000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S17 + NET S17 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 401000 4000 ) ( 406000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S18 + NET S18 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 421000 4000 ) ( 426000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S19 + NET S19 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 441000 4000 ) ( 446000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S20 + NET S20 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 461000 4000 ) ( 466000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S21 + NET S21 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 481000 4000 ) ( 486000 9000 )
+  + FIXED ( 0 0 ) N ;
+- S22 + NET S22 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 501000 4000 ) ( 506000 9000 )
+  + FIXED ( 0 0 ) N ;
+- W01 + NET W01 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 81000 ) ( 9000 86000 )
+  + FIXED ( 0 0 ) N ;
+- W02 + NET W02 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 101000 ) ( 9000 106000 )
+  + FIXED ( 0 0 ) N ;
+- W03 + NET W03 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 121000 ) ( 9000 126000 )
+  + FIXED ( 0 0 ) N ;
+- W04 + NET W04 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 141000 ) ( 9000 146000 )
+  + FIXED ( 0 0 ) N ;
+- W05 + NET W05 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 161000 ) ( 9000 166000 )
+  + FIXED ( 0 0 ) N ;
+- W06 + NET W06 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 181000 ) ( 9000 186000 )
+  + FIXED ( 0 0 ) N ;
+- W07 + NET W07 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 201000 ) ( 9000 206000 )
+  + FIXED ( 0 0 ) N ;
+- W08 + NET W08 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 221000 ) ( 9000 226000 )
+  + FIXED ( 0 0 ) N ;
+- W09 + NET W09 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 241000 ) ( 9000 246000 )
+  + FIXED ( 0 0 ) N ;
+- W10 + NET W10 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 261000 ) ( 9000 266000 )
+  + FIXED ( 0 0 ) N ;
+- W11 + NET W11 + DIRECTION INOUT + USE GROUND
+  + LAYER Metal5 ( 4000 281000 ) ( 9000 286000 )
+  + LAYER Metal2 ( 69800 288828 ) ( 70000 290728 )
+  + LAYER Metal2 ( 69800 286198 ) ( 70000 288248 )
+  + LAYER Metal2 ( 69800 283828 ) ( 70000 285878 )
+  + LAYER Metal2 ( 69800 281122 ) ( 70000 283172 )
+  + LAYER Metal2 ( 69800 278752 ) ( 70000 280802 )
+  + LAYER Metal2 ( 69800 276272 ) ( 70000 278172 )
+  + FIXED ( 0 0 ) N ;
+- W12 + NET W12 + DIRECTION INOUT + USE GROUND
+  + LAYER Metal5 ( 4000 301000 ) ( 9000 306000 )
+  + LAYER Metal2 ( 69800 308828 ) ( 70000 310728 )
+  + LAYER Metal2 ( 69800 306198 ) ( 70000 308248 )
+  + LAYER Metal2 ( 69800 303828 ) ( 70000 305878 )
+  + LAYER Metal2 ( 69800 301122 ) ( 70000 303172 )
+  + LAYER Metal2 ( 69800 298752 ) ( 70000 300802 )
+  + LAYER Metal2 ( 69800 296272 ) ( 70000 298172 )
+  + FIXED ( 0 0 ) N ;
+- W13 + NET W13 + DIRECTION INOUT + USE POWER
+  + LAYER Metal5 ( 4000 321000 ) ( 9000 326000 )
+  + LAYER Metal2 ( 69069 328828 ) ( 70000 330728 )
+  + LAYER Metal2 ( 69069 326198 ) ( 70000 328248 )
+  + LAYER Metal2 ( 69069 323828 ) ( 70000 325878 )
+  + LAYER Metal2 ( 69069 321122 ) ( 70000 323172 )
+  + LAYER Metal2 ( 69069 318752 ) ( 70000 320802 )
+  + LAYER Metal2 ( 69069 316272 ) ( 70000 318172 )
+  + FIXED ( 0 0 ) N ;
+- W14 + NET W14 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 341000 ) ( 9000 346000 )
+  + FIXED ( 0 0 ) N ;
+- W15 + NET W15 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 361000 ) ( 9000 366000 )
+  + FIXED ( 0 0 ) N ;
+- W16 + NET W16 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 381000 ) ( 9000 386000 )
+  + FIXED ( 0 0 ) N ;
+- W17 + NET W17 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 401000 ) ( 9000 406000 )
+  + FIXED ( 0 0 ) N ;
+- W18 + NET W18 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 421000 ) ( 9000 426000 )
+  + FIXED ( 0 0 ) N ;
+- W19 + NET W19 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 441000 ) ( 9000 446000 )
+  + FIXED ( 0 0 ) N ;
+- W20 + NET W20 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 461000 ) ( 9000 466000 )
+  + FIXED ( 0 0 ) N ;
+- W21 + NET W21 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 481000 ) ( 9000 486000 )
+  + FIXED ( 0 0 ) N ;
+- W22 + NET W22 + DIRECTION INOUT + USE SIGNAL
+  + LAYER Metal5 ( 4000 501000 ) ( 9000 506000 )
+  + FIXED ( 0 0 ) N ;
+- W14_PU + NET W14_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66054 349731 ) ( 70000 349807 )
+  + FIXED ( 0 0 ) N ;
+- W14_PD + NET W14_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 65990 348858 ) ( 70000 348934 )
+  + FIXED ( 0 0 ) N ;
+- W14_Y + NET W14_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 63950 336752 ) ( 70000 336828 )
+  + FIXED ( 0 0 ) N ;
+- W15_CS + NET W15_CS + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 65709 370252 ) ( 70000 370328 )
+  + FIXED ( 0 0 ) N ;
+- W15_SL + NET W15_SL + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 53028 357190 ) ( 70000 357266 )
+  + FIXED ( 0 0 ) N ;
+- W15_IE + NET W15_IE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66984 368647 ) ( 70000 368723 )
+  + FIXED ( 0 0 ) N ;
+- W15_OE + NET W15_OE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 53268 356898 ) ( 70000 356974 )
+  + FIXED ( 0 0 ) N ;
+- W15_PU + NET W15_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66084 369731 ) ( 70000 369807 )
+  + FIXED ( 0 0 ) N ;
+- W15_PD + NET W15_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66020 368858 ) ( 70000 368934 )
+  + FIXED ( 0 0 ) N ;
+- W15_A + NET W15_A + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52892 357044 ) ( 70000 357120 )
+  + FIXED ( 0 0 ) N ;
+- W15_PDRV0 + NET W15_PDRV0 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52933 369502 ) ( 70000 369578 )
+  + FIXED ( 0 0 ) N ;
+- W15_PDRV1 + NET W15_PDRV1 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52998 369360 ) ( 70000 369436 )
+  + FIXED ( 0 0 ) N ;
+- W15_Y + NET W15_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 63980 356752 ) ( 70000 356828 )
+  + FIXED ( 0 0 ) N ;
+- W16_CS + NET W16_CS + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 65709 390252 ) ( 70000 390328 )
+  + FIXED ( 0 0 ) N ;
+- W16_SL + NET W16_SL + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 53028 377190 ) ( 70000 377266 )
+  + FIXED ( 0 0 ) N ;
+- W16_IE + NET W16_IE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66984 388647 ) ( 70000 388723 )
+  + FIXED ( 0 0 ) N ;
+- W16_OE + NET W16_OE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 53268 376898 ) ( 70000 376974 )
+  + FIXED ( 0 0 ) N ;
+- W16_PU + NET W16_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66084 389731 ) ( 70000 389807 )
+  + FIXED ( 0 0 ) N ;
+- W16_PD + NET W16_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66020 388858 ) ( 70000 388934 )
+  + FIXED ( 0 0 ) N ;
+- W16_A + NET W16_A + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52892 377044 ) ( 70000 377120 )
+  + FIXED ( 0 0 ) N ;
+- W16_PDRV0 + NET W16_PDRV0 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52933 389502 ) ( 70000 389578 )
+  + FIXED ( 0 0 ) N ;
+- W16_PDRV1 + NET W16_PDRV1 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52998 389360 ) ( 70000 389436 )
+  + FIXED ( 0 0 ) N ;
+- W16_Y + NET W16_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 63980 376752 ) ( 70000 376828 )
+  + FIXED ( 0 0 ) N ;
+- W17_CS + NET W17_CS + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 65709 410252 ) ( 70000 410328 )
+  + FIXED ( 0 0 ) N ;
+- W17_SL + NET W17_SL + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 53028 397190 ) ( 70000 397266 )
+  + FIXED ( 0 0 ) N ;
+- W17_IE + NET W17_IE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66984 408647 ) ( 70000 408723 )
+  + FIXED ( 0 0 ) N ;
+- W17_OE + NET W17_OE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 53268 396898 ) ( 70000 396974 )
+  + FIXED ( 0 0 ) N ;
+- W17_PU + NET W17_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66084 409731 ) ( 70000 409807 )
+  + FIXED ( 0 0 ) N ;
+- W17_PD + NET W17_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66020 408858 ) ( 70000 408934 )
+  + FIXED ( 0 0 ) N ;
+- W17_A + NET W17_A + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52892 397044 ) ( 70000 397120 )
+  + FIXED ( 0 0 ) N ;
+- W17_PDRV0 + NET W17_PDRV0 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52933 409502 ) ( 70000 409578 )
+  + FIXED ( 0 0 ) N ;
+- W17_PDRV1 + NET W17_PDRV1 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52998 409360 ) ( 70000 409436 )
+  + FIXED ( 0 0 ) N ;
+- W17_Y + NET W17_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 63980 396752 ) ( 70000 396828 )
+  + FIXED ( 0 0 ) N ;
+- W18_CS + NET W18_CS + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 65709 430252 ) ( 70000 430328 )
+  + FIXED ( 0 0 ) N ;
+- W18_SL + NET W18_SL + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 53028 417190 ) ( 70000 417266 )
+  + FIXED ( 0 0 ) N ;
+- W18_IE + NET W18_IE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66984 428647 ) ( 70000 428723 )
+  + FIXED ( 0 0 ) N ;
+- W18_OE + NET W18_OE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 53268 416898 ) ( 70000 416974 )
+  + FIXED ( 0 0 ) N ;
+- W18_PU + NET W18_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66084 429731 ) ( 70000 429807 )
+  + FIXED ( 0 0 ) N ;
+- W18_PD + NET W18_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66020 428858 ) ( 70000 428934 )
+  + FIXED ( 0 0 ) N ;
+- W18_A + NET W18_A + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52892 417044 ) ( 70000 417120 )
+  + FIXED ( 0 0 ) N ;
+- W18_PDRV0 + NET W18_PDRV0 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52933 429502 ) ( 70000 429578 )
+  + FIXED ( 0 0 ) N ;
+- W18_PDRV1 + NET W18_PDRV1 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52998 429360 ) ( 70000 429436 )
+  + FIXED ( 0 0 ) N ;
+- W18_Y + NET W18_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 63980 416752 ) ( 70000 416828 )
+  + FIXED ( 0 0 ) N ;
+- W19_CS + NET W19_CS + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 65709 450252 ) ( 70000 450328 )
+  + FIXED ( 0 0 ) N ;
+- W19_SL + NET W19_SL + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 53028 437190 ) ( 70000 437266 )
+  + FIXED ( 0 0 ) N ;
+- W19_IE + NET W19_IE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66984 448647 ) ( 70000 448723 )
+  + FIXED ( 0 0 ) N ;
+- W19_OE + NET W19_OE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 53268 436898 ) ( 70000 436974 )
+  + FIXED ( 0 0 ) N ;
+- W19_PU + NET W19_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66084 449731 ) ( 70000 449807 )
+  + FIXED ( 0 0 ) N ;
+- W19_PD + NET W19_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66020 448858 ) ( 70000 448934 )
+  + FIXED ( 0 0 ) N ;
+- W19_A + NET W19_A + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52892 437044 ) ( 70000 437120 )
+  + FIXED ( 0 0 ) N ;
+- W19_PDRV0 + NET W19_PDRV0 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52933 449502 ) ( 70000 449578 )
+  + FIXED ( 0 0 ) N ;
+- W19_PDRV1 + NET W19_PDRV1 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52998 449360 ) ( 70000 449436 )
+  + FIXED ( 0 0 ) N ;
+- W19_Y + NET W19_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 63980 436752 ) ( 70000 436828 )
+  + FIXED ( 0 0 ) N ;
+- W20_CS + NET W20_CS + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 65709 470252 ) ( 70000 470328 )
+  + FIXED ( 0 0 ) N ;
+- W20_SL + NET W20_SL + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 53028 457190 ) ( 70000 457266 )
+  + FIXED ( 0 0 ) N ;
+- W20_IE + NET W20_IE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66984 468647 ) ( 70000 468723 )
+  + FIXED ( 0 0 ) N ;
+- W20_OE + NET W20_OE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 53268 456898 ) ( 70000 456974 )
+  + FIXED ( 0 0 ) N ;
+- W20_PU + NET W20_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66084 469731 ) ( 70000 469807 )
+  + FIXED ( 0 0 ) N ;
+- W20_PD + NET W20_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66020 468858 ) ( 70000 468934 )
+  + FIXED ( 0 0 ) N ;
+- W20_A + NET W20_A + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52892 457044 ) ( 70000 457120 )
+  + FIXED ( 0 0 ) N ;
+- W20_PDRV0 + NET W20_PDRV0 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52933 469502 ) ( 70000 469578 )
+  + FIXED ( 0 0 ) N ;
+- W20_PDRV1 + NET W20_PDRV1 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52998 469360 ) ( 70000 469436 )
+  + FIXED ( 0 0 ) N ;
+- W20_Y + NET W20_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 63980 456752 ) ( 70000 456828 )
+  + FIXED ( 0 0 ) N ;
+- W21_CS + NET W21_CS + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 65709 490252 ) ( 70000 490328 )
+  + FIXED ( 0 0 ) N ;
+- W21_SL + NET W21_SL + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 53028 477190 ) ( 70000 477266 )
+  + FIXED ( 0 0 ) N ;
+- W21_IE + NET W21_IE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66984 488647 ) ( 70000 488723 )
+  + FIXED ( 0 0 ) N ;
+- W21_OE + NET W21_OE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 53268 476898 ) ( 70000 476974 )
+  + FIXED ( 0 0 ) N ;
+- W21_PU + NET W21_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66084 489731 ) ( 70000 489807 )
+  + FIXED ( 0 0 ) N ;
+- W21_PD + NET W21_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66020 488858 ) ( 70000 488934 )
+  + FIXED ( 0 0 ) N ;
+- W21_A + NET W21_A + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52892 477044 ) ( 70000 477120 )
+  + FIXED ( 0 0 ) N ;
+- W21_PDRV0 + NET W21_PDRV0 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52933 489502 ) ( 70000 489578 )
+  + FIXED ( 0 0 ) N ;
+- W21_PDRV1 + NET W21_PDRV1 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52998 489360 ) ( 70000 489436 )
+  + FIXED ( 0 0 ) N ;
+- W21_Y + NET W21_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 63980 476752 ) ( 70000 476828 )
+  + FIXED ( 0 0 ) N ;
+- W22_CS + NET W22_CS + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 65709 510252 ) ( 70000 510328 )
+  + FIXED ( 0 0 ) N ;
+- W22_SL + NET W22_SL + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 53028 497190 ) ( 70000 497266 )
+  + FIXED ( 0 0 ) N ;
+- W22_IE + NET W22_IE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66984 508647 ) ( 70000 508723 )
+  + FIXED ( 0 0 ) N ;
+- W22_OE + NET W22_OE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 53268 496898 ) ( 70000 496974 )
+  + FIXED ( 0 0 ) N ;
+- W22_PU + NET W22_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66084 509731 ) ( 70000 509807 )
+  + FIXED ( 0 0 ) N ;
+- W22_PD + NET W22_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 66020 508858 ) ( 70000 508934 )
+  + FIXED ( 0 0 ) N ;
+- W22_A + NET W22_A + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52892 497044 ) ( 70000 497120 )
+  + FIXED ( 0 0 ) N ;
+- W22_PDRV0 + NET W22_PDRV0 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52933 509502 ) ( 70000 509578 )
+  + FIXED ( 0 0 ) N ;
+- W22_PDRV1 + NET W22_PDRV1 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 52998 509360 ) ( 70000 509436 )
+  + FIXED ( 0 0 ) N ;
+- W22_Y + NET W22_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 63980 496752 ) ( 70000 496828 )
+  + FIXED ( 0 0 ) N ;
+- N01_PU + NET N01_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 89731 517000 ) ( 89807 520946 )
+  + FIXED ( 0 0 ) N ;
+- N01_PD + NET N01_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 88858 517000 ) ( 88934 521010 )
+  + FIXED ( 0 0 ) N ;
+- N01_Y + NET N01_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 76752 517000 ) ( 76828 523050 )
+  + FIXED ( 0 0 ) N ;
+- N02_PU + NET N02_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 109731 517000 ) ( 109807 520946 )
+  + FIXED ( 0 0 ) N ;
+- N02_PD + NET N02_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 108858 517000 ) ( 108934 521010 )
+  + FIXED ( 0 0 ) N ;
+- N02_Y + NET N02_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 96752 517000 ) ( 96828 523050 )
+  + FIXED ( 0 0 ) N ;
+- N03_PU + NET N03_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 129731 517000 ) ( 129807 520946 )
+  + FIXED ( 0 0 ) N ;
+- N03_PD + NET N03_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 128858 517000 ) ( 128934 521010 )
+  + FIXED ( 0 0 ) N ;
+- N03_Y + NET N03_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 116752 517000 ) ( 116828 523050 )
+  + FIXED ( 0 0 ) N ;
+- N04_PU + NET N04_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 149731 517000 ) ( 149807 520946 )
+  + FIXED ( 0 0 ) N ;
+- N04_PD + NET N04_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 148858 517000 ) ( 148934 521010 )
+  + FIXED ( 0 0 ) N ;
+- N04_Y + NET N04_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 136752 517000 ) ( 136828 523050 )
+  + FIXED ( 0 0 ) N ;
+- N05_CS + NET N05_CS + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 170252 517000 ) ( 170328 521291 )
+  + FIXED ( 0 0 ) N ;
+- N05_SL + NET N05_SL + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 157190 517000 ) ( 157266 533972 )
+  + FIXED ( 0 0 ) N ;
+- N05_IE + NET N05_IE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 168647 517000 ) ( 168723 520016 )
+  + FIXED ( 0 0 ) N ;
+- N05_OE + NET N05_OE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 156898 517000 ) ( 156974 533732 )
+  + FIXED ( 0 0 ) N ;
+- N05_PU + NET N05_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 169731 517000 ) ( 169807 520916 )
+  + FIXED ( 0 0 ) N ;
+- N05_PD + NET N05_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 168858 517000 ) ( 168934 520980 )
+  + FIXED ( 0 0 ) N ;
+- N05_A + NET N05_A + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 157044 517000 ) ( 157120 534108 )
+  + FIXED ( 0 0 ) N ;
+- N05_PDRV0 + NET N05_PDRV0 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 169502 517000 ) ( 169578 534067 )
+  + FIXED ( 0 0 ) N ;
+- N05_PDRV1 + NET N05_PDRV1 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 169360 517000 ) ( 169436 534002 )
+  + FIXED ( 0 0 ) N ;
+- N05_Y + NET N05_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 156752 517000 ) ( 156828 523020 )
+  + FIXED ( 0 0 ) N ;
+- N06_CS + NET N06_CS + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 190252 517000 ) ( 190328 521291 )
+  + FIXED ( 0 0 ) N ;
+- N06_SL + NET N06_SL + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 177190 517000 ) ( 177266 533972 )
+  + FIXED ( 0 0 ) N ;
+- N06_IE + NET N06_IE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 188647 517000 ) ( 188723 520016 )
+  + FIXED ( 0 0 ) N ;
+- N06_OE + NET N06_OE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 176898 517000 ) ( 176974 533732 )
+  + FIXED ( 0 0 ) N ;
+- N06_PU + NET N06_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 189731 517000 ) ( 189807 520916 )
+  + FIXED ( 0 0 ) N ;
+- N06_PD + NET N06_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 188858 517000 ) ( 188934 520980 )
+  + FIXED ( 0 0 ) N ;
+- N06_A + NET N06_A + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 177044 517000 ) ( 177120 534108 )
+  + FIXED ( 0 0 ) N ;
+- N06_PDRV0 + NET N06_PDRV0 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 189502 517000 ) ( 189578 534067 )
+  + FIXED ( 0 0 ) N ;
+- N06_PDRV1 + NET N06_PDRV1 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 189360 517000 ) ( 189436 534002 )
+  + FIXED ( 0 0 ) N ;
+- N06_Y + NET N06_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 176752 517000 ) ( 176828 523020 )
+  + FIXED ( 0 0 ) N ;
+- N07_PU + NET N07_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 209731 517000 ) ( 209807 520946 )
+  + FIXED ( 0 0 ) N ;
+- N07_PD + NET N07_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 208858 517000 ) ( 208934 521010 )
+  + FIXED ( 0 0 ) N ;
+- N07_Y + NET N07_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 196752 517000 ) ( 196828 523050 )
+  + FIXED ( 0 0 ) N ;
+- N08_CS + NET N08_CS + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 230252 517000 ) ( 230328 521291 )
+  + FIXED ( 0 0 ) N ;
+- N08_SL + NET N08_SL + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 217190 517000 ) ( 217266 533972 )
+  + FIXED ( 0 0 ) N ;
+- N08_IE + NET N08_IE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 228647 517000 ) ( 228723 520016 )
+  + FIXED ( 0 0 ) N ;
+- N08_OE + NET N08_OE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 216898 517000 ) ( 216974 533732 )
+  + FIXED ( 0 0 ) N ;
+- N08_PU + NET N08_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 229731 517000 ) ( 229807 520916 )
+  + FIXED ( 0 0 ) N ;
+- N08_PD + NET N08_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 228858 517000 ) ( 228934 520980 )
+  + FIXED ( 0 0 ) N ;
+- N08_A + NET N08_A + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 217044 517000 ) ( 217120 534108 )
+  + FIXED ( 0 0 ) N ;
+- N08_PDRV0 + NET N08_PDRV0 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 229502 517000 ) ( 229578 534067 )
+  + FIXED ( 0 0 ) N ;
+- N08_PDRV1 + NET N08_PDRV1 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 229360 517000 ) ( 229436 534002 )
+  + FIXED ( 0 0 ) N ;
+- N08_Y + NET N08_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 216752 517000 ) ( 216828 523020 )
+  + FIXED ( 0 0 ) N ;
+- N09_CS + NET N09_CS + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 250252 517000 ) ( 250328 521291 )
+  + FIXED ( 0 0 ) N ;
+- N09_SL + NET N09_SL + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 237190 517000 ) ( 237266 533972 )
+  + FIXED ( 0 0 ) N ;
+- N09_IE + NET N09_IE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 248647 517000 ) ( 248723 520016 )
+  + FIXED ( 0 0 ) N ;
+- N09_OE + NET N09_OE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 236898 517000 ) ( 236974 533732 )
+  + FIXED ( 0 0 ) N ;
+- N09_PU + NET N09_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 249731 517000 ) ( 249807 520916 )
+  + FIXED ( 0 0 ) N ;
+- N09_PD + NET N09_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 248858 517000 ) ( 248934 520980 )
+  + FIXED ( 0 0 ) N ;
+- N09_A + NET N09_A + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 237044 517000 ) ( 237120 534108 )
+  + FIXED ( 0 0 ) N ;
+- N09_PDRV0 + NET N09_PDRV0 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 249502 517000 ) ( 249578 534067 )
+  + FIXED ( 0 0 ) N ;
+- N09_PDRV1 + NET N09_PDRV1 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 249360 517000 ) ( 249436 534002 )
+  + FIXED ( 0 0 ) N ;
+- N09_Y + NET N09_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 236752 517000 ) ( 236828 523020 )
+  + FIXED ( 0 0 ) N ;
+- N10_CS + NET N10_CS + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 270252 517000 ) ( 270328 521291 )
+  + FIXED ( 0 0 ) N ;
+- N10_SL + NET N10_SL + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 257190 517000 ) ( 257266 533972 )
+  + FIXED ( 0 0 ) N ;
+- N10_IE + NET N10_IE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 268647 517000 ) ( 268723 520016 )
+  + FIXED ( 0 0 ) N ;
+- N10_OE + NET N10_OE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 256898 517000 ) ( 256974 533732 )
+  + FIXED ( 0 0 ) N ;
+- N10_PU + NET N10_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 269731 517000 ) ( 269807 520916 )
+  + FIXED ( 0 0 ) N ;
+- N10_PD + NET N10_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 268858 517000 ) ( 268934 520980 )
+  + FIXED ( 0 0 ) N ;
+- N10_A + NET N10_A + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 257044 517000 ) ( 257120 534108 )
+  + FIXED ( 0 0 ) N ;
+- N10_PDRV0 + NET N10_PDRV0 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 269502 517000 ) ( 269578 534067 )
+  + FIXED ( 0 0 ) N ;
+- N10_PDRV1 + NET N10_PDRV1 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 269360 517000 ) ( 269436 534002 )
+  + FIXED ( 0 0 ) N ;
+- N10_Y + NET N10_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 256752 517000 ) ( 256828 523020 )
+  + FIXED ( 0 0 ) N ;
+- N11_CS + NET N11_CS + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 290252 517000 ) ( 290328 521291 )
+  + FIXED ( 0 0 ) N ;
+- N11_SL + NET N11_SL + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 277190 517000 ) ( 277266 533972 )
+  + FIXED ( 0 0 ) N ;
+- N11_IE + NET N11_IE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 288647 517000 ) ( 288723 520016 )
+  + FIXED ( 0 0 ) N ;
+- N11_OE + NET N11_OE + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 276898 517000 ) ( 276974 533732 )
+  + FIXED ( 0 0 ) N ;
+- N11_PU + NET N11_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 289731 517000 ) ( 289807 520916 )
+  + FIXED ( 0 0 ) N ;
+- N11_PD + NET N11_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 288858 517000 ) ( 288934 520980 )
+  + FIXED ( 0 0 ) N ;
+- N11_A + NET N11_A + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 277044 517000 ) ( 277120 534108 )
+  + FIXED ( 0 0 ) N ;
+- N11_PDRV0 + NET N11_PDRV0 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 289502 517000 ) ( 289578 534067 )
+  + FIXED ( 0 0 ) N ;
+- N11_PDRV1 + NET N11_PDRV1 + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 289360 517000 ) ( 289436 534002 )
+  + FIXED ( 0 0 ) N ;
+- N11_Y + NET N11_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 276752 517000 ) ( 276828 523020 )
+  + FIXED ( 0 0 ) N ;
+- N12_PU + NET N12_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 309731 517000 ) ( 309807 520946 )
+  + FIXED ( 0 0 ) N ;
+- N12_PD + NET N12_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 308858 517000 ) ( 308934 521010 )
+  + FIXED ( 0 0 ) N ;
+- N12_Y + NET N12_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 296752 517000 ) ( 296828 523050 )
+  + FIXED ( 0 0 ) N ;
+- N13_PU + NET N13_PU + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 329731 517000 ) ( 329807 520946 )
+  + FIXED ( 0 0 ) N ;
+- N13_PD + NET N13_PD + DIRECTION INPUT + USE SIGNAL
+  + LAYER Metal2 ( 328858 517000 ) ( 328934 521010 )
+  + FIXED ( 0 0 ) N ;
+- N13_Y + NET N13_Y + DIRECTION OUTPUT + USE SIGNAL
+  + LAYER Metal2 ( 316752 517000 ) ( 316828 523050 )
+  + FIXED ( 0 0 ) N ;
+END PINS
+END DESIGN

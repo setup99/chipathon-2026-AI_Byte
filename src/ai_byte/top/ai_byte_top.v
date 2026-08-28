@@ -26,6 +26,10 @@ module ai_byte_top
                                  ((WT_ADDR_W>RES_ADDR_W)?WT_ADDR_W:RES_ADDR_W)
 )
 (
+`ifdef USE_POWER_PINS
+    inout  wire                         VDD,
+    inout  wire                         VSS,
+`endif
     input  wire                         clk,
     input  wire                         rst_n,
 
@@ -39,6 +43,16 @@ module ai_byte_top
     // Optional observability (not required on package pins)
     output wire [2:0]                   debug_state
 );
+
+    // A02 padframe abutment: Metal2 power pins at W12/W13 (see connectors/).
+    // LibreLane places these macros at fixed top-level coords (MACROS).
+    // Skip when the D10-style A02_A wrapper owns the connectors (top-level).
+`ifdef USE_POWER_PINS
+`ifndef AI_BYTE_NO_POWER_CONN
+    (* keep *) (* keep_hierarchy *) vss_conn u_vss_conn (.VSS(VSS));
+    (* keep *) (* keep_hierarchy *) vdd_conn u_vdd_conn (.VDD(VDD));
+`endif
+`endif
 
     wire [REG_ADDR_W-1:0]    reg_addr;
     wire                     reg_we, reg_re;
