@@ -3,7 +3,7 @@
 	"INCLUDE_CONFIGS": [
 		"$LVS_ROOT/tech/$PDK/lvs_config.base.json"
 	],
-	"TOP_SOURCE": "ai_byte_top",
+	"TOP_SOURCE": "A02_A",
 	"TOP_LAYOUT": "$TOP_SOURCE",
 	"EXTRACT_FLATGLOB": [
 		""
@@ -24,7 +24,7 @@
 		""
 	],
 	"LVS_VERILOG_FILES": [
-		"$UPRJ_ROOT/verilog/gl/ai_byte_top.v"
+		"$UPRJ_ROOT/verilog/gl/A02_A.v"
 	],
-	"LAYOUT_FILE": "$UPRJ_ROOT/gds/ai_byte_top.gds"
+	"LAYOUT_FILE": "$UPRJ_ROOT/gds/A02_A.gds"
 }

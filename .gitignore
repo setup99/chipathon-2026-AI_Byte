@@ -1,11 +1,18 @@
 runs/
+librelane/runs/
 __pycache__/
 gf180mcu/
 gf180_drc.lyrdb
 sim_build/
 final/
 final_core/
+latest_run/
+# LibreLane local archive (regenerate with make librelane-a02-macro; not in git)
+final_a02_macro/
 librelane/.core_size_override.yaml
 img/
 *.lyrdb
 .ipynb_checkpoints/
+# Scratch metrics at repo root (signoff copies live under docs/signoff_a02_macro/)
+/metrics*.json
+/metrics_*.csv

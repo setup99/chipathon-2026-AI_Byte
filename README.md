@@ -227,6 +227,27 @@ Details: [`librelane/README.md`](librelane/README.md).
 
 Outputs: `final_core/` (macro) then `final/gds/chip_top.gds` (submission).
 
+### A02 user macro (Chipathon tapeout block)
+
+D10-style **1110×1110 µm** block per organizer `A02_A.def` (Metal2 abutment, power connectors, no on-die pad ring):
+
+```bash
+make clone-pdk && make check-pdk
+make librelane-a02-macro          # full signoff → final_a02_macro/
+# make librelane-a02-macro-nodrc  # skip DRC while iterating
+```
+
+Signoff bundle and reports: [`docs/signoff_a02_macro/README.md`](docs/signoff_a02_macro/README.md).
+
+**Chipathon submission paths** (`info.yaml` + `lvs_config.json` on `main`):
+
+| Path | Role |
+|------|------|
+| `gds/A02_A.gds` | Layout (`TOP_SOURCE` = `A02_A`) |
+| `verilog/gl/A02_A.v` | Gate-level netlist for LVS |
+| `info.yaml` | 146 Metal2 abutment pins (organizer `A02_A.def` order) |
+| `docs/signoff_a02_macro/` | DRC/LVS/STA reports + `metrics.csv` / `metrics.json` |
+
 ### Resync RTL from parent monorepo (optional)
 
 If you develop control/CE elsewhere:
