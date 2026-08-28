@@ -1,0 +1,21 @@
+Post-PnR STA summary — A02_A @ 140 ns (Exp8c)
+Source: final_a02_macro/metrics.json
+
+Corner                    Hold WS   Setup WS  Hold Vio  Setup Vio  Max Slew  Max Cap  Fanout
+-----------------------------------------------------------------------------------------------
+nom_tt_025C_5v00           0.7891    70.1521         0          0         0        0       0
+nom_ss_125C_4v50           0.7913    37.4258         0          0         6        0       0
+nom_ff_n40C_5v50           0.7820    75.3428         0          0         0        0       0
+min_tt_025C_5v00           0.8117    70.4442         0          0         0        0       0
+min_ss_125C_4v50           0.8284    40.1428         0          0         6        0       0
+min_ff_n40C_5v50           0.7657    75.5385         0          0         0        0       0
+max_tt_025C_5v00           0.7602    69.8062         0          0         0        0       0
+max_ss_125C_4v50           0.7445    34.1234         0          0        58        0       0
+max_ff_n40C_5v50           0.7915    75.1099         0          0         0        0       0
+
+Overall worst hold WS:  0.7445 ns
+Overall worst setup WS: 34.1234 ns
+Max slew violations (worst corner): 58 @ max_ss_125C_4v50
+Unannotated nets (all corners): 757 (753 clkload*, 4 unused inputs)
+Disconnected pins: 4 (0 critical)
+Floating nets (post-GPL): 2 (VDD/VSS black-boxed connectors)
