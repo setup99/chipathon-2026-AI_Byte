@@ -23,306 +23,60 @@ project:
 # ======================================================
 # External pad connections (organizer DEF / padframe integrate)
 # ======================================================
-# Top cell: A02_A — 146 Metal2 abutment pins per organizer A02_A.def
-# (librelane/floorplan/A02_A_full.def). Order matches DEF pin list.
+# ONE entry per I/O pad cell (22 pads), not per Metal2 abutment net.
+# Layout top A02_A exposes 146 abutment pins in DEF; pad-control glue
+# (_PU/_PD/_CS/_SL/_IE/_OE/_OUT/_PDRV*) is internal to the macro wrapper.
 #
-# Functional package pins (22) are a subset: VSS, VDD, clk, data[7:0],
-# addr[3:0], irq, re, debug_state[2:0], we, rst_n — see A02_A_pad_map.yaml.
-# Pad-control glue (_PU/_PD/_CS/_SL/_IE/_OE/_OUT/_PDRV*) uses bidirectional
-# io_type (no dedicated output type in Chipathon schema).
+# Order matches A02_A_pad_map.yaml (UL quadrant clockwise, quiet ground first).
+# Outputs use bidirectional (no dedicated output io_type in Chipathon schema).
+# done/error are in STATUS register (CPU-readable), not package pins.
 #
 # Signoff: docs/signoff_a02_macro/README.md
 # ======================================================
 pins:
+  # Quiet ground first (fixed down-bond per quadrant)
   - name: VSS
     io_type: ground
+  # Power paired with the ground above
   - name: VDD
     io_type: power
-  - name: clk_PU
-    io_type: bidirectional
-  - name: clk_PD
-    io_type: bidirectional
   - name: clk
     io_type: input_cmos
-  - name: "data_CS[7]"
+  - name: "data[7]"
     io_type: bidirectional
-  - name: "data_SL[7]"
+  - name: "data[5]"
     io_type: bidirectional
-  - name: "data_IE[7]"
+  - name: "data[6]"
     io_type: bidirectional
-  - name: "data_OE[7]"
+  - name: "data[4]"
     io_type: bidirectional
-  - name: "data_PU[7]"
+  - name: "data[0]"
     io_type: bidirectional
-  - name: "data_PD[7]"
+  - name: "data[1]"
     io_type: bidirectional
-  - name: "data_OUT[7]"
+  - name: "data[2]"
     io_type: bidirectional
-  - name: "data_PDRV0[7]"
-    io_type: bidirectional
-  - name: "data_PDRV1[7]"
-    io_type: bidirectional
-  - name: "data_IN[7]"
-    io_type: input_cmos
-  - name: "data_CS[5]"
-    io_type: bidirectional
-  - name: "data_SL[5]"
-    io_type: bidirectional
-  - name: "data_IE[5]"
-    io_type: bidirectional
-  - name: "data_OE[5]"
-    io_type: bidirectional
-  - name: "data_PU[5]"
-    io_type: bidirectional
-  - name: "data_PD[5]"
-    io_type: bidirectional
-  - name: "data_OUT[5]"
-    io_type: bidirectional
-  - name: "data_PDRV0[5]"
-    io_type: bidirectional
-  - name: "data_PDRV1[5]"
-    io_type: bidirectional
-  - name: "data_IN[5]"
-    io_type: input_cmos
-  - name: "data_CS[6]"
-    io_type: bidirectional
-  - name: "data_SL[6]"
-    io_type: bidirectional
-  - name: "data_IE[6]"
-    io_type: bidirectional
-  - name: "data_OE[6]"
-    io_type: bidirectional
-  - name: "data_PU[6]"
-    io_type: bidirectional
-  - name: "data_PD[6]"
-    io_type: bidirectional
-  - name: "data_OUT[6]"
-    io_type: bidirectional
-  - name: "data_PDRV0[6]"
-    io_type: bidirectional
-  - name: "data_PDRV1[6]"
-    io_type: bidirectional
-  - name: "data_IN[6]"
-    io_type: input_cmos
-  - name: "data_CS[4]"
-    io_type: bidirectional
-  - name: "data_SL[4]"
-    io_type: bidirectional
-  - name: "data_IE[4]"
-    io_type: bidirectional
-  - name: "data_OE[4]"
-    io_type: bidirectional
-  - name: "data_PU[4]"
-    io_type: bidirectional
-  - name: "data_PD[4]"
-    io_type: bidirectional
-  - name: "data_OUT[4]"
-    io_type: bidirectional
-  - name: "data_PDRV0[4]"
-    io_type: bidirectional
-  - name: "data_PDRV1[4]"
-    io_type: bidirectional
-  - name: "data_IN[4]"
-    io_type: input_cmos
-  - name: "data_CS[0]"
-    io_type: bidirectional
-  - name: "data_SL[0]"
-    io_type: bidirectional
-  - name: "data_IE[0]"
-    io_type: bidirectional
-  - name: "data_OE[0]"
-    io_type: bidirectional
-  - name: "data_PU[0]"
-    io_type: bidirectional
-  - name: "data_PD[0]"
-    io_type: bidirectional
-  - name: "data_OUT[0]"
-    io_type: bidirectional
-  - name: "data_PDRV0[0]"
-    io_type: bidirectional
-  - name: "data_PDRV1[0]"
-    io_type: bidirectional
-  - name: "data_IN[0]"
-    io_type: input_cmos
-  - name: "data_CS[1]"
-    io_type: bidirectional
-  - name: "data_SL[1]"
-    io_type: bidirectional
-  - name: "data_IE[1]"
-    io_type: bidirectional
-  - name: "data_OE[1]"
-    io_type: bidirectional
-  - name: "data_PU[1]"
-    io_type: bidirectional
-  - name: "data_PD[1]"
-    io_type: bidirectional
-  - name: "data_OUT[1]"
-    io_type: bidirectional
-  - name: "data_PDRV0[1]"
-    io_type: bidirectional
-  - name: "data_PDRV1[1]"
-    io_type: bidirectional
-  - name: "data_IN[1]"
-    io_type: input_cmos
-  - name: "data_CS[2]"
-    io_type: bidirectional
-  - name: "data_SL[2]"
-    io_type: bidirectional
-  - name: "data_IE[2]"
-    io_type: bidirectional
-  - name: "data_OE[2]"
-    io_type: bidirectional
-  - name: "data_PU[2]"
-    io_type: bidirectional
-  - name: "data_PD[2]"
-    io_type: bidirectional
-  - name: "data_OUT[2]"
-    io_type: bidirectional
-  - name: "data_PDRV0[2]"
-    io_type: bidirectional
-  - name: "data_PDRV1[2]"
-    io_type: bidirectional
-  - name: "data_IN[2]"
-    io_type: input_cmos
-  - name: "data_CS[3]"
-    io_type: bidirectional
-  - name: "data_SL[3]"
-    io_type: bidirectional
-  - name: "data_IE[3]"
-    io_type: bidirectional
-  - name: "data_OE[3]"
-    io_type: bidirectional
-  - name: "data_PU[3]"
-    io_type: bidirectional
-  - name: "data_PD[3]"
-    io_type: bidirectional
-  - name: "data_OUT[3]"
-    io_type: bidirectional
-  - name: "data_PDRV0[3]"
-    io_type: bidirectional
-  - name: "data_PDRV1[3]"
-    io_type: bidirectional
-  - name: "data_IN[3]"
-    io_type: input_cmos
-  - name: "addr_PU[0]"
-    io_type: bidirectional
-  - name: "addr_PD[0]"
+  - name: "data[3]"
     io_type: bidirectional
   - name: "addr[0]"
     io_type: input_cmos
-  - name: "addr_PU[1]"
-    io_type: bidirectional
-  - name: "addr_PD[1]"
-    io_type: bidirectional
   - name: "addr[1]"
     io_type: input_cmos
-  - name: "addr_PU[2]"
-    io_type: bidirectional
-  - name: "addr_PD[2]"
-    io_type: bidirectional
   - name: "addr[2]"
     io_type: input_cmos
-  - name: "addr_PU[3]"
-    io_type: bidirectional
-  - name: "addr_PD[3]"
-    io_type: bidirectional
   - name: "addr[3]"
     io_type: input_cmos
-  - name: irq_CS
-    io_type: bidirectional
-  - name: irq_SL
-    io_type: bidirectional
-  - name: irq_IE
-    io_type: bidirectional
-  - name: irq_OE
-    io_type: bidirectional
-  - name: irq_PU
-    io_type: bidirectional
-  - name: irq_PD
-    io_type: bidirectional
-  - name: irq_OUT
-    io_type: bidirectional
-  - name: irq_PDRV0
-    io_type: bidirectional
-  - name: irq_PDRV1
-    io_type: bidirectional
-  - name: irq_IN
-    io_type: input_cmos
-  - name: re_PU
-    io_type: bidirectional
-  - name: re_PD
+  - name: irq
     io_type: bidirectional
   - name: re
     io_type: input_cmos
-  - name: "debug_state_CS[0]"
+  - name: "debug_state[0]"
     io_type: bidirectional
-  - name: "debug_state_SL[0]"
+  - name: "debug_state[2]"
     io_type: bidirectional
-  - name: "debug_state_IE[0]"
-    io_type: bidirectional
-  - name: "debug_state_OE[0]"
-    io_type: bidirectional
-  - name: "debug_state_PU[0]"
-    io_type: bidirectional
-  - name: "debug_state_PD[0]"
-    io_type: bidirectional
-  - name: "debug_state_OUT[0]"
-    io_type: bidirectional
-  - name: "debug_state_PDRV0[0]"
-    io_type: bidirectional
-  - name: "debug_state_PDRV1[0]"
-    io_type: bidirectional
-  - name: "debug_state_IN[0]"
-    io_type: input_cmos
-  - name: "debug_state_CS[2]"
-    io_type: bidirectional
-  - name: "debug_state_SL[2]"
-    io_type: bidirectional
-  - name: "debug_state_IE[2]"
-    io_type: bidirectional
-  - name: "debug_state_OE[2]"
-    io_type: bidirectional
-  - name: "debug_state_PU[2]"
-    io_type: bidirectional
-  - name: "debug_state_PD[2]"
-    io_type: bidirectional
-  - name: "debug_state_OUT[2]"
-    io_type: bidirectional
-  - name: "debug_state_PDRV0[2]"
-    io_type: bidirectional
-  - name: "debug_state_PDRV1[2]"
-    io_type: bidirectional
-  - name: "debug_state_IN[2]"
-    io_type: input_cmos
-  - name: "debug_state_CS[1]"
-    io_type: bidirectional
-  - name: "debug_state_SL[1]"
-    io_type: bidirectional
-  - name: "debug_state_IE[1]"
-    io_type: bidirectional
-  - name: "debug_state_OE[1]"
-    io_type: bidirectional
-  - name: "debug_state_PU[1]"
-    io_type: bidirectional
-  - name: "debug_state_PD[1]"
-    io_type: bidirectional
-  - name: "debug_state_OUT[1]"
-    io_type: bidirectional
-  - name: "debug_state_PDRV0[1]"
-    io_type: bidirectional
-  - name: "debug_state_PDRV1[1]"
-    io_type: bidirectional
-  - name: "debug_state_IN[1]"
-    io_type: input_cmos
-  - name: we_PU
-    io_type: bidirectional
-  - name: we_PD
+  - name: "debug_state[1]"
     io_type: bidirectional
   - name: we
     io_type: input_cmos
-  - name: rst_n_PU
-    io_type: bidirectional
-  - name: rst_n_PD
-    io_type: bidirectional
   - name: rst_n
     io_type: input_schmitt

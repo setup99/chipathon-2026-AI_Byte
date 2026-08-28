@@ -22,7 +22,7 @@ Top: `A02_A` (1110×1110 µm D10-style organizer DEF + power connectors)
 |------|------|
 | `gds/A02_A.gds` | Submission GDS (`lvs_config.json` → `LAYOUT_FILE`) |
 | `verilog/gl/A02_A.v` | Gate-level netlist (`lvs_config.json` → `LVS_VERILOG_FILES`) |
-| `info.yaml` | 146-pin A02_A abutment list (DEF order) |
+| `info.yaml` | 22 I/O pad cells (one per pad; not 146 abutment nets) |
 | `lvs_config.json` | `TOP_SOURCE` / `TOP_LAYOUT` = `A02_A` |
 
 Signoff reports and `metrics.csv` / `metrics.json` for this run are in **this directory** (`docs/signoff_a02_macro/`). LibreLane also writes a local `final_a02_macro/` tree when you run the flow; that folder is gitignored.

@@ -245,7 +245,7 @@ Signoff bundle and reports: [`docs/signoff_a02_macro/README.md`](docs/signoff_a0
 |------|------|
 | `gds/A02_A.gds` | Layout (`TOP_SOURCE` = `A02_A`) |
 | `verilog/gl/A02_A.v` | Gate-level netlist for LVS |
-| `info.yaml` | 146 Metal2 abutment pins (organizer `A02_A.def` order) |
+| `info.yaml` | 22 I/O pad cells (one entry per pad; matches `A02_A_pad_map.yaml`) |
 | `docs/signoff_a02_macro/` | DRC/LVS/STA reports + `metrics.csv` / `metrics.json` |
 
 ### Resync RTL from parent monorepo (optional)
