@@ -11,6 +11,11 @@ Top: `A02_A` (1110×1110 µm D10-style organizer DEF + power connectors)
 | `drc.magic.rpt` | Magic DRC |
 | `drc.klayout.json` | KLayout DRC |
 | `lvs.netgen.rpt` | Netgen LVS |
+| `lvs.report` | Netgen LVS log (device/net summary — Fraunhofer aggregation) |
+| `A02_A.spice` | Magic layout extraction netlist |
+| `magic_extraction.log` | Magic extraction log |
+| `devices.md` | Fraunhofer device declaration + PDK name mapping |
+| `stdcell_instance_counts.txt` | Per-subcircuit instance counts from extraction |
 | `irdrop.rpt` | OpenROAD PDN IR drop |
 | `manufacturability.rpt` | Antenna / LVS / DRC summary |
 | `metrics.csv` / `metrics.json` | LibreLane final metrics |
