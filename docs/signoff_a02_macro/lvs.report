@@ -1,0 +1,1903 @@
+Netgen 1.5.316 compiled on Tue Feb 10 11:09:08 UTC 2026
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Reading SPICE netlist file '/home/aymen/.cache/ai-byte/pdk/gf180mcu/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice'...
+Call to undefined subcircuit nfet_05v0
+Creating placeholder cell definition.
+Call to undefined subcircuit pfet_05v0
+Creating placeholder cell definition.
+Reading SPICE netlist file '/home/aymen/.cache/ai-byte/pdk/gf180mcu/gf180mcuD/libs.ref/gf180mcu_fd_io/spice/gf180mcu_ws_io.spice'...
+Call to undefined subcircuit pfet_06v0
+Creating placeholder cell definition.
+Call to undefined subcircuit cap_nmos_06v0
+Creating placeholder cell definition.
+Call to undefined subcircuit ppolyf_u
+Creating placeholder cell definition.
+Call to undefined subcircuit nfet_06v0
+Creating placeholder cell definition.
+Reading SPICE netlist file '/home/aymen/.cache/ai-byte/pdk/gf180mcu/gf180mcuD/libs.ref/gf180mcu_fd_io/spice/gf180mcu_fd_io.spice'...
+Call to undefined subcircuit pfet_06v0_dss
+Creating placeholder cell definition.
+Call to undefined subcircuit nfet_06v0_dss
+Creating placeholder cell definition.
+Reading SPICE netlist file '/home/aymen/.cache/ai-byte/pdk/gf180mcu/gf180mcuD/libs.ref/gf180mcu_fd_io/spice/gf180mcu_ef_io.spice'...
+Reading Verilog netlist file '/home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/librelane/runs/RUN_2026-08-28_10-25-59/95-openroad-fillinsertion/A02_A.pnl.v'...
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Note:  Implicit pin ZN in instance clkload0 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload1 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload10 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload100 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload101 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload102 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload103 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload104 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload105 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload106 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload107 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload108 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload109 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload11 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload110 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload111 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload112 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload113 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload114 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload115 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload116 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload117 of gf180mcu_fd_sc_mcu7t5v0__inv_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload118 of gf180mcu_fd_sc_mcu7t5v0__inv_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload119 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload12 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload120 of gf180mcu_fd_sc_mcu7t5v0__inv_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload121 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 in cell A02_A
+Note:  Implicit pin Z in instance clkload122 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 in cell A02_A
+Note:  Implicit pin ZN in instance clkload123 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload124 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload125 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload126 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload127 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload128 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload129 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload13 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload130 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload131 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload132 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload133 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload134 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload135 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload136 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload137 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload138 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload139 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload14 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload140 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload141 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload142 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload143 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload144 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload145 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload146 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload147 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload148 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload149 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload15 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload150 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload151 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload152 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload153 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload154 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload155 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 in cell A02_A
+Note:  Implicit pin ZN in instance clkload156 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload157 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload158 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 in cell A02_A
+Note:  Implicit pin Z in instance clkload159 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 in cell A02_A
+Note:  Implicit pin ZN in instance clkload16 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload160 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin Z in instance clkload161 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload162 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload163 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload164 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload165 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload166 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload167 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload168 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload169 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload17 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload170 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload171 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload172 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload173 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload174 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload175 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload176 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload177 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload178 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload179 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload18 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload180 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload181 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload182 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload183 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload184 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload185 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload186 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload187 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload188 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload189 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload19 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload190 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload191 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload192 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload193 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload194 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload195 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload196 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload197 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload198 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload199 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload2 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload20 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload200 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload201 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload202 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload203 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload204 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload205 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload206 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload207 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload208 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload209 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload21 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload210 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload211 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload212 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload213 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload214 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload215 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload216 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload217 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload218 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload219 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload22 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload220 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload221 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload222 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload223 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload224 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload225 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload226 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload227 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload228 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload229 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload23 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload230 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload231 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload232 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload233 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload234 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload235 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload236 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload237 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload238 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload239 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload24 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload240 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload241 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload242 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload243 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload244 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload245 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload246 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload247 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload248 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload249 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload25 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload250 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload251 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload252 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload253 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload254 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload255 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload256 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload257 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload258 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload259 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload26 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload260 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload261 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload262 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload263 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload264 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload265 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload266 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload267 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload268 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload269 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload27 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload270 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload271 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload272 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload273 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload274 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload275 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload276 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload277 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload278 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload279 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload28 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload280 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload281 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload282 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload283 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload284 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload285 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload286 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload287 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload288 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload289 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload29 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload290 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload291 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload292 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload293 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload294 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload295 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload296 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload297 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload298 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload299 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload3 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload30 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload300 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload301 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload302 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload303 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload304 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload305 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload306 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload307 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload308 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload309 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload31 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload310 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload311 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload312 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload313 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 in cell A02_A
+Note:  Implicit pin ZN in instance clkload314 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload315 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload316 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload317 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload318 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload319 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload32 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload320 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload321 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload322 of gf180mcu_fd_sc_mcu7t5v0__clkinv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload323 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload324 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload325 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload326 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload327 of gf180mcu_fd_sc_mcu7t5v0__clkinv_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload328 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload329 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload33 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload330 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload331 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload332 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload333 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload334 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload335 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload336 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload337 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload338 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload339 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload34 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload340 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload341 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload342 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload343 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload344 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload345 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload346 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload347 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload348 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload349 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload35 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload350 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload351 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload352 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload353 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload354 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload355 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload356 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload357 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload358 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload359 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload36 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload360 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload361 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload362 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload363 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload364 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload365 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload366 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload367 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload368 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload369 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload37 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload370 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload371 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload372 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload373 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload374 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin Z in instance clkload375 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload376 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload377 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload378 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload379 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload38 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload380 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload381 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload382 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload383 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload384 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload385 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload386 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload387 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload388 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload389 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload39 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload390 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload391 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload392 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload393 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload394 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload395 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload396 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload397 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload398 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload399 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload4 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload40 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload400 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload401 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload402 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload403 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload404 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload405 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload406 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload407 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload408 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload409 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload41 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload410 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload411 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload412 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload413 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload414 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload415 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload416 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload417 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload418 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload419 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload42 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload420 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload421 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload422 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload423 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload424 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload425 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload426 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload427 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload428 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload429 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload43 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload430 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload431 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload432 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload433 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload434 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload435 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload436 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload437 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload438 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload439 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload44 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload440 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload441 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload442 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload443 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload444 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload445 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload446 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload447 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload448 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload449 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload45 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload450 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload451 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload452 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload453 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload454 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload455 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload456 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload457 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload458 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload459 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload46 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload460 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload461 of gf180mcu_fd_sc_mcu7t5v0__clkinv_3 in cell A02_A
+Note:  Implicit pin Z in instance clkload462 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload463 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload464 of gf180mcu_fd_sc_mcu7t5v0__clkinv_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload465 of gf180mcu_fd_sc_mcu7t5v0__clkinv_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload466 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload467 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload468 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload469 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload47 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload470 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload471 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload472 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload473 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload474 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload475 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload476 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload477 of gf180mcu_fd_sc_mcu7t5v0__clkinv_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload478 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload479 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload48 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload480 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload481 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload482 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload483 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload484 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload485 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload486 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload487 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload488 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload489 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload49 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload490 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload491 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload492 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload493 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload494 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload495 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload496 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload497 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload498 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload499 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload5 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload50 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload500 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload501 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload502 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload503 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload504 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload505 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload506 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload507 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload508 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload509 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload51 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload510 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload511 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload512 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload513 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload514 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload515 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload516 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload517 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload518 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload519 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload52 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload520 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload521 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload522 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload523 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload524 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload525 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload526 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload527 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload528 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload529 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload53 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload530 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload531 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload532 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload533 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload534 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload535 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload536 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload537 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload538 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload539 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload54 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload540 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload541 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload542 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload543 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload544 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin Z in instance clkload545 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload546 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload547 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload548 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload549 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload55 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload550 of gf180mcu_fd_sc_mcu7t5v0__clkinv_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload551 of gf180mcu_fd_sc_mcu7t5v0__clkinv_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload552 of gf180mcu_fd_sc_mcu7t5v0__clkinv_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload553 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload554 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload555 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload556 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload557 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload558 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload559 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload56 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload560 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload561 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload562 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload563 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload564 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload565 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload566 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload567 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload568 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload569 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin Z in instance clkload57 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload570 of gf180mcu_fd_sc_mcu7t5v0__clkinv_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload571 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload572 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload573 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload574 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload575 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload576 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload577 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload578 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload579 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload58 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload580 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload581 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload582 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload583 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload584 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload585 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload586 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload587 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload588 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload589 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload59 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload590 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload591 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload592 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload593 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload594 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload595 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload596 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload597 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload598 of gf180mcu_fd_sc_mcu7t5v0__clkinv_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload599 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload6 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload60 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload600 of gf180mcu_fd_sc_mcu7t5v0__clkinv_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload601 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload602 of gf180mcu_fd_sc_mcu7t5v0__clkinv_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload603 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload604 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload605 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin Z in instance clkload606 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload607 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload608 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload609 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload61 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload610 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload611 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload612 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload613 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload614 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload615 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload616 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload617 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload618 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload619 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 in cell A02_A
+Note:  Implicit pin ZN in instance clkload62 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload620 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload621 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload622 of gf180mcu_fd_sc_mcu7t5v0__clkinv_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload623 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload624 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload625 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload626 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload627 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload628 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload629 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload63 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload630 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload631 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload632 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload633 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload634 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload635 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload636 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload637 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload638 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload639 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload64 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload640 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload641 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload642 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload643 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload644 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload645 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload646 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload647 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload648 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload649 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload65 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload650 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload651 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload652 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload653 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload654 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload655 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload656 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload657 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload658 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload659 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload66 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload660 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload661 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin Z in instance clkload662 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload663 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload664 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload665 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload666 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload667 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload668 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload669 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin Z in instance clkload67 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload670 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload671 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload672 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload673 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload674 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload675 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload676 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload677 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload678 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload679 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload68 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload680 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload681 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload682 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload683 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload684 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload685 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload686 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload687 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload688 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload689 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload69 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload690 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload691 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload692 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload693 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload694 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload695 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload696 of gf180mcu_fd_sc_mcu7t5v0__clkinv_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload697 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload698 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload699 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload7 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload70 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload700 of gf180mcu_fd_sc_mcu7t5v0__clkinv_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload701 of gf180mcu_fd_sc_mcu7t5v0__inv_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload702 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload703 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload704 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload705 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload706 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload707 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload708 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload709 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload71 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload710 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload711 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload712 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload713 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload714 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload715 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload716 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload717 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload718 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload719 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload72 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload720 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload721 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload722 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload723 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload724 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload725 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload726 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload727 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload728 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload729 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload73 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload730 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload731 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload732 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload733 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload734 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload735 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload736 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin Z in instance clkload737 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload738 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload739 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload74 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload740 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload741 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload742 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload743 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload744 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload745 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload746 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload747 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload748 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload749 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload75 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload750 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin Z in instance clkload751 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload752 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload76 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload77 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload78 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload79 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload8 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload80 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload81 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin Z in instance clkload82 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload83 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload84 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin Z in instance clkload85 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload86 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload87 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin ZN in instance clkload88 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload89 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload9 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload90 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload91 of gf180mcu_fd_sc_mcu7t5v0__clkinv_1 in cell A02_A
+Note:  Implicit pin ZN in instance clkload92 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload93 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload94 of gf180mcu_fd_sc_mcu7t5v0__clkinv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload95 of gf180mcu_fd_sc_mcu7t5v0__inv_2 in cell A02_A
+Note:  Implicit pin ZN in instance clkload96 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin ZN in instance clkload97 of gf180mcu_fd_sc_mcu7t5v0__inv_3 in cell A02_A
+Note:  Implicit pin Z in instance clkload98 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Note:  Implicit pin Z in instance clkload99 of gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 in cell A02_A
+Creating placeholder cell definition for module vdd_conn.
+Creating placeholder cell definition for module vss_conn.
+Treating empty subcircuits as black-box cells
+Generating JSON file result
+
+Reading setup file /nix/store/xjkk69lna4pw6jkb6bhsvqkgmfkjqxg5-python3-3.13.9-env/lib/python3.13/site-packages/librelane/scripts/netgen/setup.tcl
+
+Model ppolyf_u pin 1 == 2
+No property par1 found for device ppolyf_u
+No property pm found for device ppolyf_u
+Model nfet_05v0 pin 1 == 3
+No property par1 found for device nfet_05v0
+No property NRD found for device nfet_05v0
+No property NRS found for device nfet_05v0
+No property par found for device nfet_05v0
+No property sa found for device nfet_05v0
+No property sb found for device nfet_05v0
+No property sd found for device nfet_05v0
+No property par found for device nfet_05v0
+No property dtemp found for device nfet_05v0
+No property nf found for device nfet_05v0
+No property as found for device nfet_05v0
+No property ad found for device nfet_05v0
+No property ps found for device nfet_05v0
+No property pd found for device nfet_05v0
+Model nfet_06v0 pin 1 == 3
+No property par1 found for device nfet_06v0
+No property par found for device nfet_06v0
+Model pfet_05v0 pin 1 == 3
+No property par1 found for device pfet_05v0
+No property NRD found for device pfet_05v0
+No property NRS found for device pfet_05v0
+No property par found for device pfet_05v0
+No property sa found for device pfet_05v0
+No property sb found for device pfet_05v0
+No property sd found for device pfet_05v0
+No property par found for device pfet_05v0
+No property dtemp found for device pfet_05v0
+No property nf found for device pfet_05v0
+No property as found for device pfet_05v0
+No property ad found for device pfet_05v0
+No property ps found for device pfet_05v0
+No property pd found for device pfet_05v0
+Model pfet_06v0 pin 1 == 3
+No property par1 found for device pfet_06v0
+No property par found for device pfet_06v0
+Model nfet_06v0_dss pin 1 == 3
+No property par1 found for device nfet_06v0_dss
+No property NRD found for device nfet_06v0_dss
+No property NRS found for device nfet_06v0_dss
+No property sa found for device nfet_06v0_dss
+No property sb found for device nfet_06v0_dss
+No property sd found for device nfet_06v0_dss
+No property par found for device nfet_06v0_dss
+No property as found for device nfet_06v0_dss
+No property ad found for device nfet_06v0_dss
+No property ps found for device nfet_06v0_dss
+No property pd found for device nfet_06v0_dss
+Model pfet_06v0_dss pin 1 == 3
+No property par1 found for device pfet_06v0_dss
+No property NRD found for device pfet_06v0_dss
+No property NRS found for device pfet_06v0_dss
+No property sa found for device pfet_06v0_dss
+No property sb found for device pfet_06v0_dss
+No property sd found for device pfet_06v0_dss
+No property par found for device pfet_06v0_dss
+No property as found for device pfet_06v0_dss
+No property ad found for device pfet_06v0_dss
+No property ps found for device pfet_06v0_dss
+No property pd found for device pfet_06v0_dss
+No property par1 found for device cap_nmos_06v0
+No property NRD found for device cap_nmos_06v0
+No property NRS found for device cap_nmos_06v0
+No property as found for device cap_nmos_06v0
+No property ad found for device cap_nmos_06v0
+No property ps found for device cap_nmos_06v0
+No property pd found for device cap_nmos_06v0
+No property par1 found for device diode_nd2ps_06v0
+No property par1 found for device diode_pd2nw_06v0
+Comparison output logged to file /home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/librelane/runs/RUN_2026-08-28_10-25-59/113-netgen-lvs/reports/lvs.netgen.rpt
+Logging to file "/home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/librelane/runs/RUN_2026-08-28_10-25-59/113-netgen-lvs/reports/lvs.netgen.rpt" enabled
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__dffq_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__dffq_1 contains 0 device instances.
+Circuit contains 0 nets, and 7 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__dffq_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__dffq_1 contains 24 device instances.
+  Class: pfet_05v0             instances:  12
+  Class: nfet_05v0             instances:  12
+Circuit contains 19 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__dffq_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__fillcap_8'
+Circuit gf180mcu_fd_sc_mcu7t5v0__fillcap_8 contains 0 device instances.
+Circuit contains 0 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__fillcap_8'
+Circuit gf180mcu_fd_sc_mcu7t5v0__fillcap_8 contains 4 device instances.
+  Class: pfet_05v0             instances:   2
+  Class: nfet_05v0             instances:   2
+Circuit contains 8 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__fillcap_8 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__fillcap_64'
+Circuit gf180mcu_fd_sc_mcu7t5v0__fillcap_64 contains 0 device instances.
+Circuit contains 0 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__fillcap_64'
+Circuit gf180mcu_fd_sc_mcu7t5v0__fillcap_64 contains 32 device instances.
+  Class: pfet_05v0             instances:  16
+  Class: nfet_05v0             instances:  16
+Circuit contains 36 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__fillcap_64 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__nor2_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__nor2_1 contains 0 device instances.
+Circuit contains 0 nets, and 7 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__nor2_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__nor2_1 contains 4 device instances.
+  Class: pfet_05v0             instances:   2
+  Class: nfet_05v0             instances:   2
+Circuit contains 8 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__nor2_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__nand2_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__nand2_1 contains 0 device instances.
+Circuit contains 0 nets, and 7 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__nand2_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__nand2_1 contains 4 device instances.
+  Class: pfet_05v0             instances:   2
+  Class: nfet_05v0             instances:   2
+Circuit contains 8 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__nand2_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__nand3_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__nand3_1 contains 0 device instances.
+Circuit contains 0 nets, and 8 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__nand3_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__nand3_1 contains 6 device instances.
+  Class: pfet_05v0             instances:   3
+  Class: nfet_05v0             instances:   3
+Circuit contains 10 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__nand3_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__xor2_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__xor2_1 contains 0 device instances.
+Circuit contains 0 nets, and 7 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__xor2_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__xor2_1 contains 10 device instances.
+  Class: pfet_05v0             instances:   5
+  Class: nfet_05v0             instances:   5
+Circuit contains 11 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__xor2_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__dffrnq_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 contains 0 device instances.
+Circuit contains 0 nets, and 8 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__dffrnq_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 contains 28 device instances.
+  Class: pfet_05v0             instances:  14
+  Class: nfet_05v0             instances:  14
+Circuit contains 20 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__fillcap_4'
+Circuit gf180mcu_fd_sc_mcu7t5v0__fillcap_4 contains 0 device instances.
+Circuit contains 0 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__fillcap_4'
+Circuit gf180mcu_fd_sc_mcu7t5v0__fillcap_4 contains 2 device instances.
+  Class: pfet_05v0             instances:   1
+  Class: nfet_05v0             instances:   1
+Circuit contains 6 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__fillcap_4 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkinv_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkinv_1 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkinv_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkinv_1 contains 2 device instances.
+  Class: pfet_05v0             instances:   1
+  Class: nfet_05v0             instances:   1
+Circuit contains 6 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkinv_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__oai21_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai21_1 contains 0 device instances.
+Circuit contains 0 nets, and 8 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__oai21_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai21_1 contains 6 device instances.
+  Class: pfet_05v0             instances:   3
+  Class: nfet_05v0             instances:   3
+Circuit contains 10 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai21_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__fillcap_16'
+Circuit gf180mcu_fd_sc_mcu7t5v0__fillcap_16 contains 0 device instances.
+Circuit contains 0 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__fillcap_16'
+Circuit gf180mcu_fd_sc_mcu7t5v0__fillcap_16 contains 8 device instances.
+  Class: pfet_05v0             instances:   4
+  Class: nfet_05v0             instances:   4
+Circuit contains 12 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__fillcap_16 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkbuf_4'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkbuf_4'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 contains 11 device instances.
+  Class: pfet_05v0             instances:   6
+  Class: nfet_05v0             instances:   5
+Circuit contains 7 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__xnor2_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__xnor2_1 contains 0 device instances.
+Circuit contains 0 nets, and 7 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__xnor2_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__xnor2_1 contains 10 device instances.
+  Class: pfet_05v0             instances:   5
+  Class: nfet_05v0             instances:   5
+Circuit contains 11 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__xnor2_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__buf_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_1 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__buf_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_1 contains 4 device instances.
+  Class: pfet_05v0             instances:   2
+  Class: nfet_05v0             instances:   2
+Circuit contains 7 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__mux2_2'
+Circuit gf180mcu_fd_sc_mcu7t5v0__mux2_2 contains 0 device instances.
+Circuit contains 0 nets, and 8 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__mux2_2'
+Circuit gf180mcu_fd_sc_mcu7t5v0__mux2_2 contains 14 device instances.
+  Class: pfet_05v0             instances:   7
+  Class: nfet_05v0             instances:   7
+Circuit contains 14 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__mux2_2 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__oai211_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai211_1 contains 0 device instances.
+Circuit contains 0 nets, and 9 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__oai211_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai211_1 contains 8 device instances.
+  Class: pfet_05v0             instances:   4
+  Class: nfet_05v0             instances:   4
+Circuit contains 12 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai211_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__aoi21_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__aoi21_1 contains 0 device instances.
+Circuit contains 0 nets, and 8 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__aoi21_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__aoi21_1 contains 6 device instances.
+  Class: pfet_05v0             instances:   3
+  Class: nfet_05v0             instances:   3
+Circuit contains 10 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__aoi21_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__aoi22_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__aoi22_1 contains 0 device instances.
+Circuit contains 0 nets, and 9 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__aoi22_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__aoi22_1 contains 8 device instances.
+  Class: pfet_05v0             instances:   4
+  Class: nfet_05v0             instances:   4
+Circuit contains 12 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__aoi22_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__xor3_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__xor3_1 contains 0 device instances.
+Circuit contains 0 nets, and 8 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__xor3_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__xor3_1 contains 20 device instances.
+  Class: pfet_05v0             instances:  10
+  Class: nfet_05v0             instances:  10
+Circuit contains 17 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__xor3_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__and2_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__and2_1 contains 0 device instances.
+Circuit contains 0 nets, and 7 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__and2_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__and2_1 contains 6 device instances.
+  Class: pfet_05v0             instances:   3
+  Class: nfet_05v0             instances:   3
+Circuit contains 9 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__and2_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__or4_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__or4_1 contains 0 device instances.
+Circuit contains 0 nets, and 9 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__or4_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__or4_1 contains 10 device instances.
+  Class: pfet_05v0             instances:   5
+  Class: nfet_05v0             instances:   5
+Circuit contains 13 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__or4_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__tiel'
+Circuit gf180mcu_fd_sc_mcu7t5v0__tiel contains 0 device instances.
+Circuit contains 0 nets, and 5 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__tiel'
+Circuit gf180mcu_fd_sc_mcu7t5v0__tiel contains 2 device instances.
+  Class: pfet_05v0             instances:   1
+  Class: nfet_05v0             instances:   1
+Circuit contains 6 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__tiel contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__and3_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__and3_1 contains 0 device instances.
+Circuit contains 0 nets, and 8 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__and3_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__and3_1 contains 8 device instances.
+  Class: pfet_05v0             instances:   4
+  Class: nfet_05v0             instances:   4
+Circuit contains 11 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__and3_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__aoi221_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__aoi221_1 contains 0 device instances.
+Circuit contains 0 nets, and 10 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__aoi221_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__aoi221_1 contains 10 device instances.
+  Class: pfet_05v0             instances:   5
+  Class: nfet_05v0             instances:   5
+Circuit contains 14 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__aoi221_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__oai32_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai32_1 contains 0 device instances.
+Circuit contains 0 nets, and 10 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__oai32_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai32_1 contains 10 device instances.
+  Class: pfet_05v0             instances:   5
+  Class: nfet_05v0             instances:   5
+Circuit contains 14 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai32_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__fillcap_32'
+Circuit gf180mcu_fd_sc_mcu7t5v0__fillcap_32 contains 0 device instances.
+Circuit contains 0 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__fillcap_32'
+Circuit gf180mcu_fd_sc_mcu7t5v0__fillcap_32 contains 16 device instances.
+  Class: pfet_05v0             instances:   8
+  Class: nfet_05v0             instances:   8
+Circuit contains 20 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__fillcap_32 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__dlyc_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__dlyc_1 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__dlyc_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__dlyc_1 contains 20 device instances.
+  Class: pfet_05v0             instances:  10
+  Class: nfet_05v0             instances:  10
+Circuit contains 19 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__dlyc_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkinv_4'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkinv_4 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkinv_4'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkinv_4 contains 8 device instances.
+  Class: pfet_05v0             instances:   4
+  Class: nfet_05v0             instances:   4
+Circuit contains 6 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkinv_4 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__inv_2'
+Circuit gf180mcu_fd_sc_mcu7t5v0__inv_2 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__inv_2'
+Circuit gf180mcu_fd_sc_mcu7t5v0__inv_2 contains 4 device instances.
+  Class: pfet_05v0             instances:   2
+  Class: nfet_05v0             instances:   2
+Circuit contains 6 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__inv_2 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__aoi222_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__aoi222_1 contains 0 device instances.
+Circuit contains 0 nets, and 11 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__aoi222_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__aoi222_1 contains 12 device instances.
+  Class: pfet_05v0             instances:   6
+  Class: nfet_05v0             instances:   6
+Circuit contains 16 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__aoi222_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__buf_4'
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_4 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__buf_4'
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_4 contains 12 device instances.
+  Class: pfet_05v0             instances:   6
+  Class: nfet_05v0             instances:   6
+Circuit contains 7 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_4 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__buf_2'
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_2 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__buf_2'
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_2 contains 6 device instances.
+  Class: pfet_05v0             instances:   3
+  Class: nfet_05v0             instances:   3
+Circuit contains 7 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_2 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__oai22_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai22_1 contains 0 device instances.
+Circuit contains 0 nets, and 9 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__oai22_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai22_1 contains 8 device instances.
+  Class: pfet_05v0             instances:   4
+  Class: nfet_05v0             instances:   4
+Circuit contains 12 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai22_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__oai221_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai221_1 contains 0 device instances.
+Circuit contains 0 nets, and 10 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__oai221_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai221_1 contains 10 device instances.
+  Class: pfet_05v0             instances:   5
+  Class: nfet_05v0             instances:   5
+Circuit contains 14 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai221_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__and4_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__and4_1 contains 0 device instances.
+Circuit contains 0 nets, and 9 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__and4_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__and4_1 contains 10 device instances.
+  Class: pfet_05v0             instances:   5
+  Class: nfet_05v0             instances:   5
+Circuit contains 13 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__and4_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__xnor3_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__xnor3_1 contains 0 device instances.
+Circuit contains 0 nets, and 8 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__xnor3_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__xnor3_1 contains 20 device instances.
+  Class: pfet_05v0             instances:  10
+  Class: nfet_05v0             instances:  10
+Circuit contains 17 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__xnor3_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__nand4_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__nand4_1 contains 0 device instances.
+Circuit contains 0 nets, and 9 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__nand4_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__nand4_1 contains 8 device instances.
+  Class: pfet_05v0             instances:   4
+  Class: nfet_05v0             instances:   4
+Circuit contains 12 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__nand4_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__nor3_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__nor3_1 contains 0 device instances.
+Circuit contains 0 nets, and 8 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__nor3_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__nor3_1 contains 6 device instances.
+  Class: pfet_05v0             instances:   3
+  Class: nfet_05v0             instances:   3
+Circuit contains 10 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__nor3_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__oai31_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai31_1 contains 0 device instances.
+Circuit contains 0 nets, and 9 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__oai31_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai31_1 contains 8 device instances.
+  Class: pfet_05v0             instances:   4
+  Class: nfet_05v0             instances:   4
+Circuit contains 12 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai31_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__or2_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__or2_1 contains 0 device instances.
+Circuit contains 0 nets, and 7 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__or2_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__or2_1 contains 6 device instances.
+  Class: pfet_05v0             instances:   3
+  Class: nfet_05v0             instances:   3
+Circuit contains 9 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__or2_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__mux4_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__mux4_1 contains 0 device instances.
+Circuit contains 0 nets, and 11 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__mux4_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__mux4_1 contains 26 device instances.
+  Class: pfet_05v0             instances:  13
+  Class: nfet_05v0             instances:  13
+Circuit contains 20 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__mux4_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__aoi211_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__aoi211_1 contains 0 device instances.
+Circuit contains 0 nets, and 9 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__aoi211_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__aoi211_1 contains 8 device instances.
+  Class: pfet_05v0             instances:   4
+  Class: nfet_05v0             instances:   4
+Circuit contains 12 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__aoi211_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkinv_2'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkinv_2 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkinv_2'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkinv_2 contains 4 device instances.
+  Class: pfet_05v0             instances:   2
+  Class: nfet_05v0             instances:   2
+Circuit contains 6 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkinv_2 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__antenna'
+Circuit gf180mcu_fd_sc_mcu7t5v0__antenna contains 0 device instances.
+Circuit contains 0 nets, and 5 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__antenna'
+Circuit gf180mcu_fd_sc_mcu7t5v0__antenna contains 2 device instances.
+  Class: diode_pd2nw_06v0      instances:   1
+  Class: diode_nd2ps_06v0      instances:   1
+Circuit contains 3 nets, and 2 disconnected pins.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__antenna contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__oai33_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai33_1 contains 0 device instances.
+Circuit contains 0 nets, and 11 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__oai33_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai33_1 contains 12 device instances.
+  Class: pfet_05v0             instances:   6
+  Class: nfet_05v0             instances:   6
+Circuit contains 16 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai33_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__inv_4'
+Circuit gf180mcu_fd_sc_mcu7t5v0__inv_4 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__inv_4'
+Circuit gf180mcu_fd_sc_mcu7t5v0__inv_4 contains 8 device instances.
+  Class: pfet_05v0             instances:   4
+  Class: nfet_05v0             instances:   4
+Circuit contains 6 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__inv_4 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkbuf_8'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkbuf_8'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 contains 23 device instances.
+  Class: pfet_05v0             instances:  12
+  Class: nfet_05v0             instances:  11
+Circuit contains 7 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__inv_3'
+Circuit gf180mcu_fd_sc_mcu7t5v0__inv_3 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__inv_3'
+Circuit gf180mcu_fd_sc_mcu7t5v0__inv_3 contains 6 device instances.
+  Class: pfet_05v0             instances:   3
+  Class: nfet_05v0             instances:   3
+Circuit contains 6 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__inv_3 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__or3_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__or3_1 contains 0 device instances.
+Circuit contains 0 nets, and 8 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__or3_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__or3_1 contains 8 device instances.
+  Class: pfet_05v0             instances:   4
+  Class: nfet_05v0             instances:   4
+Circuit contains 11 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__or3_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkbuf_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_1 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkbuf_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_1 contains 5 device instances.
+  Class: pfet_05v0             instances:   3
+  Class: nfet_05v0             instances:   2
+Circuit contains 7 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__oai222_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai222_1 contains 0 device instances.
+Circuit contains 0 nets, and 11 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__oai222_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai222_1 contains 12 device instances.
+  Class: pfet_05v0             instances:   6
+  Class: nfet_05v0             instances:   6
+Circuit contains 16 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__oai222_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__nor4_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__nor4_1 contains 0 device instances.
+Circuit contains 0 nets, and 9 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__nor4_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__nor4_1 contains 8 device instances.
+  Class: pfet_05v0             instances:   4
+  Class: nfet_05v0             instances:   4
+Circuit contains 12 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__nor4_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__nor3_2'
+Circuit gf180mcu_fd_sc_mcu7t5v0__nor3_2 contains 0 device instances.
+Circuit contains 0 nets, and 8 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__nor3_2'
+Circuit gf180mcu_fd_sc_mcu7t5v0__nor3_2 contains 12 device instances.
+  Class: pfet_05v0             instances:   6
+  Class: nfet_05v0             instances:   6
+Circuit contains 12 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__nor3_2 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkbuf_2'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_2 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkbuf_2'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_2 contains 6 device instances.
+  Class: pfet_05v0             instances:   3
+  Class: nfet_05v0             instances:   3
+Circuit contains 7 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_2 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__buf_8'
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_8 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__buf_8'
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_8 contains 24 device instances.
+  Class: pfet_05v0             instances:  12
+  Class: nfet_05v0             instances:  12
+Circuit contains 7 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_8 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__inv_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__inv_1 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__inv_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__inv_1 contains 2 device instances.
+  Class: pfet_05v0             instances:   1
+  Class: nfet_05v0             instances:   1
+Circuit contains 6 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__inv_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__tieh'
+Circuit gf180mcu_fd_sc_mcu7t5v0__tieh contains 0 device instances.
+Circuit contains 0 nets, and 5 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__tieh'
+Circuit gf180mcu_fd_sc_mcu7t5v0__tieh contains 2 device instances.
+  Class: pfet_05v0             instances:   1
+  Class: nfet_05v0             instances:   1
+Circuit contains 6 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__tieh contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkinv_3'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkinv_3 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkinv_3'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkinv_3 contains 6 device instances.
+  Class: pfet_05v0             instances:   3
+  Class: nfet_05v0             instances:   3
+Circuit contains 6 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkinv_3 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__dffq_2'
+Circuit gf180mcu_fd_sc_mcu7t5v0__dffq_2 contains 0 device instances.
+Circuit contains 0 nets, and 7 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__dffq_2'
+Circuit gf180mcu_fd_sc_mcu7t5v0__dffq_2 contains 26 device instances.
+  Class: pfet_05v0             instances:  13
+  Class: nfet_05v0             instances:  13
+Circuit contains 19 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__dffq_2 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkbuf_16'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_16 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkbuf_16'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_16 contains 46 device instances.
+  Class: pfet_05v0             instances:  24
+  Class: nfet_05v0             instances:  22
+Circuit contains 7 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_16 contains no devices.
+
+Contents of circuit 1:  Circuit: 'vss_conn'
+Circuit vss_conn contains 0 device instances.
+Circuit contains 0 nets, and 1 disconnected pin.
+Contents of circuit 2:  Circuit: 'vss_conn'
+Circuit vss_conn contains 0 device instances.
+Circuit contains 0 nets.
+
+Circuit vss_conn contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkbuf_3'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_3 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__clkbuf_3'
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_3 contains 11 device instances.
+  Class: pfet_05v0             instances:   6
+  Class: nfet_05v0             instances:   5
+Circuit contains 7 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__clkbuf_3 contains no devices.
+
+Contents of circuit 1:  Circuit: 'vdd_conn'
+Circuit vdd_conn contains 0 device instances.
+Circuit contains 0 nets, and 1 disconnected pin.
+Contents of circuit 2:  Circuit: 'vdd_conn'
+Circuit vdd_conn contains 0 device instances.
+Circuit contains 0 nets.
+
+Circuit vdd_conn contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__buf_12'
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_12 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__buf_12'
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_12 contains 36 device instances.
+  Class: pfet_05v0             instances:  18
+  Class: nfet_05v0             instances:  18
+Circuit contains 7 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_12 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__buf_3'
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_3 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__buf_3'
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_3 contains 8 device instances.
+  Class: pfet_05v0             instances:   4
+  Class: nfet_05v0             instances:   4
+Circuit contains 7 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__buf_3 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__nor4_2'
+Circuit gf180mcu_fd_sc_mcu7t5v0__nor4_2 contains 0 device instances.
+Circuit contains 0 nets, and 9 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__nor4_2'
+Circuit gf180mcu_fd_sc_mcu7t5v0__nor4_2 contains 16 device instances.
+  Class: pfet_05v0             instances:   8
+  Class: nfet_05v0             instances:   8
+Circuit contains 15 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__nor4_2 contains no devices.
+
+Contents of circuit 1:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__dffsnq_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__dffsnq_1 contains 0 device instances.
+Circuit contains 0 nets, and 8 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_fd_sc_mcu7t5v0__dffsnq_1'
+Circuit gf180mcu_fd_sc_mcu7t5v0__dffsnq_1 contains 28 device instances.
+  Class: pfet_05v0             instances:  14
+  Class: nfet_05v0             instances:  14
+Circuit contains 20 nets.
+
+Circuit gf180mcu_fd_sc_mcu7t5v0__dffsnq_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'A02_A'
+Circuit A02_A contains 41686 device instances.
+  Class: gf180mcu_fd_sc_mcu7t5v0__nand3_1 instances: 450
+  Class: vss_conn              instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__dffq_1 instances: 2525
+  Class: gf180mcu_fd_sc_mcu7t5v0__dffq_2 instances:   7
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai33_1 instances:  13
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai221_1 instances:  29
+  Class: vdd_conn              instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi222_1 instances: 207
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_12 instances:   2
+  Class: gf180mcu_fd_sc_mcu7t5v0__and3_1 instances:  59
+  Class: gf180mcu_fd_sc_mcu7t5v0__dffsnq_1 instances:   3
+  Class: gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 instances: 643
+  Class: gf180mcu_fd_sc_mcu7t5v0__nand2_1 instances: 4243
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai32_1 instances:  38
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai211_1 instances: 265
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi22_1 instances: 988
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi221_1 instances: 324
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_1 instances:  25
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_2 instances:  23
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_3 instances:   3
+  Class: gf180mcu_fd_sc_mcu7t5v0__mux2_2 instances: 419
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 instances: 1367
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 instances:   9
+  Class: gf180mcu_fd_sc_mcu7t5v0__and2_1 instances: 551
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor4_1 instances:  34
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor4_2 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__or4_1 instances:  20
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai31_1 instances:  85
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkinv_1 instances: 1126
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkinv_2 instances:  53
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkinv_3 instances:   2
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai22_1 instances: 121
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkinv_4 instances:  14
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_1 instances: 1903
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_2 instances: 231
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_3 instances:   4
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_4 instances: 440
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_8 instances:   3
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_16 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi21_1 instances: 1420
+  Class: gf180mcu_fd_sc_mcu7t5v0__tieh instances:   5
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi211_1 instances: 174
+  Class: gf180mcu_fd_sc_mcu7t5v0__tiel instances:  95
+  Class: gf180mcu_fd_sc_mcu7t5v0__inv_1 instances:  16
+  Class: gf180mcu_fd_sc_mcu7t5v0__inv_2 instances: 172
+  Class: gf180mcu_fd_sc_mcu7t5v0__inv_3 instances:  46
+  Class: gf180mcu_fd_sc_mcu7t5v0__inv_4 instances:   4
+  Class: gf180mcu_fd_sc_mcu7t5v0__xnor3_1 instances:  26
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor3_1 instances: 131
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor3_2 instances:   8
+  Class: gf180mcu_fd_sc_mcu7t5v0__or3_1 instances:  39
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai21_1 instances: 2558
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_4 instances: 6720
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_8 instances: 3609
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_64 instances: 379
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_16 instances: 1824
+  Class: gf180mcu_fd_sc_mcu7t5v0__xor3_1 instances: 184
+  Class: gf180mcu_fd_sc_mcu7t5v0__xnor2_1 instances: 388
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor2_1 instances: 1767
+  Class: gf180mcu_fd_sc_mcu7t5v0__antenna instances:  14
+  Class: gf180mcu_fd_sc_mcu7t5v0__nand4_1 instances:  75
+  Class: gf180mcu_fd_sc_mcu7t5v0__or2_1 instances: 157
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai222_1 instances:   8
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_32 instances: 538
+  Class: gf180mcu_fd_sc_mcu7t5v0__dlyc_1 instances: 3673
+  Class: gf180mcu_fd_sc_mcu7t5v0__xor2_1 instances: 1260
+  Class: gf180mcu_fd_sc_mcu7t5v0__mux4_1 instances: 106
+  Class: gf180mcu_fd_sc_mcu7t5v0__and4_1 instances:  57
+Circuit contains 28610 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'A02_A'
+Circuit A02_A contains 41686 device instances.
+  Class: gf180mcu_fd_sc_mcu7t5v0__nand3_1 instances: 450
+  Class: vss_conn              instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__dffq_1 instances: 2525
+  Class: gf180mcu_fd_sc_mcu7t5v0__dffq_2 instances:   7
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai33_1 instances:  13
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai221_1 instances:  29
+  Class: vdd_conn              instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi222_1 instances: 207
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_12 instances:   2
+  Class: gf180mcu_fd_sc_mcu7t5v0__and3_1 instances:  59
+  Class: gf180mcu_fd_sc_mcu7t5v0__dffsnq_1 instances:   3
+  Class: gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 instances: 643
+  Class: gf180mcu_fd_sc_mcu7t5v0__nand2_1 instances: 4243
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai32_1 instances:  38
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai211_1 instances: 265
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi22_1 instances: 988
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi221_1 instances: 324
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_1 instances:  25
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_2 instances:  23
+  Class: gf180mcu_fd_sc_mcu7t5v0__mux2_2 instances: 419
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_3 instances:   3
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 instances: 1367
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 instances:   9
+  Class: gf180mcu_fd_sc_mcu7t5v0__and2_1 instances: 551
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor4_1 instances:  34
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor4_2 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__or4_1 instances:  20
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai31_1 instances:  85
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkinv_1 instances: 1126
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkinv_2 instances:  53
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai22_1 instances: 121
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkinv_3 instances:   2
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkinv_4 instances:  14
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_1 instances: 1903
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_2 instances: 231
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_3 instances:   4
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_4 instances: 440
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_8 instances:   3
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_16 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi21_1 instances: 1420
+  Class: gf180mcu_fd_sc_mcu7t5v0__tieh instances:   5
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi211_1 instances: 174
+  Class: gf180mcu_fd_sc_mcu7t5v0__tiel instances:  95
+  Class: gf180mcu_fd_sc_mcu7t5v0__inv_1 instances:  16
+  Class: gf180mcu_fd_sc_mcu7t5v0__inv_2 instances: 172
+  Class: gf180mcu_fd_sc_mcu7t5v0__inv_3 instances:  46
+  Class: gf180mcu_fd_sc_mcu7t5v0__inv_4 instances:   4
+  Class: gf180mcu_fd_sc_mcu7t5v0__xnor3_1 instances:  26
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor3_1 instances: 131
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor3_2 instances:   8
+  Class: gf180mcu_fd_sc_mcu7t5v0__or3_1 instances:  39
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai21_1 instances: 2558
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_4 instances: 6720
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_8 instances: 3609
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_64 instances: 379
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_16 instances: 1824
+  Class: gf180mcu_fd_sc_mcu7t5v0__xor3_1 instances: 184
+  Class: gf180mcu_fd_sc_mcu7t5v0__xnor2_1 instances: 388
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor2_1 instances: 1767
+  Class: gf180mcu_fd_sc_mcu7t5v0__antenna instances:  14
+  Class: gf180mcu_fd_sc_mcu7t5v0__nand4_1 instances:  75
+  Class: gf180mcu_fd_sc_mcu7t5v0__or2_1 instances: 157
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai222_1 instances:   8
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_32 instances: 538
+  Class: gf180mcu_fd_sc_mcu7t5v0__dlyc_1 instances: 3673
+  Class: gf180mcu_fd_sc_mcu7t5v0__xor2_1 instances: 1260
+  Class: gf180mcu_fd_sc_mcu7t5v0__mux4_1 instances: 106
+  Class: gf180mcu_fd_sc_mcu7t5v0__and4_1 instances:  57
+Circuit contains 28610 nets, and 4 disconnected pins.
+
+Circuit was modified by parallel/series device merging.
+New circuit summary:
+
+Contents of circuit 1:  Circuit: 'A02_A'
+Circuit A02_A contains 28621 device instances.
+  Class: gf180mcu_fd_sc_mcu7t5v0__nand3_1 instances: 450
+  Class: vss_conn              instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__dffq_1 instances: 2525
+  Class: gf180mcu_fd_sc_mcu7t5v0__dffq_2 instances:   7
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai33_1 instances:  13
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai221_1 instances:  29
+  Class: vdd_conn              instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi222_1 instances: 207
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_12 instances:   2
+  Class: gf180mcu_fd_sc_mcu7t5v0__and3_1 instances:  59
+  Class: gf180mcu_fd_sc_mcu7t5v0__dffsnq_1 instances:   3
+  Class: gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 instances: 643
+  Class: gf180mcu_fd_sc_mcu7t5v0__nand2_1 instances: 4243
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai32_1 instances:  38
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai211_1 instances: 265
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi22_1 instances: 988
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi221_1 instances: 324
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_1 instances:  25
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_2 instances:  23
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_3 instances:   3
+  Class: gf180mcu_fd_sc_mcu7t5v0__mux2_2 instances: 419
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 instances: 1367
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 instances:   9
+  Class: gf180mcu_fd_sc_mcu7t5v0__and2_1 instances: 551
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor4_1 instances:  34
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor4_2 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__or4_1 instances:  20
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai31_1 instances:  85
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkinv_1 instances: 1126
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkinv_2 instances:  53
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkinv_3 instances:   2
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai22_1 instances: 121
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkinv_4 instances:  14
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_1 instances: 1903
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_2 instances: 231
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_3 instances:   4
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_4 instances: 440
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_8 instances:   3
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_16 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi21_1 instances: 1420
+  Class: gf180mcu_fd_sc_mcu7t5v0__tieh instances:   5
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi211_1 instances: 174
+  Class: gf180mcu_fd_sc_mcu7t5v0__tiel instances:  95
+  Class: gf180mcu_fd_sc_mcu7t5v0__inv_1 instances:  16
+  Class: gf180mcu_fd_sc_mcu7t5v0__inv_2 instances: 172
+  Class: gf180mcu_fd_sc_mcu7t5v0__inv_3 instances:  46
+  Class: gf180mcu_fd_sc_mcu7t5v0__inv_4 instances:   4
+  Class: gf180mcu_fd_sc_mcu7t5v0__xnor3_1 instances:  26
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor3_1 instances: 131
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor3_2 instances:   8
+  Class: gf180mcu_fd_sc_mcu7t5v0__or3_1 instances:  39
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai21_1 instances: 2558
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_4 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_8 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_64 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_16 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__xor3_1 instances: 184
+  Class: gf180mcu_fd_sc_mcu7t5v0__xnor2_1 instances: 388
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor2_1 instances: 1767
+  Class: gf180mcu_fd_sc_mcu7t5v0__antenna instances:  14
+  Class: gf180mcu_fd_sc_mcu7t5v0__nand4_1 instances:  75
+  Class: gf180mcu_fd_sc_mcu7t5v0__or2_1 instances: 157
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai222_1 instances:   8
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_32 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__dlyc_1 instances: 3673
+  Class: gf180mcu_fd_sc_mcu7t5v0__xor2_1 instances: 1260
+  Class: gf180mcu_fd_sc_mcu7t5v0__mux4_1 instances: 106
+  Class: gf180mcu_fd_sc_mcu7t5v0__and4_1 instances:  57
+Circuit contains 28610 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'A02_A'
+Circuit A02_A contains 28621 device instances.
+  Class: gf180mcu_fd_sc_mcu7t5v0__nand3_1 instances: 450
+  Class: vss_conn              instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__dffq_1 instances: 2525
+  Class: gf180mcu_fd_sc_mcu7t5v0__dffq_2 instances:   7
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai33_1 instances:  13
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai221_1 instances:  29
+  Class: vdd_conn              instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi222_1 instances: 207
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_12 instances:   2
+  Class: gf180mcu_fd_sc_mcu7t5v0__and3_1 instances:  59
+  Class: gf180mcu_fd_sc_mcu7t5v0__dffsnq_1 instances:   3
+  Class: gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 instances: 643
+  Class: gf180mcu_fd_sc_mcu7t5v0__nand2_1 instances: 4243
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai32_1 instances:  38
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai211_1 instances: 265
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi22_1 instances: 988
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi221_1 instances: 324
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_1 instances:  25
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_2 instances:  23
+  Class: gf180mcu_fd_sc_mcu7t5v0__mux2_2 instances: 419
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_3 instances:   3
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 instances: 1367
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 instances:   9
+  Class: gf180mcu_fd_sc_mcu7t5v0__and2_1 instances: 551
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor4_1 instances:  34
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor4_2 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__or4_1 instances:  20
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai31_1 instances:  85
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkinv_1 instances: 1126
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkinv_2 instances:  53
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai22_1 instances: 121
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkinv_3 instances:   2
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkinv_4 instances:  14
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_1 instances: 1903
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_2 instances: 231
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_3 instances:   4
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_4 instances: 440
+  Class: gf180mcu_fd_sc_mcu7t5v0__buf_8 instances:   3
+  Class: gf180mcu_fd_sc_mcu7t5v0__clkbuf_16 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi21_1 instances: 1420
+  Class: gf180mcu_fd_sc_mcu7t5v0__tieh instances:   5
+  Class: gf180mcu_fd_sc_mcu7t5v0__aoi211_1 instances: 174
+  Class: gf180mcu_fd_sc_mcu7t5v0__tiel instances:  95
+  Class: gf180mcu_fd_sc_mcu7t5v0__inv_1 instances:  16
+  Class: gf180mcu_fd_sc_mcu7t5v0__inv_2 instances: 172
+  Class: gf180mcu_fd_sc_mcu7t5v0__inv_3 instances:  46
+  Class: gf180mcu_fd_sc_mcu7t5v0__inv_4 instances:   4
+  Class: gf180mcu_fd_sc_mcu7t5v0__xnor3_1 instances:  26
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor3_1 instances: 131
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor3_2 instances:   8
+  Class: gf180mcu_fd_sc_mcu7t5v0__or3_1 instances:  39
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai21_1 instances: 2558
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_4 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_8 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_64 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_16 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__xor3_1 instances: 184
+  Class: gf180mcu_fd_sc_mcu7t5v0__xnor2_1 instances: 388
+  Class: gf180mcu_fd_sc_mcu7t5v0__nor2_1 instances: 1767
+  Class: gf180mcu_fd_sc_mcu7t5v0__antenna instances:  14
+  Class: gf180mcu_fd_sc_mcu7t5v0__nand4_1 instances:  75
+  Class: gf180mcu_fd_sc_mcu7t5v0__or2_1 instances: 157
+  Class: gf180mcu_fd_sc_mcu7t5v0__oai222_1 instances:   8
+  Class: gf180mcu_fd_sc_mcu7t5v0__fillcap_32 instances:   1
+  Class: gf180mcu_fd_sc_mcu7t5v0__dlyc_1 instances: 3673
+  Class: gf180mcu_fd_sc_mcu7t5v0__xor2_1 instances: 1260
+  Class: gf180mcu_fd_sc_mcu7t5v0__mux4_1 instances: 106
+  Class: gf180mcu_fd_sc_mcu7t5v0__and4_1 instances:  57
+Circuit contains 28610 nets, and 4 disconnected pins.
+
+Circuit 1 contains 28621 devices, Circuit 2 contains 28621 devices.
+Circuit 1 contains 28610 nets,    Circuit 2 contains 28610 nets.
+
+
+Final result: 
+Circuits match uniquely.
+.
+Logging to file "/home/aymen/Documents/AI_BYTE_accelerator/chipathon-2026-AI_Byte/librelane/runs/RUN_2026-08-28_10-25-59/113-netgen-lvs/reports/lvs.netgen.rpt" disabled
+LVS Done.
