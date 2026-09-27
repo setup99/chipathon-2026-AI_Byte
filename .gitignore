@@ -18,3 +18,6 @@ img/
 # Scratch metrics at repo root (signoff copies live under docs/signoff_a02_macro/)
 /metrics*.json
 /metrics_*.csv
+
+# Keep large local datasets out of GitHub pushes; these are downloaded/generated on demand.
+/cnn_test_flow/data/cifar-10-python.tar.gz
