@@ -19,6 +19,10 @@ project:
     Q8.8 ALU, EML elementary functions) with 8-bit host MMIF on GF180MCU.
     Tapeout block: A02_A user macro (1110×1110 µm, D10-style organizer DEF).
   lvs_config: "lvs_config.json"
+  gf_def_ready: true
+  ws_def_ready: false
+  drc_ready: true
+  lvs_ready: true
 
 # ======================================================
 # External pad connections (organizer DEF / padframe integrate)
