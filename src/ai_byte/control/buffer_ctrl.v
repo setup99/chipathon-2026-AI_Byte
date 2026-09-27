@@ -432,7 +432,8 @@ module ai_byte_buffer_ctrl_v2
             ST_SAW: begin
                 case (step)
                     0: begin m_wt_ce<=1; m_wt_addr<=idx[WT_ADDR_W-1:0]; step<=1; end
-                    1: begin
+                    1: begin m_wt_ce<=1; m_wt_addr<=idx[WT_ADDR_W-1:0]; step<=2; end
+                    2: begin
                         sa_w_load<=1;
                         sa_w_row<=idx[3:2];
                         sa_w_col<=idx[1:0];
@@ -453,21 +454,24 @@ module ai_byte_buffer_ctrl_v2
                         m_act_ce<=1; m_act_addr<=idx[ACT_ADDR_W-1:0]; step<=1;
                     end
                     1: begin
+                        m_act_ce<=1; m_act_addr<=idx[ACT_ADDR_W-1:0]; step<=2;
+                    end
+                    2: begin
                         // store act byte into scratch_i16 as zero-extended for reuse as X bytes
                         ybuf[idx] <= {{8{sram_act_rdata[7]}}, sram_act_rdata}; // keep int8 in low
                         if (idx+1 >= TILE_BYTES[7:0]) begin
-                            idx<=0; step<=2;
+                            idx<=0; step<=3;
                         end else begin idx<=idx+1; step<=0; end
                     end
-                    2: begin
+                    3: begin
                         // present column 0 and start
                         sa_x_in <= {ybuf[3][7:0], ybuf[2][7:0], ybuf[1][7:0], ybuf[0][7:0]};
                         if (!sa_busy) begin
                             sa_start<=1; sa_op_sel<=4'b0101;
-                            idx<=1; step<=3;
+                            idx<=0; step<=4;
                         end
                     end
-                    3: begin
+                    4: begin
                         // cycles 1..N-1
                         sa_x_in <= {
                             ybuf[idx*TILE+3][7:0],
@@ -514,15 +518,19 @@ module ai_byte_buffer_ctrl_v2
                             step<=1;
                         end
                         1: begin
+                            m_act_ce<=1; m_act_addr<=TILE_BYTES[ACT_ADDR_W-1:0]+idx[ACT_ADDR_W-1:0];
+                            step<=2;
+                        end
+                        2: begin
                             Bq<=sext8(sram_act_rdata);
                             if (wrap_in_ready) begin
-                                wrap_in_data<=ybuf[idx]; wrap_in_valid<=1; step<=2;
+                                wrap_in_data<=ybuf[idx]; wrap_in_valid<=1; step<=3;
                             end
                         end
-                        2: if (wrap_in_ready) begin
-                            wrap_in_data<=Bq; wrap_in_valid<=1; step<=3;
+                        3: if (wrap_in_ready) begin
+                            wrap_in_data<=Bq; wrap_in_valid<=1; step<=4;
                         end
-                        3: if (wrap_out_valid) begin
+                        4: if (wrap_out_valid) begin
                             m_res_ce<=1; m_res_we<=1; m_res_addr<=idx[RES_ADDR_W-1:0];
                             m_res_wdata<=wrap_out_is_int8 ? wrap_out_data8 : wrap_out_data16[7:0];
                             if (idx+1 >= TILE_BYTES[7:0]) st<=ST_DONE;

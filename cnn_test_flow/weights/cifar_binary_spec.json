@@ -1,0 +1,18 @@
+{
+  "task": "CIFAR-10 Binary Classification (Airplane vs. Automobile)",
+  "architecture": "768 -> FC(768x64) -> ReLU -> FC(64x4) -> ArgMax(2)",
+  "quant_accuracy_pct": 91.35,
+  "float_accuracy_pct": 91.35,
+  "classes": [
+    "airplane",
+    "automobile"
+  ],
+  "W1_shape": [
+    768,
+    64
+  ],
+  "W2_shape": [
+    64,
+    4
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "architecture": "512 -> FC(128) + ReLU + Shift(8) -> FC(4) + Bias",
+  "input_features": 512,
+  "classes": [
+    "healthy",
+    "early_blight",
+    "late_blight",
+    "bacterial_spot"
+  ],
+  "class_names": [
+    "Healthy",
+    "Early Blight",
+    "Late Blight",
+    "Bacterial Spot"
+  ],
+  "float_acc": 0.9110275689223057,
+  "int8_acc": 0.9047619047619048,
+  "s1_shift": 8,
+  "s2_scale": 80.0
+}

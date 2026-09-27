@@ -1,0 +1,22 @@
+{
+  "architecture": "768\u2192FC\u2192Sigmoid\u2192128\u2192FC\u2192Tanh\u219264\u2192FC\u219210",
+  "hardware_opcodes": [
+    "OP_FC",
+    "OP_SIGMOID",
+    "OP_TANH"
+  ],
+  "float_accuracy_pct": 49.980000000000004,
+  "quant_accuracy_pct": 28.18,
+  "classes": [
+    "airplane",
+    "automobile",
+    "bird",
+    "cat",
+    "deer",
+    "dog",
+    "frog",
+    "horse",
+    "ship",
+    "truck"
+  ]
+}

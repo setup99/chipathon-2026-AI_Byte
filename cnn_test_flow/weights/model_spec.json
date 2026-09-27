@@ -1,0 +1,16 @@
+{
+  "architecture": "MNIST 14x14 INT8 -> FC1(196x16) -> ReLU -> FC2(16x16) -> ArgMax(10)",
+  "quant_accuracy_pct": 93.77,
+  "W1_shape": [
+    196,
+    16
+  ],
+  "W2_shape": [
+    16,
+    16
+  ],
+  "conv_kernel_shape": [
+    4,
+    4
+  ]
+}

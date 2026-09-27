@@ -153,14 +153,18 @@ module pe_gemv_ws #(
     end
 
 // synthesis translate_off
+`ifdef DEBUG_PE
     always @(posedge clk) begin
         if (rst_n) begin
             if (compute_start || start_reg1 || valid_reg1) begin
                 $display("[DEBUG PE %0d] t=%0t, compute_start=%b, start_reg1=%b, valid_reg1=%b, x_in_valid=%b, acc=%0d, sum=%0d, prod=%0d",
                          PE_ID, $time, compute_start, start_reg1, valid_reg1, x_in_valid, acc, sum, prod);
+                $display("[DEBUG PE %0d] t=%0t, compute_start=%b, start_reg1=%b, valid_reg1=%b, x_in_valid=%b, acc=%0d, sum=%0d, prod=%0d, w=%0d, xreg=%0d, xin=%0d",
+                         PE_ID, $time, compute_start, start_reg1, valid_reg1, x_in_valid, acc, sum, prod, w_dout, x_reg1, x_in);
             end
         end
     end
+`endif
 // synthesis translate_on
 
 endmodule

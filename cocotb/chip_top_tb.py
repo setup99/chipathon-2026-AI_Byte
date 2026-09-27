@@ -113,6 +113,9 @@ async def test_smoke_reset(dut):
     raw = int(dut.bidir_PAD.value)
     irq = (raw >> 14) & 1
     assert irq == 0, f"IRQ unexpectedly high after reset (bidir={raw:#x})"
+    from ai_byte_pads import irq_pad
+    irq = irq_pad(dut)
+    assert irq == 0, "IRQ unexpectedly high after reset"
     cocotb.log.info("smoke reset OK")
 
 
@@ -163,6 +166,7 @@ def chip_top_runner():
 
     test_module = os.getenv("COCOTB_TEST_MODULES", "chip_top_tb,test_ai_byte")
 
+    waves = os.getenv("WAVES", "0") == "1"
     runner = get_runner(sim)
     runner.build(
         sources=sources,
@@ -171,12 +175,12 @@ def chip_top_runner():
         always=True,
         includes=includes,
         build_args=[],
-        waves=True,
+        waves=waves,
     )
     runner.test(
         hdl_toplevel=hdl_toplevel,
         test_module=test_module,
-        waves=True,
+        waves=waves,
     )
 
 

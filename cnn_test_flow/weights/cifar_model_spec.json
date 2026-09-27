@@ -1,0 +1,24 @@
+{
+  "architecture": "CIFAR-10 16x16x3 INT8 -> FC1(768x64) -> ReLU -> FC2(64x16) -> ArgMax(10)",
+  "quant_accuracy_pct": 42.21,
+  "W1_shape": [
+    768,
+    64
+  ],
+  "W2_shape": [
+    64,
+    16
+  ],
+  "classes": [
+    "airplane",
+    "automobile",
+    "bird",
+    "cat",
+    "deer",
+    "dog",
+    "frog",
+    "horse",
+    "ship",
+    "truck"
+  ]
+}

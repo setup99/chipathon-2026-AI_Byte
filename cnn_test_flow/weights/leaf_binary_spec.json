@@ -1,0 +1,18 @@
+{
+  "task": "PlantVillage Leaf Disease Detection (Tomato: Healthy vs. Early Blight)",
+  "architecture": "768 -> FC(768x64) -> ReLU -> FC(64x4) -> ArgMax(2) / OP_SOFTMAX",
+  "quant_accuracy_pct": 98.0,
+  "float_accuracy_pct": 98.0,
+  "classes": [
+    "healthy",
+    "early_blight"
+  ],
+  "W1_shape": [
+    768,
+    64
+  ],
+  "W2_shape": [
+    64,
+    4
+  ]
+}
